@@ -1,9 +1,9 @@
 <?php
 /**
-* Plugin Name: Custom Theme Helpers
+* Plugin Name: Singular Plugin
 * Description: A custom plugin containing theme customization code and miscellaneous helper functions.
-* Author: Author Name
-* Author URI: https://www.authoruri.com/
+* Author: Singular Talent
+* Author URI: https://www.wordpress.org/
 * Version: 1.0
 */
 

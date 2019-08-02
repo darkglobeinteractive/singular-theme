@@ -62,6 +62,7 @@ wp-content/*
 wp-content/plugins/hello.php
 wp-content/plugins/index.php
 wp-content/plugins/akismet/
+wp-content/plugins/advanced-custom-fields-pro/
 
 # ignore specific themes
 wp-content/themes/index.php
