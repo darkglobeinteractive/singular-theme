@@ -28,3 +28,7 @@ progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=
 /* FOOTER ------------------------------------------------------- */
 #footer { }
 #footer .copyright { }
+
+
+/* FONTS -------------------------------------------------------- */
+body { font-family: 'Open Sans', Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
