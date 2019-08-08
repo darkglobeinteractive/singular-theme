@@ -22,7 +22,16 @@ progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=
 
 
 /* CONTENT ------------------------------------------------------ */
+#main { }
+#main-wrap { }
+
+
+/* SINGLE COLUMN ------------------------------------------------ */
 #content { }
+
+
+/* DUAL-COLUMN -------------------------------------------------- */
+
 
 
 /* FOOTER ------------------------------------------------------- */

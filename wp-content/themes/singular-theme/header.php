@@ -20,4 +20,5 @@
 				) );
 				?>
       </header>
-      <div id="content">
+      <div id="main">
+				<div id="main-wrap">
