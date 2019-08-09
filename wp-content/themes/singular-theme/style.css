@@ -13,16 +13,17 @@ progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=
 
 
 /* GLOBAL ------------------------------------------------------- */
-#page { }
+body { background-color: #000; }
+#page { width: 100%; max-width: 1600px; margin: 0 auto; background-color: #fff; }
 
 
 /* HEADER ------------------------------------------------------- */
-#header { }
-#header .logo { }
+#header { position: relative; z-index: 2; height: 120px; }
+#header .logo { display: block; position: absolute; z-index: 1; top: 0; left: 0; width: 80px; height: 60px; background: transparent url('screenshot.png') 0 0 no-repeat; background-size: 100% 100%; text-indent: -9999em; }
 
 
 /* CONTENT ------------------------------------------------------ */
-#main { }
+#main { clear: both; position: relative; z-index: 1; }
 #main-wrap { }
 
 
@@ -35,7 +36,7 @@ progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=
 
 
 /* FOOTER ------------------------------------------------------- */
-#footer { }
+#footer { clear: both; position: relative; z-index: 1; }
 #footer .copyright { }
 
 

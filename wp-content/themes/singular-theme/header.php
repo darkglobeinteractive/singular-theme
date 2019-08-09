@@ -16,9 +16,19 @@
 					'menu' => 'main-menu',
 					'menu_class' => 'menu',
 					'container' => 'nav',
-          'container_class' => 'navigation'
+          'container_id' => 'navigation'
 				) );
 				?>
+				<a href="#mobile-menu" id="mm-trigger">
+					<span class="trigger-wrapper">
+						<span class="trigger-container">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</span>
+				</a>
       </header>
       <div id="main">
 				<div id="main-wrap">
