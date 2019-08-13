@@ -24,6 +24,9 @@ jQuery(document).ready(function($) {
     });
   });
 
-  /* NEXT ------------------------------------------------------- */
+  /* SLICK SLIDER ----------------------------------------------- */
+  /* Un-comment the slick items in functions.php
+  $('.slick-slider').slick();
+  */
 
 });
