@@ -30,5 +30,8 @@
 					</span>
 				</a>
       </header>
+			<?php
+				// include( locate_template( 'templates/banner.php', false, false ) ); 
+			?>
       <div id="main">
 				<div id="main-wrap">

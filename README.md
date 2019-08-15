@@ -9,13 +9,14 @@ Based-on the documentation (https://mmenujs.com/documentation/) as of August 6, 
 Add Main Menu
 -----------------------------------
 Admin > Appearance > Menus
-1) Menu Name: "Main Menu"
+1) [ ] Menu Name: "Main Menu"
 
 
 ===================================
 Plugin Installation Notes
 ===================================
-1) Install "Classic Editor"
+1) [ ] Install "Classic Editor"
+2) [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
 
 
 
@@ -23,5 +24,7 @@ Plugin Installation Notes
 Third-Party Plugin Notes
 ===================================
 
-1) Install "Advanced Custom Fields PRO" via uploaded zip.
+1) [ ] Install "Advanced Custom Fields PRO" via uploaded zip.
   Key: b3JkZXJfaWQ9MTYzMDMyfHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOS0wNi0xMyAxNzowODo1Mg==
+
+  A) [ ] Import the "Custom Title" ACF field group

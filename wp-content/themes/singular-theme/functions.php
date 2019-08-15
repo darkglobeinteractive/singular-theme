@@ -34,6 +34,17 @@ function singular_scripts() {
 add_action( 'wp_enqueue_scripts', 'singular_scripts' );
 
 
+/* GLOBALLY SHARED VARIABLES ------------------------------------ */
+function singular_global_vars() {
+  static $global_vars = NULL;
+  if ( empty( $global_vars ) ) {
+    $global_vars = array( 'queried_object' => get_queried_object() );
+  }
+  return $global_vars;
+}
+add_action( 'template_redirect', 'singular_global_vars' );
+
+
 /* WP CORE CUSTOM FIELDS ---------------------------------------- */
 /* Un-comment the following line if you need to use WordPress core "Custom Fields" */
 /* The "Advanced Custom Themes" plugin hides the option by default */
