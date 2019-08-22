@@ -1,4 +1,4 @@
-<!-- front-page.php -->
+<!-- front-page.php // Home Page -->
 <?php get_header(); ?>
 
 <div id="content">

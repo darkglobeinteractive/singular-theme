@@ -18,7 +18,7 @@ Plugin Installation Notes
 1) [ ] Install "Classic Editor"
 2) [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
 3) [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/)
-
+4) [ ] Install "Enhanced Media Library" (https://wordpress.org/plugins/enhanced-media-library/)
 
 
 ===================================

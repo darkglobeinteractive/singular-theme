@@ -1,12 +1,15 @@
-<!-- page.php // Single Page -->
+<!-- single.php // Single Blog Post -->
 <?php get_header(); ?>
 
   <div id="content">
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      <?php if ( get_the_title() ): ?>
-        <h1><?php echo get_the_title(); ?></h1>
+      <h1 class="blog-post"><?php echo get_the_title(); ?></h1>
+
+      <?php $featured_image = get_the_post_thumbnail_url( get_the_ID(), ''); ?>
+      <?php if ( $featured_image ): ?>
+        <div class="featured-image"><img src="<?php echo $featured_image; ?>" /></div>
       <?php endif; ?>
 
       <?php the_content(); ?>
