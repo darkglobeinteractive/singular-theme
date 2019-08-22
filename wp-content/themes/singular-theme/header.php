@@ -7,7 +7,12 @@
 		<title><?php wp_title( '|', true, 'right' ); bloginfo(); ?></title>
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php
+	$additional_classes = [];
+	if ( is_active_sidebar( 'primary' ) ) {
+	  array_push ( $additional_classes, 'sidebar' );
+	}
+	body_class( $additional_classes ); ?>>
     <div id="page">
       <header id="header">
         <a href="/" class="logo"><?php bloginfo(); ?></a>
@@ -31,7 +36,7 @@
 				</a>
       </header>
 			<?php
-				// include( locate_template( 'templates/banner.php', false, false ) ); 
+				// include( locate_template( 'templates/banner.php', false, false ) );
 			?>
       <div id="main">
 				<div id="main-wrap">

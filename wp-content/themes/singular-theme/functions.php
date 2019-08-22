@@ -45,6 +45,18 @@ function singular_global_vars() {
 add_action( 'template_redirect', 'singular_global_vars' );
 
 
+/* INITIATE WIDGETS/SIDEBAR ------------------------------------- */
+function singular_widgets_init() {
+  register_sidebar( array (
+    'name' => 'Primary Sidebar',
+    'id' => 'primary',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>'
+  ) );
+}
+add_action( 'widgets_init', 'singular_widgets_init' );
+
+
 /* WP CORE CUSTOM FIELDS ---------------------------------------- */
 /* Un-comment the following line if you need to use WordPress core "Custom Fields" */
 /* The "Advanced Custom Themes" plugin hides the option by default */

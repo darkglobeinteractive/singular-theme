@@ -1,3 +1,6 @@
+        <?php if ( is_active_sidebar( 'primary' ) ): ?>
+          <?php get_sidebar( 'primary' ); ?>
+        <?php endif; ?>
       </div>
     </div>
     <footer id="footer">
