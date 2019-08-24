@@ -10,6 +10,7 @@ Add Main Menu
 -----------------------------------
 Admin > Appearance > Menus
 1) [ ] Menu Name: "Main Menu"
+2) [ ] Add something to the menu tree so it appears correctly on the front-end
 
 
 ===================================
