@@ -4,7 +4,9 @@
       </div>
     </div>
     <footer id="footer">
-      <div class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo(); ?>, All Rights Reserved.</div>
+      <div class="content">
+        <div class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo(); ?>, All Rights Reserved.</div>
+      </div>
     </footer>
   </div>
 <?php wp_footer(); ?>
