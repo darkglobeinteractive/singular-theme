@@ -20,6 +20,7 @@ Plugin Installation Notes
 2) [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
 3) [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/)
 4) [ ] Install "Enhanced Media Library" (https://wordpress.org/plugins/enhanced-media-library/)
+5) [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/) -- Optional
 
 
 ===================================
