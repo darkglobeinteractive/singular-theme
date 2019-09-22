@@ -4,8 +4,13 @@
 // include('inc/shortcodes.php');
 
 /* ENABLE THEME SUPPORT ----------------------------------------- */
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'menus' );
+function singular_setup_theme_supported_features() {
+  add_theme_support( 'menus' );
+  add_theme_support( 'post-thumbnails' );
+  // add_theme_support( 'responsive-embeds' );
+}
+add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
+
 
 
 /* STYLES ------------------------------------------------------- */
