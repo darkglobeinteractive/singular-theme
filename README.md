@@ -14,6 +14,12 @@ Admin > Appearance > Menus
 
 
 ===================================
+General Notes
+===================================
+1) The Settings > Reading blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
+
+
+===================================
 Plugin Installation Notes
 ===================================
 1) [ ] Install "Classic Editor"
