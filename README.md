@@ -32,8 +32,18 @@ Plugin Installation Notes
 ===================================
 Third-Party Plugin Notes
 ===================================
-
 1) [ ] Install "Advanced Custom Fields PRO" via uploaded zip.
-  Key: b3JkZXJfaWQ9MTYzMDMyfHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOS0wNi0xMyAxNzowODo1Mg==
+       [ ] Import the "Custom Title" ACF field group
 
-  A) [ ] Import the "Custom Title" ACF field group
+
+===================================
+CLIENT 1 REQUESTS
+===================================
+1) [ ] Install "WPS Hide Login" (https://wordpress.org/plugins/wps-hide-login/)
+       [ ] Rename login page to /user
+2) [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
+       [ ] Limit login attempts
+3) [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
+       [ ] Add captcha to login and other forms
+4) [ ] Remove 'root' user if necessary
+5) [ ] Disable browser-based theme editing ability
