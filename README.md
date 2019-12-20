@@ -47,3 +47,4 @@ CLIENT 1 REQUESTS
        [ ] Add captcha to login and other forms
 4) [ ] Remove 'root' user if necessary
 5) [ ] Disable browser-based theme editing ability
+       [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
