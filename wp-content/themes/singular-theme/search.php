@@ -14,7 +14,7 @@
         <div class="search-result">
 
           <?php if ( get_the_title() ): ?>
-            <div class="title"><a href=""><?php echo get_the_title(); ?></a></div>
+            <div class="title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></div>
           <?php endif; ?>
 
           <div class="blurb"><?php
