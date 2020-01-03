@@ -12,6 +12,11 @@ Admin > Appearance > Menus
 1) [ ] Menu Name: "Main Menu"
 2) [ ] Add something to the menu tree so it appears correctly on the front-end
 
+Create Pages / Modify Templates
+-----------------------------------
+1) [ ] Create sitemap page and update template file to reflect page ID
+2) [ ] Create search form page and update template file to reflect page ID
+
 
 ===================================
 General Notes
