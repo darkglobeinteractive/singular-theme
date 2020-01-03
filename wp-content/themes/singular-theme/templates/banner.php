@@ -9,8 +9,11 @@ $cat_id = ( is_object( $gv['queried_object'] ) ? $gv['queried_object']->cat_ID :
 $banner_title = wp_title( '', false );
 
 // Customize page title when necessary
+// Is this the search results page
+if ( is_search() ) {
+  $banner_title = 'Search Results';
 // Blog category listing pages
-if ( $cat_id !== '' ) {
+} elseif ( is_int( $cat_id ) ) {
   $banner_title = 'Blog: '.$gv['queried_object']->name;
 // All blog posts have the same title
 } elseif ( get_post_type() === 'post' ) {

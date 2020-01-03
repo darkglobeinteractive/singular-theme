@@ -118,5 +118,28 @@ body.sidebar #sidebar { width: 300px; }
 #footer .copyright { }
 
 
+/* SEARCH FORM -------------------------------------------------- */
+/* generated via get_search_form() */
+#searchform,
+#searchform * { box-sizing: border-box; }
+#searchform { }
+#searchform > div { }
+#searchform > div label.search-reader-text { }
+#searchform > div input#s { }
+#searchform > div input#searchsubmit { }
+
+
+/* SEARCH RESULTS ----------------------------------------------- */
+#search-results,
+#search-results * { box-sizing: border-box; }
+#search-results { }
+#search-results .search-result { }
+#search-results .search-result .title { }
+#search-results .search-result .title a { }
+#search-results .search-result .blurb { }
+#search-results .search-result .more { }
+#search-results .search-result .more a { }
+
+
 /* FONTS -------------------------------------------------------- */
 body { font-family: 'Open Sans', Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
