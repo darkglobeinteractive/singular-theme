@@ -67,6 +67,7 @@ wp-content/plugins/classic-editor/
 wp-content/plugins/custom-post-type-ui/
 wp-content/plugins/widget-context/
 wp-content/plugins/enhanced-media-library/
+wp-content/plugins/google-sitemap-generator/
 
 # ignore specific themes
 wp-content/themes/index.php

@@ -1,7 +1,8 @@
 <?php
 /* INCLUDES ----------------------------------------------------- */
 /* Un-comment the ones you'd like to use, each contains examples */
-// include('inc/shortcodes.php');
+// include( 'inc/shortcodes.php' );
+// include( 'inc/sitemap.php' );
 
 /* ENABLE THEME SUPPORT ----------------------------------------- */
 function singular_setup_theme_supported_features() {
