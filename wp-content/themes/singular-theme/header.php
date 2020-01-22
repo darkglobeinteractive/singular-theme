@@ -4,7 +4,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title><?php wp_title( '|', true, 'right' ); bloginfo(); ?></title>
+		<title><?php
+		$gv = singular_global_vars();
+		if ( get_field ( 'custom_page_title', $gv['queried_object']->ID ) ) {
+			echo get_field ( 'custom_page_title', $gv['queried_object']->ID ).' | ';
+		} else {
+			wp_title( '|', true, 'right' );
+		};
+		bloginfo();
+		?></title>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php
