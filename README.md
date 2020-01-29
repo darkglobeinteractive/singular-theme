@@ -50,6 +50,7 @@ CLIENT 1 REQUESTS
        [ ] Limit login attempts
 3) [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
        [ ] Add captcha to login and other forms
-4) [ ] Remove 'root' user if necessary
-5) [ ] Disable browser-based theme editing ability
+4) [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+5) [ ] Remove 'root' user if necessary
+6) [ ] Disable browser-based theme editing ability
        [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
