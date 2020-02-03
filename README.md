@@ -25,13 +25,18 @@ General Notes
 
 
 ===================================
-Plugin Installation Notes
+Required Plugin Installation Notes
 ===================================
 1) [ ] Install "Classic Editor"
 2) [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
-3) [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/)
-4) [ ] Install "Enhanced Media Library" (https://wordpress.org/plugins/enhanced-media-library/)
-5) [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/) -- Optional
+3) [ ] Install "Enhanced Media Library" (https://wordpress.org/plugins/enhanced-media-library/)
+
+
+===================================
+Optional Plugin Installation Notes
+===================================
+1) [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/): Useful for SEO and
+2) [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/):
 
 
 ===================================
@@ -51,6 +56,7 @@ CLIENT 1 REQUESTS
 3) [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
        [ ] Add captcha to login and other forms
 4) [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+       [ ] Install "ACF Content ANalysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
 5) [ ] Remove 'root' user if necessary
 6) [ ] Disable browser-based theme editing ability
        [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);

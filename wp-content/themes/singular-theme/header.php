@@ -21,6 +21,7 @@
 	  array_push ( $additional_classes, 'sidebar' );
 	}
 	body_class( $additional_classes ); ?>>
+		<a href="#banner" class="skip-main">Skip to Main Content</a>
     <div id="page">
       <header id="header">
         <a href="/" class="logo"><?php bloginfo(); ?></a>
