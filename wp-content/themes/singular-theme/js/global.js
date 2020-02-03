@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
   /* MOBILE NAVIGATION ------------------------------------------ */
   $('#navigation > ul.menu').each(function() {
+    var $skip_content = $('a.skip-main').detach();
     var $mobile_menu = $(this).clone();
     $('ul', $mobile_menu).each(function() {
       $(this).attr('class','');
@@ -26,6 +27,7 @@ jQuery(document).ready(function($) {
       }
       */
     });
+    $('body').prepend($skip_content);
   });
 
 
