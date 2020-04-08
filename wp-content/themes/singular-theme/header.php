@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php
 		$gv = singular_global_vars();
-		if ( get_field ( 'custom_page_title', $gv['queried_object']->ID ) ) {
+		if ( is_object( $gv['queried_object'] ) && get_field ( 'custom_page_title', $gv['queried_object']->ID ) ) {
 			echo get_field ( 'custom_page_title', $gv['queried_object']->ID ).' | ';
 		} else {
 			wp_title( '|', true, 'right' );
