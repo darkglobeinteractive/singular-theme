@@ -125,6 +125,8 @@ body.sidebar #sidebar { width: 300px; }
 .rss-feed-block .rss-feed-item { }
 .rss-feed-block .rss-feed-item .rss-feed-item-link { }
 .rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-date { display: block; }
+.rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-image { display: block; }
+.rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-image img { display: block; max-width: 100%; }
 .rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-title { display: block; }
 .rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-description { display: block; }
 
