@@ -82,6 +82,11 @@ body.sidebar #sidebar { width: 300px; }
 #sidebar .widget_categories ul li a { }
 
 
+/* FOOTER ------------------------------------------------------- */
+#footer { clear: both; position: relative; z-index: 1; }
+#footer .copyright { }
+
+
 /* BLOG LANDING PAGE -------------------------------------------- */
 .blog-list,
 .blog-list * { box-sizing: border-box; }
@@ -102,7 +107,7 @@ body.sidebar #sidebar { width: 300px; }
 .blog-list article.post .content .btn-wrap .btn { }
 
 
-/* PAGINATION --------------------------------------------------- */
+/* BLOG PAGINATION ---------------------------------------------- */
 .blog-list-pagination { }
 .blog-list-pagination .navigation { }
 .blog-list-pagination .navigation h2 { display: none; }
@@ -113,9 +118,15 @@ body.sidebar #sidebar { width: 300px; }
 .blog-list-pagination .page-numbers.prev { }
 
 
-/* FOOTER ------------------------------------------------------- */
-#footer { clear: both; position: relative; z-index: 1; }
-#footer .copyright { }
+/* RSS FEED BLOCK ----------------------------------------------- */
+.rss-feed-block,
+.rss-feed-block * { box-sizing: border-box; }
+.rss-feed-block { }
+.rss-feed-block .rss-feed-item { }
+.rss-feed-block .rss-feed-item .rss-feed-item-link { }
+.rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-date { display: block; }
+.rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-title { display: block; }
+.rss-feed-block .rss-feed-item .rss-feed-item-link .rss-feed-item-description { display: block; }
 
 
 /* SEARCH FORM -------------------------------------------------- */
