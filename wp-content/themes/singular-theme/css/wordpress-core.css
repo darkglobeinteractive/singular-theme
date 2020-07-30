@@ -41,6 +41,7 @@ pre,
 
 /* IMAGES ------------------------------------------------------- */
 .wp-block-image { max-width: none; margin: 32px auto; padding: 0px; }
+.wp-block-image img { max-width: 100%; height: auto; }
 img.aligncenter,
 .wp-block-image.aligncenter { display: block; margin: 12px auto; padding: 0px; }
 img.alignnone,
