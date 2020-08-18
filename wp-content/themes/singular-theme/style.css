@@ -136,10 +136,10 @@ body.sidebar #sidebar { width: 300px; }
 #searchform,
 #searchform * { box-sizing: border-box; }
 #searchform { }
-#searchform > div { }
-#searchform > div label.search-reader-text { }
-#searchform > div input#s { }
-#searchform > div input#searchsubmit { }
+#searchform .searchform-wrap { }
+#searchform .searchform-wrap label.search-reader-text { }
+#searchform .searchform-wrap input#s { }
+#searchform .searchform-wrap input#searchsubmit { }
 
 
 /* SEARCH RESULTS ----------------------------------------------- */
