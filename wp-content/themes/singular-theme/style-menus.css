@@ -39,7 +39,7 @@
 #mm-trigger,
 #mm-trigger * { box-sizing: border-box; }
 #mm-trigger { display: none; position: absolute; z-index: 1; top: 0; right: 0; }
-#mm-trigger .trigger-wrapper { display: block; width: 60px; height: 60px; }
+#mm-trigger .trigger-wrapper { display: block; width: 60px; }
 #mm-trigger .trigger-container { display: block; width: 40px; height: 18px; margin: 21px 10px;
   position: relative; -webkit-transform: rotate(0deg);-moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer;
 }
