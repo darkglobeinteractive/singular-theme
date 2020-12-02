@@ -1,6 +1,8 @@
 @media screen and (max-width: 600px) {
 
-  /* WORDPRESS CORE OVERRIDES ------------------------------------- */
-  #wpadminbar { position: fixed; } /* Keep it fixed for use with mmenu slide-out */
+  /* 9.1: WORDPRESS CORE OVERRIDES -------------------------------- */
+  #wpadminbar {
+    position: fixed;
+  }
 
 }
