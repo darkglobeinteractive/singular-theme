@@ -56,6 +56,8 @@ CLIENT 1 REQUESTS
 3) [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
        [ ] Add captcha to login and other forms
 4) [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+       [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
+       [ ] Add site name and image to the Yoast SEO admin
        [ ] Install "ACF Content ANalysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
 5) [ ] Remove 'root' user if necessary
 6) [ ] Disable browser-based theme editing ability
