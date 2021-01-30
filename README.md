@@ -17,6 +17,11 @@ Create Pages / Modify Templates
 1) [ ] Create sitemap page and update template file to reflect page ID
 2) [ ] Create search form page and update template file to reflect page ID
 
+Login Page Customizations
+-----------------------------------
+1) [ ] Update the image located at /singular-theme/img/login-logo.png
+2) [ ] Modify the styles at /singular-theme/css/wordpress-core.css
+
 
 ===================================
 General Notes
@@ -29,7 +34,7 @@ Required Plugin Installation Notes
 ===================================
 1) [ ] Install "Classic Editor"
 2) [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
-3) [ ] Install "Enhanced Media Library" (https://wordpress.org/plugins/enhanced-media-library/)
+3) [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
 ===================================

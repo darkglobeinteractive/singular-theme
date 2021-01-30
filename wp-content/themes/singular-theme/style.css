@@ -2,8 +2,8 @@
 Theme Name: Singular
 Author: Singular Talent
 Author URI: https://www.wordpress.org/
-Description: A custom WordPress theme.
-Version: 1.0
+Description: Singular is a bare-bones starter theme used to build custom sites from the ground-up, containing no additional customizer settings.
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -98,9 +98,9 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
-  height: 60px;
+  height: 80px;
   width: 80px;
-  background: transparent url('screenshot.png') 0 0 no-repeat;
+  background: transparent url('img/login-logo.png') 0 0 no-repeat;
   background-size: 100% 100%;
   text-indent: -9999em;
 }

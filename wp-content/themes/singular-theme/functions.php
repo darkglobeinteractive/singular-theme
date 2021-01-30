@@ -33,6 +33,13 @@ function singular_styles() {
 add_action( 'wp_enqueue_scripts', 'singular_styles' );
 
 
+/* LOGIN STYLES ------------------------------------------------- */
+function singular_login_css() {
+  wp_enqueue_style( 'login-styles', get_template_directory_uri() . '/css/login.css');
+}
+add_action( 'login_enqueue_scripts', 'singular_login_css' );
+
+
 /* SCRIPTS ------------------------------------------------------ */
 function singular_scripts() {
   // wp_enqueue_script( 'colorbox_js', get_template_directory_uri().'/libs/colorbox/jquery.colorbox-min.js', array( 'jquery' ) );
