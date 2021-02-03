@@ -9,61 +9,61 @@ Based-on the documentation (https://mmenujs.com/documentation/) as of August 6, 
 Add Main Menu
 -----------------------------------
 Admin > Appearance > Menus
-1) [ ] Menu Name: "Main Menu"
-2) [ ] Add something to the menu tree so it appears correctly on the front-end
+1. [ ] Menu Name: "Main Menu"
+2. [ ] Add something to the menu tree so it appears correctly on the front-end
 
 Create Pages / Modify Templates
 -----------------------------------
-1) [ ] Create sitemap page and update template file to reflect page ID
-2) [ ] Create search form page and update template file to reflect page ID
+1. [ ] Create sitemap page and update template file to reflect page ID
+2. [ ] Create search form page and update template file to reflect page ID
 
 Login Page Customizations
 -----------------------------------
-1) [ ] Update the image located at /singular-theme/img/login-logo.png
-2) [ ] Modify the styles at /singular-theme/css/wordpress-core.css
+1. [ ] Update the image located at /singular-theme/img/login-logo.png
+2. [ ] Modify the styles at /singular-theme/css/wordpress-core.css
 
 
 ===================================
 General Notes
 ===================================
-1) The Settings > Reading blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
+1. The Settings > Reading blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
 
 
 ===================================
 Required Plugin Installation Notes
 ===================================
-1) [ ] Install "Classic Editor"
-2) [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
-3) [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
+1. [ ] Install "Classic Editor"
+2. [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
+3. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
 ===================================
 Optional Plugin Installation Notes
 ===================================
-1) [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/): Useful for SEO and
-2) [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/):
+1. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/): Useful for SEO and
+2. [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/):
 
 
 ===================================
 Third-Party Plugin Notes
 ===================================
-1) [ ] Install "Advanced Custom Fields PRO" via uploaded zip.
-       [ ] Import the "Custom Title" ACF field group
+1. [ ] Install "Advanced Custom Fields PRO" via uploaded zip.
+  - [ ] Import the "Custom Title" ACF field group
 
 
 ===================================
 CLIENT 1 REQUESTS
 ===================================
-1) [ ] Install "WPS Hide Login" (https://wordpress.org/plugins/wps-hide-login/)
-       [ ] Rename login page to /user
-2) [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
-       [ ] Limit login attempts
-3) [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
-       [ ] Add captcha to login and other forms
-4) [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
-       [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
-       [ ] Add site name and image to the Yoast SEO admin
-       [ ] Install "ACF Content ANalysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-5) [ ] Remove 'root' user if necessary
-6) [ ] Disable browser-based theme editing ability
-       [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
+1. [ ] Install "WPS Hide Login" (https://wordpress.org/plugins/wps-hide-login/)
+  - [ ] Rename login page to /user
+2. [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
+  - [ ] Limit login attempts
+3. [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
+  - [ ] Add captcha to login and other forms
+4. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+  - [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
+ - [ ] Add site name and image to the Yoast SEO admin
+ - [ ] Install "ACF Content ANalysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
+5. [ ] Remove 'root' user if necessary
+6. [ ] Disable browser-based theme editing ability
+  - [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
