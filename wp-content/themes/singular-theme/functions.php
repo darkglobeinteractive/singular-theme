@@ -33,11 +33,16 @@ function singular_styles() {
 add_action( 'wp_enqueue_scripts', 'singular_styles' );
 
 
-/* LOGIN STYLES ------------------------------------------------- */
+/* LOGIN PAGE UPDATES ------------------------------------------- */
 function singular_login_css() {
   wp_enqueue_style( 'login-styles', get_template_directory_uri() . '/css/login.css');
 }
 add_action( 'login_enqueue_scripts', 'singular_login_css' );
+
+function singular_login_url() {
+  return '/';
+}
+add_filter( 'login_headerurl', 'singular_login_url' );
 
 
 /* SCRIPTS ------------------------------------------------------ */
