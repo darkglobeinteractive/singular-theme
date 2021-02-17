@@ -27,6 +27,12 @@ jQuery(document).ready(function($) {
       }
       */
     });
+    /* Use this if the menu trigger $('#mm-trigger') is in a fixed location and won't close the menu
+    var api = $('#mobile-menu').data('mmenu');
+    $('#mm-trigger').click(function() {
+      api.close();
+    });
+    */
     $('body').prepend($skip_content);
   });
 
