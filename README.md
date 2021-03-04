@@ -24,9 +24,9 @@ Admin > Appearance > Menus
 # Login Page Customizations
 
 1. [ ] Update the image located at /singular-theme/img/login-logo.png
-2. [ ] Modify the styles at /singular-theme/css/wordpress-core.css
+2. [ ] Modify the styles at /singular-theme/css/login.css
 
-  
+
 # General Notes
 
 1. The Settings > Reading blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
