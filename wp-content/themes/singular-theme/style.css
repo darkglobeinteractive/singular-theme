@@ -107,14 +107,14 @@ body {
 
 
 /* 3.1: BANNER -------------------------------------------------- */
-#banner,
-#banner * {
+.banner,
+.banner * {
   box-sizing: border-box;
 }
-#banner { }
-#banner .content { }
-#banner .banner-title { }
-#banner .banner-title .copy { }
+.banner { }
+.banner .content { }
+.banner .banner-title { }
+.banner .banner-title .copy { }
 
 
 /* 4.0: CONTENT ------------------------------------------------- */

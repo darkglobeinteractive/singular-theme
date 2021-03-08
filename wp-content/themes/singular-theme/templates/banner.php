@@ -28,7 +28,7 @@ $banner_element = ( get_post_type() === 'post' ? '<div class="banner-title">' : 
 $banner_element .= $banner_title;
 $banner_element .= ( get_post_type() === 'post' ? '</div>' : '</h1>' );
 ?>
-<div id="banner" tabindex="-1">
+<div id="banner" class="banner" tabindex="-1">
   <div class="content">
     <?php echo $banner_element; ?>
   </div>

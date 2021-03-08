@@ -112,6 +112,9 @@ TABLE OF CONTENTS
   top: 0;
   right: 0;
 }
+#mm-trigger .trigger-title {
+  display: none;
+}
 #mm-trigger .trigger-wrapper {
   display: block;
   width: 60px;

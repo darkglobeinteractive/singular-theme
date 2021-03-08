@@ -37,6 +37,7 @@
 				) );
 				?>
 				<a href="#mobile-menu" id="mm-trigger">
+					<span class="trigger-title">Mobile Menu</span>
 					<span class="trigger-wrapper">
 						<span class="trigger-container">
 							<span></span>
