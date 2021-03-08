@@ -27,7 +27,7 @@
 		<a href="#banner" class="skip-main">Skip to Main Content</a>
     <div id="page">
       <header id="header">
-        <a href="/" class="logo"><?php bloginfo(); ?></a>
+        <?php include( locate_template( 'templates/logo.php', false, false ) ); ?>
         <?php
 				wp_nav_menu( array(
 					'menu' => 'main-menu',
@@ -48,8 +48,6 @@
 					</span>
 				</a>
       </header>
-			<?php
-				include( locate_template( 'templates/banner.php', false, false ) );
-			?>
+			<?php include( locate_template( 'templates/banner.php', false, false ) ); ?>
       <div id="main">
 				<div id="main-wrap">
