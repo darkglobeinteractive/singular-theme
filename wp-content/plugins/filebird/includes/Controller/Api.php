@@ -15,9 +15,21 @@ class Api {
 
     protected static $instance = null;
 
+    public static function getInstance() {
+        if (null == self::$instance) {
+          self::$instance = new self;
+          self::$instance->doHooks();
+        }
+        return self::$instance;
+    }
+
     public function __construct() {
+    }
+
+    private function doHooks(){
         add_action('rest_api_init', array($this, 'registerRestFields'));
     }
+
     public function registerRestFields() {
         register_rest_route(NJFB_REST_URL,
           'fbv-api',
@@ -81,8 +93,9 @@ class Api {
         );
         
     }
-    public function restApi() {
-        $act = isset($_POST['act']) ? sanitize_text_field($_POST['act']) : '';
+    public function restApi($request) {
+        $act = $request->get_param('act');
+        $act = isset($act) ? sanitize_text_field($act) : '';
         if($act == 'generate-key') {
             $key = $this->generateRandomString(40);
             update_option('fbv_rest_api_key', $key);
@@ -151,13 +164,6 @@ class Api {
             return $key === $this->getBearerToken();
         }
         return false;
-    }
-
-    public static function getInstance() {
-        if (null == self::$instance) {
-          self::$instance = new self;
-        }
-        return self::$instance;
     }
 
     private function generateRandomString($length = 10) {

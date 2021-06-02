@@ -12,7 +12,7 @@ class Folder {
     //TODO need to convert ord to number using +0
     global $wpdb;
     
-    $where = apply_filters('fbv_getting_folders_where', array('created_by' => '0'));
+    $where = array('created_by' => apply_filters('fbv_in_not_in_created_by', '0'));
     if(\is_null($order_by)) $order_by = 'ord+0, id, name';
     $order_by = apply_filters('fbv_order_by', $order_by);
 
@@ -190,44 +190,65 @@ class Folder {
       array('%d')
     );
   }
-  public static function getInAndNotInIds($fbv, $allow_filter = false) {
+  public static function getInAndNotInIds($fbv) {
     global $wpdb;
     $query = array(
       'post__not_in' => array(),
       'post__in' => array()
     );
 
-    $select = apply_filters("fbv_in_not_in_select_query", "SELECT `attachment_id` FROM " . self::getTable(self::$relation_table), $fbv, self::getTable(self::$folder_table), self::getTable(self::$relation_table));
+    $select = "SELECT `attachment_id` FROM " . self::getTable(self::$relation_table);
     $where_arr = array('1 = 1');
     if($fbv !== -1) {//skip if fbv == -1 (load all)
       if($fbv === 0) {
         //load uncategorized folder
-        $where_arr[] = apply_filters(
-          'fbv_in_not_in_uncategorized_where',
-          "`folder_id` IN (SELECT `id` FROM ".self::getTable(self::$folder_table)." WHERE `created_by` = '0')",
-          self::getTable(self::$folder_table)
-        );
-        $query['post__not_in'] = $wpdb->get_col($select. " WHERE " . implode(' AND ', apply_filters('fbv_in_not_in_where_query', $where_arr, $fbv)));
+        $created_by = apply_filters('fbv_in_not_in_created_by', '0');
+        $where_arr[] = "`folder_id` IN (SELECT `id` FROM ".self::getTable(self::$folder_table)." WHERE `created_by` = '{$created_by}')";
+        $q = $select. " WHERE " . implode(' AND ', $where_arr);
+        $q = apply_filters('fbv_in_not_in_query', $q, $fbv);
+        $query['post__not_in'] = $wpdb->get_col($q);
       } else {
-        if(apply_filters('fbv_can_get_in_not_in', true, $fbv)) {
-          if( ! is_array($fbv)) {
-            $fbv = array($fbv);
-          }
-          $where_arr[] = "`folder_id` IN (".implode(',', $fbv).")";
-          $query['post__in'] = $wpdb->get_col($select. " WHERE " . implode(' AND ', apply_filters('fbv_in_not_in_where_query', $where_arr, $fbv)));
-          
-          if(count($query['post__in']) == 0) {
-            $query['post__in'] = array(-1);
-          }
+        if( ! is_array($fbv)) {
+          $fbv = array($fbv);
+        }
+        $fbv = array_map('intval', $fbv);
+        $where_arr[] = "`folder_id` IN (".implode(',', $fbv).")";
+
+        $q = $select. " WHERE " . implode(' AND ', $where_arr);
+        $q = apply_filters('fbv_in_not_in_query', $q, $fbv);
+        $query['post__in'] = $wpdb->get_col($q);
+
+        if(count($query['post__in']) == 0) {
+          $query['post__in'] = array(-1);
         }
       }
     }
-    //for performance reasons, we will have a check here
-    return $allow_filter ? apply_filters('fbv_in_not_in', $query) : $query;
+    return $query;
   }
   public static function getAuthor($folder_id) {
     global $wpdb;
     return (int)$wpdb->get_var($wpdb->prepare('SELECT `created_by` FROM %1$s WHERE `id` = %2$d', self::getTable(self::$folder_table), $folder_id));
+  }
+  
+  public static function getChildrenOfFolder($folder_id, $index = 0) {
+    global $wpdb;
+    $detail = null;
+    if($index == 0) {
+      $detail = $wpdb->get_results("SELECT name, id FROM " . $wpdb->prefix . "fbv WHERE id = " . (int)$folder_id);
+    }
+    $children = $wpdb->get_results("SELECT name, id FROM " . $wpdb->prefix . "fbv WHERE parent = " . (int)$folder_id);
+    foreach ($children as $k => $v) {
+      $children[$k]->children = self::getChildrenOfFolder($v->id, $index + 1);
+    }
+    if($detail != null) {
+      $return = new \stdClass;
+      $return->id = $detail[0]->id;
+      $return->name = $detail[0]->name;
+      $return->children = $children;
+
+      return $return;
+    }
+    return $children;
   }
 
   private static function getTable($table) {

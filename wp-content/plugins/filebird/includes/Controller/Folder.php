@@ -18,8 +18,19 @@ defined('ABSPATH') || exit;
 class Folder extends Controller {
 
   protected static $instance = null;
+
+  public static function getInstance() {
+    if (null == self::$instance) {
+      self::$instance = new self;
+      self::$instance->doHooks();
+    }
+    return self::$instance;
+  }
   
   public function __construct() {
+  }
+
+  private function doHooks(){
     add_action('admin_enqueue_scripts', array($this, 'enqueueAdminScripts'));
 
     add_action('rest_api_init', array($this, 'registerRestFields'));
@@ -34,8 +45,10 @@ class Folder extends Controller {
     add_filter( 'posts_clauses', array($this, 'postsClauses'), 10, 2 );
     add_action( 'pre-upload-ui', array($this, 'actionPluploadUi') );
     add_action( 'wp_ajax_fbv_first_folder_notice', array($this, 'ajax_first_folder_notice'));
+    // add_action( 'wp_ajax_fbv_close_buy_pro_dialog', array($this, 'ajaxCloseBuyProDialog'));
     add_action( 'admin_notices', array($this, 'adminNotices') );
   }
+
   public function adminNotices()
   {
     global $pagenow;
@@ -175,22 +188,16 @@ class Folder extends Controller {
         )
     );
     register_rest_route(NJFB_REST_URL,
-        'set-default-folder',
+        'set-settings',
         array(
           'methods' => 'POST',
-          'callback' => array($this, 'ajaxSetDefaultFolder'),
+          'callback' => array($this, 'ajaxSetSettings'),
           'permission_callback' => array($this, 'resPermissionsCheck'),
         )
     );
   }
   public function resPermissionsCheck() {
     return current_user_can('upload_files');
-  }
-  public static function getInstance() {
-    if (null == self::$instance) {
-      self::$instance = new self;
-    }
-    return self::$instance;
   }
 
   public function enqueueAdminScripts($screenId) {
@@ -203,7 +210,6 @@ class Folder extends Controller {
 
     if ( $screenId !== 'pagebuilders' ) {
       wp_enqueue_script('fbv-import', NJFB_PLUGIN_URL . 'assets/js/import.js', array('jquery'), NJFB_VERSION, false);
-      wp_enqueue_script('fbv-active', NJFB_PLUGIN_URL . 'assets/js/active.js', array('jquery'), NJFB_VERSION, false);
     } 
 
     if ( $screenId === 'settings_page_filebird-settings' ) {
@@ -233,7 +239,9 @@ class Folder extends Controller {
       'media_mode' => get_user_option('media_library_mode', get_current_user_id()),
       'json_url' => apply_filters('filebird_json_url', rtrim(rest_url(NJFB_REST_URL),"/")),
       'media_url' => admin_url('upload.php'),
-      'auto_import_url' => esc_url(add_query_arg(array('page' => 'filebird-settings', 'tab' => 'update-db', 'autorun' => 'true'), admin_url('/options-general.php')))
+      'auto_import_url' => esc_url(add_query_arg(array('page' => 'filebird-settings', 'tab' => 'update-db', 'autorun' => 'true'), admin_url('/options-general.php'))),
+      'is_new_user' => get_option('fbv_is_new_user', false),
+      // 'close_buy_pro_dialog' => time() < get_option('fbv_close_buy_pro_dialog', time())
     )));
   }
 
@@ -267,17 +275,18 @@ class Folder extends Controller {
   //   }
   // }
   public function postsClauses($clauses, $query) {
+    global $wpdb;
     if ($query->get("post_type") !== "attachment") {
       return $clauses;
     }
     
     if( isset($_GET['fbv']) || !empty($query->get('fbv')) ) {
       $fbv = isset($_GET['fbv']) ? (int)sanitize_text_field($_GET['fbv']) : (int)$query->get('fbv');
-      $in_not_in = FolderModel::getInAndNotInIds($fbv, true);
+      $in_not_in = FolderModel::getInAndNotInIds($fbv);
       if(count($in_not_in['post__not_in']) > 0) {
-        $clauses['where'] .= "AND ID NOT IN (".implode(',', $in_not_in['post__not_in']).")";
+        $clauses['where'] .= " AND {$wpdb->posts}.ID NOT IN (".implode(',', $in_not_in['post__not_in']).")";
       } elseif(count($in_not_in['post__in']) > 0) {
-        $clauses['where'] .= "AND ID IN (".implode(',', $in_not_in['post__in']).")";
+        $clauses['where'] .= " AND {$wpdb->posts}.ID IN (".implode(',', $in_not_in['post__in']).")";
       }
     }
     return $clauses;
@@ -304,6 +313,11 @@ class Folder extends Controller {
   }
 
   public function ajaxQueryAttachmentsArgs($query) {
+    // Fix conflict with Picu plugin
+    if (function_exists('picu_exclude_collection_images_from_library')) {
+      remove_action('pre_get_posts', 'picu_exclude_collection_images_from_library', 999);
+    }
+
     if(isset($_REQUEST['query']['fbv'])) {
       $fbv = $_REQUEST['query']['fbv'];
       if(is_array($fbv)) {
@@ -334,6 +348,7 @@ class Folder extends Controller {
     $order_by = null;
     $sort_option = 'reset';
 
+    $icl_lang = $_GET['icl_lang'] ? sanitize_text_field($_GET['icl_lang']) : null;
     if(isset($_GET['sort']) && \in_array(sanitize_text_field($_GET['sort']), array('name_asc', 'name_desc', 'reset'))) {
       if(sanitize_text_field($_GET['sort']) == 'name_asc') {
         $order_by = 'name asc';
@@ -359,8 +374,8 @@ class Folder extends Controller {
     wp_send_json_success(array(
       'tree' => $tree,
       'folder_count' => array(
-        '-1' => Tree::getCount(-1),
-        '0' => Tree::getCount(0)
+        'total' => is_null($icl_lang) ? Tree::getCount(-1) : Tree::getCount(-1, $icl_lang),
+        'folders' => is_null($icl_lang) ? Tree::getAllFoldersAndCount() : Tree::getAllFoldersAndCount($icl_lang)
       )
     ));
   }
@@ -382,10 +397,12 @@ class Folder extends Controller {
     
     wp_send_json_success($folders);
   }
-  public function ajaxNewFolder() {
+  public function ajaxNewFolder($request) {
     //check_ajax_referer('fbv_nonce', 'nonce', true);
-    $name = ((isset($_POST['name'])) ? sanitize_text_field(wp_unslash($_POST['name'])) : '');
-    $parent = ((isset($_POST['parent'])) ? sanitize_text_field($_POST['parent']) : '');
+    $name = $request->get_param('name');
+    $parent = $request->get_param('parent');
+    $name = isset($name) ? sanitize_text_field(wp_unslash($name)) : '';
+    $parent = isset($parent) ? sanitize_text_field($parent) : '';
     $id = null;
     if($name != '' && $parent != '') {
       // if(!is_array($name)) {
@@ -416,11 +433,15 @@ class Folder extends Controller {
       ));
     }
   }
-  public function ajaxUpdateFolder() {
+  public function ajaxUpdateFolder($request) {
     //check_ajax_referer('fbv_nonce', 'nonce', true);
-    $id = ((isset($_POST['id'])) ? sanitize_text_field($_POST['id']) : '');
-    $parent = ((isset($_POST['parent'])) ? intval(sanitize_text_field($_POST['parent'])) : '');
-    $name = ((isset($_POST['name'])) ? sanitize_text_field(wp_unslash($_POST['name'])) : '');
+    $id = $request->get_param('id');
+    $parent = $request->get_param('parent');
+    $name = $request->get_param('name');
+
+    $id = isset($id) ? sanitize_text_field($id) : '';
+    $parent = isset($parent) ? intval(sanitize_text_field($parent)) : '';
+    $name = isset($name) ? sanitize_text_field(wp_unslash($name)) : '';
     if(is_numeric($id) && is_numeric($parent) && $name != '') {
       $update = FolderModel::updateFolderName($name, $parent, $id);
       if($update === true) {
@@ -432,19 +453,24 @@ class Folder extends Controller {
     }
     wp_send_json_error();
   }
-  public function ajaxUpdateFolderOrd() {
-    $id = ((isset($_POST['id'])) ? sanitize_text_field($_POST['id']) : '');
-    $parent = ((isset($_POST['parent'])) ? sanitize_text_field(wp_unslash($_POST['parent'])) : '');
-    $ord = ((isset($_POST['ord'])) ? sanitize_text_field(wp_unslash($_POST['ord'])) : '');
+  public function ajaxUpdateFolderOrd($request) {
+    $id = $request->get_param('id');
+    $parent = $request->get_param('parent');
+    $ord = $request->get_param('ord');
+
+    $id = isset($id) ? sanitize_text_field($id) : '';
+    $parent = isset($parent) ? sanitize_text_field(wp_unslash($parent)) : '';
+    $ord = isset($ord) ? sanitize_text_field(wp_unslash($ord)) : '';
     if(is_numeric($id) && is_numeric($parent) && is_numeric($ord)) {
       FolderModel::updateOrdAndParent($id, $ord, $parent);
       wp_send_json_success();
     }
     wp_send_json_error();
   }
-  public function ajaxDeleteFolder() {
+  public function ajaxDeleteFolder($request) {
     //check_ajax_referer('fbv_nonce', 'nonce', true);
-    $ids = ((isset($_POST['ids'])) ? Helpers::sanitize_array($_POST['ids']) : '');
+    $ids = $request->get_param('ids');
+    $ids = isset($ids) ? Helpers::sanitize_array($ids) : '';
     if($ids != '') {
       if(!is_array($ids)) $ids = array($ids);
       $ids = array_map('intval', $ids);
@@ -458,10 +484,12 @@ class Folder extends Controller {
       'mess' => __('Can\'t delete folder, please try again later', 'filebird')
     ));
   }
-  public function ajaxSetFolder() {
-    //check_ajax_referer('fbv_nonce', 'nonce', true);
-    $ids = ((isset($_POST['ids'])) ? Helpers::sanitize_array($_POST['ids']) : '');
-    $folder = ((isset($_POST['folder'])) ? sanitize_text_field($_POST['folder']) : '');
+  public function ajaxSetFolder($request) {
+    $ids = $request->get_param('ids');
+    $folder = $request->get_param('folder');
+
+    $ids = isset($ids) ? Helpers::sanitize_array($ids) : '';
+    $folder = isset($folder) ? sanitize_text_field($folder) : '';
     if($ids != '' && is_array($ids) && is_numeric($folder)) {
       FolderModel::setFoldersForPosts($ids, $folder);
       wp_send_json_success();
@@ -470,9 +498,11 @@ class Folder extends Controller {
       'mess' => __('Validation failed', 'filebird')
     ));
   }
-  public function ajaxUpdateTree() {
+  public function ajaxUpdateTree($request) {
     //check_ajax_referer('fbv_nonce', 'nonce', true);
-    $tree = ((isset($_POST['tree'])) ? sanitize_text_field($_POST['tree']) : '');
+    $tree = $request->get_param('tree');
+
+    $tree = isset($tree) ? sanitize_text_field($tree) : '';
     if($tree != '') {
       FolderModel::rawInsert('(id, ord, parent) VALUES ' . $tree . ' ON DUPLICATE KEY UPDATE ord=VALUES(ord),parent=VALUES(parent)');
       wp_send_json_success(array(
@@ -489,10 +519,40 @@ class Folder extends Controller {
       'relations' => FolderModel::getRelations()
     ));
   }
-  public function ajaxSetDefaultFolder() {
-    $folder_id = ((isset($_POST['folder_id'])) ? intval($_POST['folder_id']) : -1);
+  public function ajaxSetSettings($request) {
+    $folder_id = $request->get_param('folder_id');
+
+    $folder_id = isset($folder_id) ? intval($folder_id) : -1;
     Helpers::setDefaultSelectedFolder($folder_id);
     wp_send_json_success();
+  }
+  // public function ajaxCloseBuyProDialog() {
+  //   check_ajax_referer('fbv_nonce', 'nonce', true);
+  //   update_option('fbv_close_buy_pro_dialog', time() + 7*24*3600); //After 7 days show
+  //   wp_send_json_success();
+  // }
+  private static function addFolderToZip(&$zip, $children, $parent_dir = '') {
+    foreach ($children as $k => $v) {
+      $folder_name = $v->name;
+      $folder_id = $v->id;
+
+      $folder_name = sanitize_title($folder_name);
+
+      $attachment_ids = Helpers::getAttachmentIdsByFolderId($folder_id);
+      $empty_dir = $parent_dir != '' ? $parent_dir . '/' . $folder_name : $folder_name;
+      $zip->addEmptyDir($empty_dir);
+
+      foreach ($attachment_ids as $k => $id) {
+        $file = get_attached_file($id);
+        if($file) {
+          $zip->addFile($file, $empty_dir . '/' . \basename($file));
+        }
+      }
+      if(\is_array($v->children)) {
+        self::addFolderToZip($zip, $v->children, $empty_dir);
+      }
+    }
+    
   }
   public function actionPluploadUi() {
     global $pagenow;

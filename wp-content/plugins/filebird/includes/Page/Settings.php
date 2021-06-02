@@ -1,7 +1,6 @@
 <?php
 namespace FileBird\Page;
 
-use FileBird\Model\Folder as FolderModel;
 use FileBird\Classes\Helpers as Helpers;
 
 defined('ABSPATH') || exit;
@@ -14,6 +13,7 @@ class Settings {
   public static function getInstance() {
     if (null == self::$instance) {
       self::$instance = new self;
+			self::$instance->doHooks();
     }
     
     return self::$instance;
@@ -22,6 +22,9 @@ class Settings {
   private $pageId = null;
 
   private function __construct() {
+  }
+
+  private function doHooks(){
     add_action('admin_menu', array($this, 'settingsMenu'));
     add_action('admin_enqueue_scripts', array($this, 'enqueueAdminScripts'));
 
@@ -31,7 +34,7 @@ class Settings {
   }
 
   public function settingsMenu() {
-    add_submenu_page(
+    $GLOBALS['fbv_settings_screen_id'] = add_submenu_page(
       'options-general.php',
       __('FileBird', 'filebird'),
       __('FileBird', 'filebird'),

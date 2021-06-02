@@ -6,7 +6,7 @@ jQuery( document ).ready(function() {
     hideMethod: "slideUp"
   }
   //import from old version
-  jQuery('.njt_fbv_import_from_old_now').click(function(){
+  jQuery('.njt_fbv_import_from_old_now').on('click', function(){
     var $this = jQuery(this)
     if($this.hasClass('updating-message')) return false;
 
@@ -36,11 +36,13 @@ jQuery( document ).ready(function() {
     function get_folders(onDone, onFail) {
       jQuery.ajax({
         dataType: 'json',
+        contentType: 'application/json',
         url: fbv_data.json_url + '/fb-get-old-data',
         method: 'POST',
-        beforeSend: function ( xhr ) {
-          xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
-        }
+        headers: {
+          "X-WP-Nonce": fbv_data.rest_nonce,
+          "X-HTTP-Method-Override": "POST"
+        },
       })
       .done(function(res){
         onDone(res)
@@ -56,8 +58,9 @@ jQuery( document ).ready(function() {
           contentType: 'application/json',
           url: fbv_data.json_url + '/fb-insert-old-data',
           method: 'POST',
-          beforeSend: function ( xhr ) {
-            xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
+          headers: {
+            "X-WP-Nonce": fbv_data.rest_nonce,
+            "X-HTTP-Method-Override": "POST"
           },
           data: JSON.stringify({
             folders: folders[index],
@@ -77,7 +80,7 @@ jQuery( document ).ready(function() {
     }
   })
   //wipe old data
-  jQuery('.njt_fbv_wipe_old_data').click(function(){
+  jQuery('.njt_fbv_wipe_old_data').on('click', function(){
     if(!confirm(fbv_data.i18n.are_you_sure)) return false;
     
     var $this = jQuery(this)
@@ -87,11 +90,13 @@ jQuery( document ).ready(function() {
     $this.addClass('updating-message')
     jQuery.ajax({
         dataType: 'json',
+        contentType: 'application/json',
         url: fbv_data.json_url + '/fb-wipe-old-data',
         method: 'POST',
-        beforeSend: function ( xhr ) {
-          xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
-        }
+        headers: {
+          "X-WP-Nonce": fbv_data.rest_nonce,
+          "X-HTTP-Method-Override": "POST"
+        },
     })
     .done(function(res){
       $this.removeClass('updating-message')
@@ -103,7 +108,7 @@ jQuery( document ).ready(function() {
     })
   })
   //clear all data
-  jQuery('.njt_fbv_clear_all_data').click(function(){
+  jQuery('.njt_fbv_clear_all_data').on('click', function(){
     if(!confirm(fbv_data.i18n.are_you_sure)) return false;
 
     var $this = jQuery(this)
@@ -114,11 +119,13 @@ jQuery( document ).ready(function() {
     $this.addClass('updating-message')
     jQuery.ajax({
       dataType: 'json',
+      contentType: 'application/json',
       url: fbv_data.json_url + '/fb-wipe-clear-all-data',
       method: 'POST',
-      beforeSend: function ( xhr ) {
-        xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
-      }
+      headers: {
+        "X-WP-Nonce": fbv_data.rest_nonce,
+        "X-HTTP-Method-Override": "POST"
+      },
     })
     .done(function(res){
       $this.removeClass('updating-message')
@@ -130,20 +137,21 @@ jQuery( document ).ready(function() {
     })
   })
   //no thanks btn
-  jQuery('.njt_fb_no_thanks_btn').click(function(){
+  jQuery('.njt_fb_no_thanks_btn').on('click', function(){
     var $this = jQuery(this);
     $this.addClass('updating-message')
     jQuery.ajax({
       dataType: 'json',
+      contentType: 'application/json',
       type: "post",
       url: fbv_data.json_url + '/fb-no-thanks',
-      beforeSend: function ( xhr ) {
-        xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce );
+      headers: {
+        "X-WP-Nonce": fbv_data.rest_nonce,
+        "X-HTTP-Method-Override": "POST"
       },
-      data: {
-        nonce: fbv_data.nonce,
-        site: $this.data('site')
-      },
+      data: JSON.stringify({
+        site: $this.data('site'),
+      }),
       success: function (res) {
         $this.removeClass('updating-message');
         jQuery('.njt.notice.notice-warning.' + $this.data('site')).hide()
@@ -154,7 +162,7 @@ jQuery( document ).ready(function() {
         toastr.error('Please try again later', '', toastr_opt)
       });
   })
-  jQuery('.njt-fb-import').click(function(){
+  jQuery('.njt-fb-import').on('click', function(){
     var $this = jQuery(this)
     $this.addClass('updating-message')
       jQuery.ajax({
@@ -162,12 +170,13 @@ jQuery( document ).ready(function() {
         contentType: 'application/json',
         url: fbv_data.json_url + '/fb-import',
         method: 'POST',
-        beforeSend: function ( xhr ) {
-          xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
+        headers: {
+          "X-WP-Nonce": fbv_data.rest_nonce,
+          "X-HTTP-Method-Override": "POST"
         },
         data: JSON.stringify({
           site: $this.data('site'),
-          count: $this.data('count')
+          count: $this.data('count'),
         })
     })
     .done(function(res){
@@ -201,12 +210,13 @@ jQuery( document ).ready(function() {
         contentType: 'application/json',
         url: fbv_data.json_url + '/fb-import-insert-folder',
         method: 'POST',
-        beforeSend: function ( xhr ) {
-          xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
+        headers: {
+          "X-WP-Nonce": fbv_data.rest_nonce,
+          "X-HTTP-Method-Override": "POST"
         },
         data: JSON.stringify({
           site: site,
-          folders: folders[index]
+          folders: folders[index],
         })
       })
       .done(function(res){
@@ -215,15 +225,17 @@ jQuery( document ).ready(function() {
     } else {
       jQuery.ajax({
         dataType: 'json',
+        contentType: 'application/json',
         url: fbv_data.json_url + '/fb-import-after-inserting',
         method: 'POST',
-        beforeSend: function ( xhr ) {
-          xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce )
+        data: JSON.stringify({
+          site: site,
+          count: more_data_when_done.count,
+        }),
+        headers: {
+          "X-WP-Nonce": fbv_data.rest_nonce,
+          "X-HTTP-Method-Override": "POST"
         },
-        data: {
-            site: site,
-            count: more_data_when_done.count
-        }
       })
       .done(function(res){
         on_done(res)
@@ -233,19 +245,21 @@ jQuery( document ).ready(function() {
 
 
   //generate API key
-  jQuery('.fbv_generate_api_key_now').click(function(){
+  jQuery('.fbv_generate_api_key_now').on('click', function(){
     if(!confirm(fbv_data.i18n.are_you_sure)) return false;
     var $this = jQuery(this);
     $this.addClass('updating-message')
     jQuery.ajax({
       dataType: 'json',
+      contentType: 'application/json',
       type: "post",
       url: fbv_data.json_url + '/fbv-api',
-      beforeSend: function ( xhr ) {
-        xhr.setRequestHeader( 'X-WP-Nonce', fbv_data.rest_nonce );
-      },
-      data: {
-        act: 'generate-key'
+      data: JSON.stringify({
+        act: 'generate-key',
+      }),
+      headers: {
+        "X-WP-Nonce": fbv_data.rest_nonce,
+        "X-HTTP-Method-Override": "POST"
       },
       success: function (res) {
         $this.removeClass('updating-message');
