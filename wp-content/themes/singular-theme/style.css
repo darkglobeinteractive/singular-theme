@@ -222,22 +222,22 @@ body.sidebar #sidebar {
   margin: 0 0 0.5em;
 }
 .blog-list article.post .content h2 a { }
-.blog-list article.post .content .blog-category {
+.blog-list article.post .content .blog-taxonomy {
   margin: 0 0 1em;
 }
-.blog-list article.post .content .blog-category a {
+.blog-list article.post .content .blog-taxonomy a {
   display: inline-block;
   padding-right: 0.5em;
   border-right: 1px solid #000;
   margin-right: 0.5em;
   line-height: 1em;
 }
-.blog-list article.post .content .blog-category a:last-child {
+.blog-list article.post .content .blog-taxonomy a:last-child {
   padding-right: 0;
   border-right: none;
   margin-right: 0;
 }
-.blog-list article.post .content .blog-category a:last-child { }
+.blog-list article.post .content .blog-taxonomy a:last-child { }
 .blog-list article.post .content .blurb {
   margin: 0 0 1.5em;
 }

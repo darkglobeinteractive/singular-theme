@@ -25,9 +25,20 @@
           <?php
           $categories = get_the_category();
           if (!empty($categories)) {
-            echo '<div class="blog-category">';
+            echo '<div class="blog-taxonomy categories"><strong>Categories:</strong> ';
             foreach($categories as $category) {
               echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+            }
+            echo '</div>';
+          }
+          ?>
+
+          <?php
+          $tags = get_the_tags();
+          if (!empty($tags)) {
+            echo '<div class="blog-taxonomy tags"><strong>Tags:</strong> ';
+            foreach($tags as $tag) {
+              echo '<a href="' . esc_url(get_category_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a>';
             }
             echo '</div>';
           }

@@ -2,9 +2,6 @@
 // Grab global variables from custom function.php function
 $gv = singular_global_vars();
 
-// A Category ID indicates this is a category listing page
-$cat_id = ( is_object( $gv['queried_object'] ) ? $gv['queried_object']->cat_ID : '' );
-
 // Set default page title
 $banner_title = wp_title( '', false );
 
@@ -12,8 +9,8 @@ $banner_title = wp_title( '', false );
 // Is this the search results page
 if ( is_search() ) {
   $banner_title = 'Search Results';
-// Blog category listing pages
-} elseif ( is_int( $cat_id ) ) {
+// Blog category or tag listing pages
+} elseif ( is_category() || is_tag() ) {
   $banner_title = 'Blog: '.$gv['queried_object']->name;
 // All blog posts have the same title
 } elseif ( get_post_type() === 'post' ) {
