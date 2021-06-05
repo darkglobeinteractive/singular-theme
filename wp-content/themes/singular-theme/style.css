@@ -68,10 +68,27 @@ img { max-width: 100%; }
 }
 .btn,
 .btn-wrap a,
-input[type="submit"] { }
+input[type="submit"] {
+  display: inline-block;
+  margin: 0 0 0.5em;
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  background: #ccc;
+  color: #000;
+  font-size: 16px;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .btn:hover,
 .btn-wrap a:hover,
-input[type="submit"]:hover { }
+input[type="submit"]:hover {
+  background: #eee;
+}
 
 
 /* 2.0: GLOBAL -------------------------------------------------- */
