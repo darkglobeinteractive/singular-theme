@@ -34,15 +34,19 @@ class CompatibleWpml extends Controller {
     $this->wpdb = $wpdb;
     $this->table_icl_translations = $wpdb->prefix . 'icl_translations';
     $this->post_translations = $sitepress->post_translations();
+    $this->cpt_sync_options = $this->sitepress->get_setting( 'custom_posts_sync_option', array() );
 
     add_action('fbv_after_set_folder', array($this, 'fbvAfterSetFolder'), 10, 2);
     // add_filter('fbv_in_not_in', array($this, 'filterInNotIn'));
     add_filter('wpml_pre_parse_query', array($this, 'preParseQuery'));
     add_filter('wpml_post_parse_query', array($this, 'postParseQuery'));
-    add_filter('fbv_get_count_query', array($this, 'fbv_get_count_query'), 10, 3);
-    add_filter('fbv_in_not_in_query', array($this, 'fbv_in_not_in_query'), 10, 2);
-    add_filter('fbv_speedup_get_count_query', '__return_true');
-    add_filter('fbv_all_folders_and_count', array($this, 'all_folders_and_count_query'), 10, 2);
+
+    if( ! isset($this->cpt_sync_options['attachment']) || $this->cpt_sync_options['attachment'] != '0') {
+      add_filter('fbv_in_not_in_query', array($this, 'fbv_in_not_in_query'), 10, 2);
+      add_filter('fbv_get_count_query', array($this, 'fbv_get_count_query'), 10, 3);
+      add_filter('fbv_speedup_get_count_query', '__return_true');
+      add_filter('fbv_all_folders_and_count', array($this, 'all_folders_and_count_query'), 10, 2);
+    }
   }
   public function all_folders_and_count_query($query, $lang) {
     global $wpdb;
@@ -186,11 +190,11 @@ class CompatibleWpml extends Controller {
     return $args;
   }
 
-  function all_langs_where() {
+  public function all_langs_where() {
     return ' AND wpml_translations.language_code IN (' . wpml_prepare_in( array_keys( $this->sitepress->get_active_languages() ) ) . ') ';
   }
 
-  function specific_lang_where($lang) {
+  public function specific_lang_where($lang) {
   $default_language = $this->sitepress->get_default_language();
       $current_language = $lang;
       return $this->wpdb->prepare (
@@ -203,7 +207,7 @@ class CompatibleWpml extends Controller {
       );
   }
 
-  function display_as_translated_snippet( $current_language, $fallback_language ) {
+  public function display_as_translated_snippet( $current_language, $fallback_language ) {
       $content_types = null;
       $skip_content_check = true;
 
@@ -221,7 +225,7 @@ class CompatibleWpml extends Controller {
       return $display_as_translated_query->get_language_snippet( $current_language, $fallback_language, $content_types, $skip_content_check );
   }
 
-  function in_translated_types_snippet( $not = false, $posts_alias = false ) {
+  public function in_translated_types_snippet( $not = false, $posts_alias = false ) {
       $not         = $not ? " NOT " : "";
       $posts_alias = $posts_alias ? $posts_alias : $this->wpdb->posts;
 

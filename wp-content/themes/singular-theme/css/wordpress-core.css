@@ -100,10 +100,12 @@ pre,
 	height: auto;
 }
 img.aligncenter,
-.wp-block-image.aligncenter {
+.wp-block-image.aligncenter,
+.wp-block-image .aligncenter {
 	display: block;
 	margin: 12px auto;
 	padding: 0px;
+	text-align: center;
 }
 img.alignnone,
 .wp-block-image.alignnone {
@@ -112,18 +114,22 @@ img.alignnone,
 	padding: 0px;
 }
 img.alignright,
-.wp-block-image.alignright {
+.wp-block-image.alignright,
+.wp-block-image .alignright {
 	display: inline;
 	float: right;
 	margin: 0 0px 16px 24px;
 	padding: 0px;
+	text-align: right;
 }
 img.alignleft,
-.wp-block-image.alignleft {
+.wp-block-image.alignleft,
+.wp-block-image .alignleft  {
 	display: inline;
 	float: left;
 	margin: 0 24px 16px 0px;
 	padding: 0px;
+	text-align: left;
 }
 .wp-block-image .aligncenter > figcaption,
 .wp-block-image .alignleft > figcaption,
@@ -136,11 +142,14 @@ img.alignleft,
 @media screen and (max-width: 500px) {
 	img.alignright,
 	.wp-block-image.alignright,
+	.wp-block-image .alignright,
 	img.alignleft,
-	.wp-block-image.alignleft {
+	.wp-block-image.alignleft,
+	.wp-block-image .alignleft {
 		display: block;
 		float: none;
 		margin: 0 0 16px;
+		text-align: left;
 	}
 }
 

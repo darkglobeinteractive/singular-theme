@@ -162,6 +162,15 @@ Happy Organizing! 😍
 
 == Changelog ==
 
+Jun 11, 2021 - Version 4.7.4
+- Updated: Languages
+- Fixed: JS conflict with Divi builder
+- Fixed: WPML non translated mode make folder counter and files in folders get wrong
+- Fixed: Conflict with Debug Bar plugin
+- Fixed: PolyLang get missing files in folder
+- Fixed: Folder always loading
+- Fixed: Important security updates.
+
 May 26, 2021 - Version 4.7.3
 - Improved: FileBird UI in Mobile
 - Improved: Library

@@ -348,7 +348,7 @@ class Folder extends Controller {
     $order_by = null;
     $sort_option = 'reset';
 
-    $icl_lang = $_GET['icl_lang'] ? sanitize_text_field($_GET['icl_lang']) : null;
+    $icl_lang = isset($_GET['icl_lang']) ? sanitize_text_field($_GET['icl_lang']) : null;
     if(isset($_GET['sort']) && \in_array(sanitize_text_field($_GET['sort']), array('name_asc', 'name_desc', 'reset'))) {
       if(sanitize_text_field($_GET['sort']) == 'name_asc') {
         $order_by = 'name asc';
