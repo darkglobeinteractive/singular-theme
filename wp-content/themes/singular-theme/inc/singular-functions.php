@@ -1,4 +1,24 @@
 <?php
+// ASSEMBLE LINK: Receives a link field and returns the assembled element
+// $link_object: The link field which contains the url, title and target variables
+// $default_title: In case the title isn't set by the link field
+// $add_id, $add_class: Optional attributes
+function singular_assemble_link( $link_object, $default_title = 'Learn More', $add_class = false, $add_id = false ) {
+
+  // Set the three variables from the link object
+  $url = $link_object['url'];
+  $title = ( $link_object['title'] ?: $default_title );
+  $target = ( $link_object['target'] ? ' target="'.$link_object['target'].'"' : '' );
+
+  // Create the id and/or class attributes
+  $id = ( $add_id ? ' id="'.$add_id.'"' : '' );
+  $class = ( $add_class ? ' class="'.$add_class.'"' : '' );
+
+  return '<a href="'.$url.'"'.$id.$class.$target.'>'.$title.'</a>';
+
+}
+
+
 // FEED READER: Accept an RSS Feed URL and return an HTML block of articles
 // $feed_url: The RSS Feed URL (string, required)
 // $article_limit: The maximum number of articles you want to include (number, optional)
