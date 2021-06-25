@@ -3,7 +3,7 @@
 // $link_object: The link field which contains the url, title and target variables
 // $default_title: In case the title isn't set by the link field
 // $add_id, $add_class: Optional attributes
-function singular_assemble_link( $link_object, $default_title = 'Learn More', $add_class = false, $add_id = false ) {
+function singular_assemble_link( $link_object, $add_class = false, $add_id = false, $default_title = 'Learn More' ) {
 
   // Set the three variables from the link object
   $url = $link_object['url'];
