@@ -9,7 +9,7 @@
 
       <?php $featured_image = get_the_post_thumbnail_url( get_the_ID(), ''); ?>
       <?php if ( $featured_image ): ?>
-        <div class="featured-image"><img src="<?php echo $featured_image; ?>" /></div>
+        <div class="featured-image"><img src="<?php echo $featured_image; ?>" alt="Featured image for <?php echo get_the_title(); ?>" /></div>
       <?php endif; ?>
 
       <?php the_content(); ?>

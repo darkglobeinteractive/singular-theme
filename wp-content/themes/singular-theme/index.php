@@ -40,7 +40,7 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <?php if ( $post_thumbnail ): ?>
-          <div class="thumbnail"><a href="<?php echo $permalink; ?>"><img src="<?php echo $post_thumbnail; ?>" /></a></div>
+          <div class="thumbnail"><a href="<?php echo $permalink; ?>"><img src="<?php echo $post_thumbnail; ?>" alt="<?php echo get_the_title(); ?>" /></a></div>
         <?php endif; ?>
 
         <div class="content">
