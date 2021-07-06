@@ -1,29 +1,32 @@
 <?php
 // Grab global variables from custom function.php function
 $gv = singular_global_vars();
+$qo = $gv['queried_object'];
 
 // Set default page title
 $banner_title = wp_title( '', false );
 
 // Customize page title when necessary
-// Is this the search results page
+// Check for search results page first because it returns a non-object
 if ( is_search() ) {
   $banner_title = 'Search Results';
 // Blog category or tag listing pages
 } elseif ( is_category() || is_tag() ) {
-  $banner_title = 'Blog: '.$gv['queried_object']->name;
+  $banner_title = 'Blog: '.$qo->name;
 // All blog posts have the same title
 } elseif ( get_post_type() === 'post' ) {
   $banner_title = 'Blog';
 // Override title if Custom Fields custom_page_title exists
-} elseif ( get_field( 'custom_page_title', $gv['queried_object'] ) ) {
-  $banner_title = get_field( 'custom_page_title', $gv['queried_object'] );
+} elseif ( get_field( 'custom_page_title', $qo ) ) {
+  $banner_title = get_field( 'custom_page_title', $qo );
 }
 
 // Build the title element
-$banner_element = ( get_post_type() === 'post' ? '<div class="banner-title">' : '<h1 class="banner-title">' );
-$banner_element .= $banner_title;
-$banner_element .= ( get_post_type() === 'post' ? '</div>' : '</h1>' );
+if ( get_post_type() == 'post' ) {
+  $banner_element = '<div class="banner-title">'.$banner_title.'</div>';
+} else {
+  $banner_element = '<h1 class="banner-title">'.$banner_title.'</h1>';
+}
 ?>
 <div id="banner" class="banner" tabindex="-1">
   <div class="content">
