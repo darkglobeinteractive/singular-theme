@@ -9,7 +9,12 @@
 
       <?php $featured_image = get_the_post_thumbnail_url( get_the_ID(), ''); ?>
       <?php if ( $featured_image ): ?>
-        <div class="featured-image"><img src="<?php echo $featured_image; ?>" alt="Featured image for <?php echo get_the_title(); ?>" /></div>
+        <?php
+        // Create alt text for thumbnail
+        $featured_image_id = get_post_thumbnail_id( get_the_ID() );
+        $featured_image_alt = ( get_post_meta ( $featured_image_id, '_wp_attachment_image_alt', true ) ?: 'Thumbnail image for: '.get_the_title() );
+        ?>
+        <div class="featured-image"><img src="<?php echo $featured_image; ?>" alt="<?php echo $featured_image_alt; ?>" /></div>
       <?php endif; ?>
 
       <?php the_content(); ?>

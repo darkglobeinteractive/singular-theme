@@ -30,26 +30,26 @@ TABLE OF CONTENTS
 #navigation ul li {
   position: relative;
 }
+#navigation ul li.no-link > a {
+  cursor: default;
+}
 
 /* top tier */
 #navigation ul.menu { }
 #navigation ul.menu > li {
   float: left;
 }
-#navigation ul.menu > li > a,
-#navigation ul.menu > li > span {
+#navigation ul.menu > li > a {
   display: block;
   position: relative;
   padding: 0.5em 1em;
   color: #000;
   font-size: 16px;
 }
-#navigation ul.menu > li:first-child > a,
-#navigation ul.menu > li:first-child > span {
+#navigation ul.menu > li:first-child > a {
   padding-left: 0;
 }
-#navigation ul.menu > li:last-child > a,
-#navigation ul.menu > li:last-child > span {
+#navigation ul.menu > li:last-child > a {
   padding-right: 0;
 }
 
@@ -63,15 +63,13 @@ TABLE OF CONTENTS
   display: block;
 }
 #navigation ul.menu > li > ul > li { }
-#navigation ul.menu > li > ul > li > a,
-#navigation ul.menu > li > ul > li > span {
+#navigation ul.menu > li > ul > li > a {
   display: block;
   min-width: 15em;
   padding: 0.5em 1em;
   color: #000;
 }
-#navigation ul.menu > li > ul > li:hover > a,
-#navigation ul.menu > li > ul > li:hover > span {
+#navigation ul.menu > li > ul > li:hover > a {
   background-color: #aaa;
 }
 
@@ -87,15 +85,13 @@ TABLE OF CONTENTS
   display: block;
 }
 #navigation ul.menu > li > ul > li > ul > li { }
-#navigation ul.menu > li > ul > li > ul > li > a,
-#navigation ul.menu > li > ul > li > ul > li > span {
+#navigation ul.menu > li > ul > li > ul > li > a {
   display: block;
   min-width: 15em;
   padding: 0.5em 1em;
   color: #000;
 }
-#navigation ul.menu > li > ul > li > ul > li:hover > a,
-#navigation ul.menu > li > ul > li > ul > li:hover > span {
+#navigation ul.menu > li > ul > li > ul > li:hover > a {
   background-color: #aaa;
 }
 

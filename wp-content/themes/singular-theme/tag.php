@@ -15,7 +15,12 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <?php if ( $post_thumbnail ): ?>
-          <div class="thumbnail"><a href="<?php echo $permalink; ?>"><img src="<?php echo $post_thumbnail; ?>" /></a></div>
+          <?php
+          // Create alt text for thumbnail
+          $post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+          $post_thumbnail_alt = ( get_post_meta ( $post_thumbnail_id, '_wp_attachment_image_alt', true ) ?: 'Thumbnail image for: '.get_the_title() );
+          ?>
+          <div class="thumbnail"><a href="<?php echo $permalink; ?>"><img src="<?php echo $post_thumbnail; ?>" alt="<?php echo post_thumbnail_alt; ?>" /></a></div>
         <?php endif; ?>
 
         <div class="content">
