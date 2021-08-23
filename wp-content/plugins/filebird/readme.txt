@@ -2,7 +2,7 @@
 Contributors: ninjateam
 Tags: wordpress media library folders, media library folders, media folder, file manager, folders, wp media folder, wp media folders, wordpress media folders, wordpress media library, wordpress media manager, media manager, firebird
 Requires at least: 3.0
-Tested up to: 5.7.2
+Tested up to: 5.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -162,7 +162,36 @@ Happy Organizing! 😍
 
 == Changelog ==
 
-Jun 11, 2021 - Version 4.7.4
+= Aug 13, 2021 - Version 4.9 =
+- Added: Infinite scroll
+- Added: Plugin activation alert
+- Added: Sorting by File Name in FileBird Gallery
+- Improved: Folder name sorting
+- Improved: German translation
+- Fixed: Drag files in Tablet
+
+= Jul 21, 2021 - Version 4.8 =
+- Fixed: Compatible with WordPress 5.8
+- Fixed: Replace image 
+
+= Jul 15, 2021 - Version 4.7.8 =
+- Fixed: Conflict with Photo Gallery plugin
+- Fixed: ACF warning
+- Fixed: ACF meta field image can't load
+- Fixed: WPML Counter (in WPML last version 4.4.10)
+
+= Jul 2, 2021 - Version 4.7.7 =
+- Added: Notice when a license was used
+- Supported: Enhanced Media Library
+- Supported: Media Library Assistant
+- Improved: Load large files
+- Improved: Translation (Added missing strings)
+- Fixed: Loading Uncategorized folder
+- Fixed: Context menu position
+- Fixed: Security
+- Fixed: Small bugs
+
+= Jun 11, 2021 - Version 4.7.4 =
 - Updated: Languages
 - Fixed: JS conflict with Divi builder
 - Fixed: WPML non translated mode make folder counter and files in folders get wrong
@@ -171,7 +200,7 @@ Jun 11, 2021 - Version 4.7.4
 - Fixed: Folder always loading
 - Fixed: Important security updates.
 
-May 26, 2021 - Version 4.7.3
+= May 26, 2021 - Version 4.7.3 =
 - Improved: FileBird UI in Mobile
 - Improved: Library
 - Improved: Translations, update POT file
@@ -182,18 +211,18 @@ May 26, 2021 - Version 4.7.3
 - Fixed: RestAPI (404 Error)
 - Fixed: WPML/Polylang Full Compatible modes in Setting Media, support "All languages in admin bar", Counter
 
-Apr 07, 2021 - Version 4.7.2
+= Apr 07, 2021 - Version 4.7.2 =
 - Improved: Tooltip
 - Improved: UI
 - Optimized: FileBird zip size
 - Fixed: Can't set folder Uncategorized as default in folder load
 - Fixed: Update database make folders duplicated when "Each user folder mode" enabled
 
-Apr 01, 2021 - Version 4.7.1
+= Apr 01, 2021 - Version 4.7.1 =
 - Added: Upload multiple images in multiple folders when upload processing
 - Fixed: Append wrong folders in right side
 
-Mar 30, 2021 - Version 4.7
+= Mar 30, 2021 - Version 4.7 =
 - Added: New Resize bar
 - Improved: Performance
 - Improved: Optimize code
