@@ -3,6 +3,7 @@
 namespace FileBird\Controller;
 
 use FileBird\Controller\Convert as ConvertController;
+use FileBird\Classes\Convert as ConvertModel;
 use FileBird\Controller\Exclude;
 
 use FileBird\Model\Folder as FolderModel;
@@ -264,13 +265,23 @@ class Folder extends Controller
       'default_folder' => Helpers::getDefaultSelectedFolder(),
       'folders' => FolderModel::allFolders('id as term_id, name as term_name', array('term_id', 'term_name')),
       'relations' => FolderModel::getRelations(),
-      // 'is_upload' => $current_screen != null && $current_screen->id === 'upload' ? 1 : 0,
+      'is_upload_screen' => "upload.php" === $screenId ? '1' : '0',
       'i18n' => i18n::getTranslation(),
       'media_mode' => get_user_option('media_library_mode', get_current_user_id()),
       'json_url' => apply_filters('filebird_json_url', rtrim(rest_url(NJFB_REST_URL), "/")),
       'media_url' => admin_url('upload.php'),
       'auto_import_url' => esc_url(add_query_arg(array('page' => 'filebird-settings', 'tab' => 'update-db', 'autorun' => 'true'), admin_url('/options-general.php'))),
       'is_new_user' => get_option('fbv_is_new_user', false),
+      'import_other_plugins' => ConvertModel::getInstance()->get_plugin3rd_folders_to_import(),
+      'import_other_plugins_url' => esc_url(
+        add_query_arg(
+          array(
+            'page' => 'filebird-settings',
+            'tab'  => 'import',
+          ),
+          admin_url( 'options-general.php' )
+        )
+      )
       // 'close_buy_pro_dialog' => time() < get_option('fbv_close_buy_pro_dialog', time())
     )));
   }
