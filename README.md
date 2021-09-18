@@ -4,6 +4,7 @@ Bitbucket Repository
 
 https://bitbucket.org/0degreesk/wordpress-starter/
 
+
 ===================================
 Singular Theme Installation Notes
 ===================================
@@ -42,9 +43,11 @@ Admin > Appearance > Menus
 
 # Required Plugin Installation Notes
 
+Advanced Custom Fields PRO is required by this theme.
+
 1. [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
-2. [ ] Install "Advanced Custom Fields PRO" via uploaded zip
-  - Import the "Custom Title" ACF field group
+2. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
+  - [ ] /singular-theme/_configuration/acf-theme-fields.json
 2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
@@ -67,3 +70,25 @@ Admin > Appearance > Menus
   - [ ] Add site name and image to the Yoast SEO admin
 5. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
 6. [ ] Remove 'root' user if necessary
+
+
+===================================
+Singular Plugin Installation Notes
+===================================
+
+The Singular Plugin is included in the repository. It provides content-based functionality to the site.
+
+
+# Installation
+
+Advanced Custom Fields PRO (ACF PRO) is a requirement for this plugin's functionality to work. Install and activate ACF PRO before proceeding
+
+1. [ ] After installing and activating ACF PRO, import the following JSON files into ACF PRO:
+  - [ ] /singular-plugin/_configuration/acf-singular-plugin-fields.json
+
+
+# Custom Gutenberg Blocks
+
+The plugin adds a new Gutenberg block category titled "Singular Blocks" which contains the following custom blocks.
+
+1. Accordion: Produces an animated accordion block composed of titles and WYSIWYG content blocks.

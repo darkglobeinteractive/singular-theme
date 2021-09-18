@@ -95,6 +95,7 @@
   transition: max-height 200ms ease-in-out;
 }
 .singular-accordion .item .content .wrap {
+  overflow: hidden;
   padding: 1em;
 }
 .singular-accordion .item .content .wrap > *:first-child {
