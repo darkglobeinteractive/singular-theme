@@ -1,2 +1,105 @@
 /* These are front-end styles for this block type */
-.singular-accordion { }
+.singular-accordion,
+.singular-accordion * {
+  box-sizing: border-box;
+}
+.singular-accordion {
+  width: 100%;
+  margin: 0 0 1.5em;
+}
+.singular-accordion button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+  line-height: 1em;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.singular-accordion .singular-accordion-wrap { }
+.singular-accordion .item { }
+.singular-accordion .item + .item {
+  border-top: 1px solid #ccc;
+}
+.singular-accordion .item .title {
+  position: relative;
+  background-color: #eee;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-transition: background-color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out;
+  -o-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+.singular-accordion .item .title:hover {
+  background-color: #ddd;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+.singular-accordion .item .title .wrap {
+  width: 100%;
+  padding: 1em 50px 1em 1em;
+}
+.singular-accordion .item .title .trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  text-indent: -9999em;
+}
+.singular-accordion .item .title .trigger::before {
+  content:'';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  margin: -8px 0 0 -10px;
+  border-bottom: none;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 16px solid #000;
+}
+.singular-accordion .item.open .title .trigger::before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.singular-accordion .item .content {
+  overflow: hidden;
+  height: auto;
+  max-height: 0;
+  -webkit-transition: max-height 300ms ease-in-out;
+  -moz-transition: max-height 300ms ease-in-out;
+  -o-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+}
+.singular-accordion .item.open .content {
+  max-height: 10000px;
+  -webkit-transition: max-height 200ms ease-in-out;
+  -moz-transition: max-height 200ms ease-in-out;
+  -o-transition: max-height 200ms ease-in-out;
+  transition: max-height 200ms ease-in-out;
+}
+.singular-accordion .item .content .wrap {
+  padding: 1em;
+}
+.singular-accordion .item .content .wrap > *:first-child {
+  margin-top: 0;
+}
+.singular-accordion .item .content .wrap > *:last-child {
+  margin-bottom: 0;
+}

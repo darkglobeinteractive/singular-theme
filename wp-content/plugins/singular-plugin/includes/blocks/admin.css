@@ -1,1 +1,22 @@
 /* These styles are included in the admin view */
+.singular-admin-block { }
+.singular-admin-block .singular-admin-item { }
+.singular-admin-block .singular-admin-item + .singular-admin-item {
+  margin-top: 1em;
+  border-top: 1px solid #eee;
+  padding-top: 1em;
+}
+.singular-admin-block .singular-admin-item .header {
+  margin: 0 0 0.5em;
+  font-weight: 700;
+}
+.singular-admin-block .singular-admin-item .title {
+  margin: 0 0 1em;
+}
+.singular-admin-block .singular-admin-item .content { }
+.singular-admin-block .singular-admin-item .content > *:first-child {
+  margin-top: 0;
+}
+.singular-admin-block .singular-admin-item .content > *:last-child {
+  margin-bottom: 0;
+}
