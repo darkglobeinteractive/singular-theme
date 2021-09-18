@@ -1,6 +1,6 @@
 <?php
 // Handle each custom block
-function singular_acf_block_render_callback( $block ) {
+function singular_plugin_acf_block_render_callback( $block ) {
 
     // This creates a string we can use from the ACF generated $block['name'] by removing 'acf/' and returning just the name
   	$slug = str_replace( 'acf/', '', $block['name'] );
@@ -16,7 +16,7 @@ function singular_acf_block_render_callback( $block ) {
 include( 'blocks/singular-accordion/singular-accordion.php' );
 
 // Add the custom Singular Blocks category to the Gutenberg editor interface
-function singular_block_category( $block_categories, $block_editor_context ) {
+function singular_plugin_block_category( $block_categories, $block_editor_context ) {
   return array_merge(
     $block_categories,
     array(
@@ -28,7 +28,7 @@ function singular_block_category( $block_categories, $block_editor_context ) {
     )
   );
 }
-add_filter( 'block_categories_all', 'singular_block_category', 10, 2 );
+add_filter( 'block_categories_all', 'singular_plugin_block_category', 10, 2 );
 
 // Enqueue admin styles for the blocks to handle how they're displayed in the editor
 function singular_plugin_blocks_admin_scripts() {

@@ -1,9 +1,9 @@
 <?php // Admin View ?>
 <?php if ( is_admin() ): ?>
 
-  <?php if ( have_rows( 'singular_accordion_rows' ) ): ?>
+  <?php if ( have_rows( 'singular_plugin_accordion_rows' ) ): ?>
     <div class="singular-admin-block accordion">
-      <?php while ( have_rows( 'singular_accordion_rows' ) ): the_row(); ?>
+      <?php while ( have_rows( 'singular_plugin_accordion_rows' ) ): the_row(); ?>
         <div class="singular-admin-item">
           <div class="header">Accordion Row #<?php echo get_row_index(); ?></div>
           <div class="title"><strong>Title:</strong> <?php echo get_sub_field( 'title' ); ?></div>
@@ -18,10 +18,10 @@
 <?php // Front-End View ?>
 <?php else: ?>
 
-  <?php if ( have_rows( 'singular_accordion_rows' ) ): ?>
+  <?php if ( have_rows( 'singular_plugin_accordion_rows' ) ): ?>
     <div class="singular-accordion">
       <div class="singular-accordion-wrap">
-        <?php while ( have_rows( 'singular_accordion_rows' ) ): the_row(); ?>
+        <?php while ( have_rows( 'singular_plugin_accordion_rows' ) ): the_row(); ?>
           <div class="item">
             <div class="title">
               <button class="wrap">

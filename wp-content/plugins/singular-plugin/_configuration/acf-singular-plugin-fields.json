@@ -1,12 +1,12 @@
 [
     {
         "key": "group_6144c42523b9d",
-        "title": "Singular Accordion Block",
+        "title": "Singular Plugin: Accordion Block",
         "fields": [
             {
                 "key": "field_6144c44ed8d92",
                 "label": "Accordion Rows",
-                "name": "singular_accordion_rows",
+                "name": "singular_plugin_accordion_rows",
                 "type": "repeater",
                 "instructions": "",
                 "required": 1,
