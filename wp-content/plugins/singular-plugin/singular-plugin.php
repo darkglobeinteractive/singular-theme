@@ -11,3 +11,6 @@
 /* https://codex.wordpress.org/Writing_a_Plugin */
 /* https://codex.wordpress.org/Creating_Options_Pages */
 /* https://codex.wordpress.org/Adding_Administration_Menus */
+
+// Include the blocks plugin code
+include( 'includes/blocks.php' );

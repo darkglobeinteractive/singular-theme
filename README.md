@@ -1,4 +1,10 @@
 ===================================
+Bitbucket Repository
+===================================
+
+https://bitbucket.org/0degreesk/wordpress-starter/
+
+===================================
 Singular Theme Installation Notes
 ===================================
 
