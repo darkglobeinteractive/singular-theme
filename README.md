@@ -81,10 +81,11 @@ The Singular Plugin is included in the repository. It provides content-based fun
 
 # Installation
 
-Advanced Custom Fields PRO (ACF PRO) is a requirement for this plugin's functionality to work. Install and activate ACF PRO before proceeding
+Advanced Custom Fields PRO (ACF PRO) is a requirement for this plugin's functionality to work. Install and activate the Singular Plugin, then install, activate and update ACF PRO.
 
 1. [ ] After installing and activating ACF PRO, import the following JSON files into ACF PRO:
   - [ ] /singular-plugin/_configuration/acf-singular-plugin-fields.json
+2. [ ] Ensure that the "Singular Plugin: Accordion Block" field group has "Show this field group if: Block is equal to Accordion"
 
 
 # Custom Gutenberg Blocks
