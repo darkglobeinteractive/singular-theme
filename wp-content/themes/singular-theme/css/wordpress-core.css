@@ -154,6 +154,13 @@ img.alignleft,
 }
 
 
+/* MEDIA & TEXT BLOCKS ------------------------------------------ */
+.wp-block-media-text__media img,
+.wp-block-media-text__media video {
+	height: auto;
+}
+
+
 /* TABLES ------------------------------------------------------- */
 table,
 table.wp-block-table {
