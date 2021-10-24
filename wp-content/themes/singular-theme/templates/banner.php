@@ -4,7 +4,7 @@ $gv = singular_global_vars();
 $qo = $gv['queried_object'];
 
 // Set default page title
-$banner_title = wp_title( '', false );
+$banner_title = get_the_title();
 
 // Customize page title when necessary
 // Check for search results page first because it returns a non-object
