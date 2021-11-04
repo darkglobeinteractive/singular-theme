@@ -48,7 +48,7 @@ add_filter( 'login_headerurl', 'singular_login_url' );
 /* SCRIPTS ------------------------------------------------------ */
 function singular_scripts() {
   // wp_enqueue_script( 'colorbox_js', get_template_directory_uri().'/libs/colorbox/jquery.colorbox-min.js', array( 'jquery' ) );
-  // wp_enqueue_script( 'slickjs_js', get_template_directory_uri().'/libs/slick/slick/slick.min.js', array( 'jquery' ) );
+  // wp_enqueue_script( 'slickjs_js', get_template_directory_uri().'/libs/slick/slick/slick.js', array( 'jquery' ) );
   wp_enqueue_script( 'mmenu_js', get_template_directory_uri().'/libs/mmenu/dist/jquery.mmenu.all.js', array( 'jquery' ) );
 	wp_enqueue_script( 'global_js', get_template_directory_uri().'/js/global.js', array( 'jquery', 'mmenu_js' ) );
 }
