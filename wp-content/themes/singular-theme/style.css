@@ -68,7 +68,8 @@ img { max-width: 100%; }
 }
 .btn,
 .btn-wrap a,
-input[type="submit"] {
+input[type="submit"],
+.wp-block-button .wp-block-button__link {
   display: inline-block;
   margin: 0 0 0.5em;
   padding: 1em 2em;
@@ -86,7 +87,8 @@ input[type="submit"] {
 }
 .btn:hover,
 .btn-wrap a:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.wp-block-button .wp-block-button__link:hover {
   background: #eee;
 }
 
