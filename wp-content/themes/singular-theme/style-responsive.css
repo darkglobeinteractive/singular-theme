@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px) {
 
-  /* 9.1: WORDPRESS CORE OVERRIDES -------------------------------- */
+  /* 12.1: WORDPRESS CORE OVERRIDES -------------------------------- */
   #wpadminbar {
     position: fixed;
   }

@@ -24,6 +24,7 @@ function singular_styles() {
   // wp_enqueue_style( 'colorbox_css', get_template_directory_uri().'/libs/colorbox/example2/colorbox.css' );
   // wp_enqueue_style( 'slickjs_css', get_template_directory_uri().'/libs/slick/slick/slick.css' );
   // wp_enqueue_style( 'slickjs_theme_css', get_template_directory_uri().'/libs/slick/slick/slick-theme.css' );
+  // wp_enqueue_style( 'slickjs_custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu_css', get_template_directory_uri().'/libs/mmenu/dist/jquery.mmenu.all.css' );
   wp_enqueue_style( 'global_css', get_template_directory_uri().'/style.css' );
   wp_enqueue_style( 'wordpress_core_css', get_template_directory_uri().'/css/wordpress-core.css' );
