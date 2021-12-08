@@ -223,15 +223,14 @@ body.sidebar #sidebar {
 .blog-list article.post .content {
   width: 100%;
 }
-.blog-list article.post.has-post-thumbnail { }
-.blog-list article.post.has-post-thumbnail .thumbnail {
+.blog-list article.post .thumbnail {
   width: 200px;
 }
-.blog-list article.post.has-post-thumbnail .thumbnail img {
+.blog-list article.post .thumbnail img {
   display: block;
   max-width: 100%;
 }
-.blog-list article.post.has-post-thumbnail .content {
+.blog-list article.post .thumbnail + .content {
   width: calc(100% - 200px);
   padding-left: 30px;
 }
