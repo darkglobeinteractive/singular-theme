@@ -31,6 +31,7 @@ function singular_styles() {
   wp_enqueue_style( 'wordpress_core_css', get_template_directory_uri().'/css/wordpress-core.css' );
   wp_enqueue_style( 'responsive_css', get_template_directory_uri().'/style-responsive.css' );
   wp_enqueue_style( 'menus_css', get_template_directory_uri().'/style-menus.css' );
+  wp_enqueue_style( 'homepage_css', get_template_directory_uri().'/style-homepage.css' );
 }
 add_action( 'wp_enqueue_scripts', 'singular_styles' );
 
