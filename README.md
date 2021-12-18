@@ -26,6 +26,8 @@ Admin > Appearance > Menus
 
 1. [ ] Create sitemap page and update template file to reflect page ID
 2. [ ] Create search form page and update template file to reflect page ID
+3. [ ] Create home page and use customizer to set this page to the front page
+4. [ ] Delete existing widgets
 
 
 # Login Page Customizations
