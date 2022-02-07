@@ -1,8 +1,8 @@
 ===================================
-Bitbucket Repository
+GitHub Repository
 ===================================
 
-https://bitbucket.org/0degreesk/wordpress-starter/
+https://github.com/darkglobeinteractive/singular-theme
 
 
 ===================================
