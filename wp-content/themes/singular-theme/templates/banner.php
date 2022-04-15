@@ -10,6 +10,9 @@ $banner_title = get_the_title();
 // Check for search results page first because it returns a non-object
 if ( is_search() ) {
   $banner_title = 'Search Results';
+// Handle 404 Page Not Found
+} elseif ( is_404() ) {
+  $banner_title = 'Page Not Found';
 // Blog category or tag listing pages
 } elseif ( is_category() || is_tag() ) {
   $banner_title = 'Blog: '.$qo->name;
