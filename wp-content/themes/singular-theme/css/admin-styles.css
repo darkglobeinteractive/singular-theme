@@ -1,0 +1,10 @@
+/* ADMIN SORTABLE META BOXES ------------------------------------ */
+#normal-sortables.meta-box-sortables { }
+#normal-sortables.meta-box-sortables .postbox { }
+#normal-sortables.meta-box-sortables .postbox .inside { }
+#normal-sortables.meta-box-sortables .postbox.closed .postbox-header { }
+#normal-sortables.meta-box-sortables .postbox.closed .postbox-header:hover { }
+#normal-sortables.meta-box-sortables .postbox .postbox-header { }
+#normal-sortables.meta-box-sortables .postbox .postbox-header:hover { }
+#normal-sortables.meta-box-sortables .postbox .handlediv .toggle-indicator::before { }
+#normal-sortables.meta-box-sortables .postbox.closed .handlediv .toggle-indicator::before { }
