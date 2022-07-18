@@ -55,7 +55,7 @@ Advanced Custom Fields PRO is required by this theme.
 
 # Optional Plugin Installation Notes
 
-1. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/): Useful for SEO and
+1. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/): Useful for SEO and setting 301 redirects
 2. [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/): Allows you to decided where widgets are visible/hidden
 
 
@@ -71,7 +71,8 @@ Advanced Custom Fields PRO is required by this theme.
   - [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
   - [ ] Add site name and image to the Yoast SEO admin
 5. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-6. [ ] Remove 'root' user if necessary
+6. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+7. [ ] Remove 'root' user if necessary
 
 
 ===================================
