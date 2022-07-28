@@ -29,6 +29,7 @@ TABLE OF CONTENTS
 11.1: SEARCH RESULTS
 12.0: ACCESSIBILITY - SKIP TO MAIN CONTENT
 12.1: WORDPRESS CORE OVERRIDES
+12.2: CUSTOM DEBUGGING
 13.0: FONTS
 ----------------------------------------------------------------- */
 
@@ -360,6 +361,27 @@ a.skip-main:active {
   font-size: 1.2em;
   text-align: center;
 }
+
+
+/* 12.1: WORDPRESS CORE OVERRIDES ------------------------------- */
+
+
+/* 12.2: CUSTOM DEBUGGING --------------------------------------- */
+.debug,
+.debug * {
+  box-sizing: border-box;
+}
+.debug {
+  padding: 20px;
+}
+.debug .debug-section + .debug-section {
+  margin-top: 1em;
+}
+.debug .debug-title {
+  margin: 0 0 0.25em;
+  font-weight: 700;
+}
+.debug .debug-value { }
 
 
 /* 13.0: FONTS -------------------------------------------------- */

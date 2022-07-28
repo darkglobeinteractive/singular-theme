@@ -19,6 +19,46 @@ function singular_assemble_link( $link_object, $add_class = false, $add_id = fal
 }
 
 
+// CUSTOM DEBUGGING: Generates an element describing a field for debugging purposes
+// $field: The raw field data
+// $field_type: The type of field (e.g. text, array, etc.)
+// $title: The title to display for each section in the debugging block
+// $bg_color: Overrides the background color of the block
+// $test: By default, the block will be generated. This allows you to use a test on the front-end (e.g. $_GET['debug'])
+// Example: singular_debug( get_field( 'custom_field' ), 'text', 'Custom Field', '#ff0000', isset( $_GET['debug'] ) )
+function singular_debug( $field, $field_type, $title, $bg_color = '#fff', $test = true ) {
+
+  // Check the test variable before proceeding
+  if ( $test ) {
+
+    // Instantiate the return value
+    $return_value = '';
+
+    // Test for field type and handle field appropriately
+    if ( $field_type == 'text' ) {
+      $return_value = $field;
+    } elseif ( $field_type == 'array' ) {
+      foreach( $field as $key=>$value ) {
+        $return_value .= $key.': '.$value.'<br />';
+      }
+    }
+
+    // Generate the final debug block to return
+    return '<div class="debug" style="background-color: '.$bg_color.'">
+      <div class="debug-section">
+        <div class="debug-title">'.$title.'</div>
+        <div class="debug-value">'.$return_value.'</div>
+      </div>
+    </div>';
+
+  // If test is false, return an empty string
+  } else {
+    return '';
+  }
+
+}
+
+
 // FEED READER: Accept an RSS Feed URL and return an HTML block of articles
 // $feed_url: The RSS Feed URL (string, required)
 // $article_limit: The maximum number of articles you want to include (number, optional)
