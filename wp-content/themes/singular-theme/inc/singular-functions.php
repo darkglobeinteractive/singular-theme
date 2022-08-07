@@ -39,7 +39,13 @@ function singular_debug( $field, $field_type, $title, $bg_color = '#fff', $test 
       $return_value = $field;
     } elseif ( $field_type == 'array' ) {
       foreach( $field as $key=>$value ) {
-        $return_value .= $key.': '.$value.'<br />';
+        if ( gettype( $value ) == 'string' || gettype( $value ) == 'integer' ) {
+          $return_value .= $key.': '.$value.'<br />';
+        } elseif ( gettype( $value ) == 'boolean' ) {
+          $return_value .= $key.': '.( $value ? 'true' : 'false' ).'<br />';
+        } else {
+          $return_value .= $key.': [['.gettype( $value ).']]<br />';
+        }
       }
     }
 
