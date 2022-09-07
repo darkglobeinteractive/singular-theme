@@ -105,6 +105,7 @@ body {
 
 
 /* 2.1: HEADER -------------------------------------------------- */
+/* #wpadminbar is 32px tall */
 #header {
   position: relative;
   z-index: 2;
