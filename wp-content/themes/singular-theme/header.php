@@ -36,7 +36,7 @@
           'container_id' => 'navigation'
 				) );
 				?>
-				<a href="#mobile-menu" id="mm-trigger">
+				<button id="mm-trigger">
 					<span class="trigger-title">Mobile Menu</span>
 					<span class="trigger-wrapper">
 						<span class="trigger-container">
@@ -46,7 +46,7 @@
 							<span></span>
 						</span>
 					</span>
-				</a>
+				</button>
       </header>
 			<?php include( locate_template( 'templates/banner.php', false, false ) ); ?>
       <div id="main" role="main">

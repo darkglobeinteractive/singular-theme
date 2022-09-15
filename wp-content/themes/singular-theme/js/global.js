@@ -61,18 +61,16 @@ jQuery(document).ready(function($) {
     // Prepend the main #page element with the cloned menu
     $('#page').prepend('<nav id="mobile-menu"><ul>'+$mobile_menu.html()+'</ul></div>');
 
-    // Configure mmenu
-    /* Based-on the documentation (https://mmenujs.com/documentation/) as of August 6, 2019, we are using mmenu Version 7 here due to Version 8 only supporting ES6 compliant browsers. This would not be fully supportive of IE 10 and 11. As much as I would like to stop considering those browsers, this theme is used for freelance development, so it's something I don't want to have to "fix" down the road. For documentation on mmenu Version 7, see http://mmenu.frebsite.nl. */
-    $('#mobile-menu').mmenu({
-      'extensions': [
-        'position-right',
-      ],
-      /*
-      'navbar': {
-        'title': ''
+    var mobile_menu = new Mmenu( '#mobile-menu', {
+      'offCanvas': {
+        'position': 'right'
       }
-      */
     });
+    var mobile_menu_api = mobile_menu.API;
+    $('#mm-trigger').on('click', function() {
+      mobile_menu_api.open();
+    });
+
 
     /* Use this if the menu trigger $('#mm-trigger') is in a fixed location and won't close the menu
     var api = $('#mobile-menu').data('mmenu');

@@ -107,6 +107,14 @@ TABLE OF CONTENTS
   z-index: 1;
   top: 0;
   right: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 #mm-trigger .trigger-title {
   display: none;
@@ -159,19 +167,19 @@ TABLE OF CONTENTS
 #mm-trigger .trigger-container span:nth-child(4) {
   top: 14px;
 }
-html.mm-wrapper_opened #mm-trigger .trigger-container span:nth-child(1),
-html.mm-wrapper_opened #mm-trigger .trigger-container span:nth-child(4) {
+body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(1),
+body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(4) {
   top: 14px;
   width: 0%;
   left: 50%;
 }
-html.mm-wrapper_opened #mm-trigger .trigger-container span:nth-child(2) {
+body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-html.mm-wrapper_opened #mm-trigger .trigger-container span:nth-child(3) {
+body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -180,18 +188,26 @@ html.mm-wrapper_opened #mm-trigger .trigger-container span:nth-child(3) {
 
 
 /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+#mobile-menu {
+  display: none;
+}
 .mmenu { }
 
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 1600px) {
 
   /* 1.0: DESKTOP NAVIGATION -------------------------------------- */
   #navigation {
     display: none;
   }
 
-
   /* 2.0: MOBILE MENU TRIGGER ------------------------------------- */
   #mm-trigger {
+    display: block;
+  }
+
+  /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+  #mobile-menu {
     display: block;
   }
 
