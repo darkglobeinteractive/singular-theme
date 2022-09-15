@@ -4,84 +4,46 @@ jQuery(document).ready(function($) {
   $('#wpadminbar').addClass('Fixed');
 
 
-  /* MOBILE NAVIGATION ------------------------------------------ */
+  /* NAVIGATION ------------------------------------------------- */
   $('#navigation > ul.menu').each(function() {
-
-    // Detach the skip-main link so that we can reattach it after the mobile menu is put in place
-    var $skip_content = $('a.skip-main').detach();
 
     // Create variable for the main navigation menu
     var $menu = $(this);
 
     // Handle items with no-link
-    $('li.no-link > a', $menu).each(function() {
+    $('li.no-link', $menu).each(function() {
 
-      // Prevent the default functionality of the link
-      $(this).on('click', function(e) {
-        e.preventDefault();
-      });
+      // Create variable to contain the text of the item
+      var element_text = $('> a', this).text();
 
-    });
-
-    // Clone the main navigation
-    var $mobile_menu = $(this).clone();
-
-    // Remove all classes and ids from the ul elements in the cloned menu object
-    $('ul', $mobile_menu).each(function() {
-      $(this).attr('class','');
-      $(this).attr('id','');
-    });
-
-    // Handle li elements in the cloned menu
-    $('li', $mobile_menu).each(function() {
-
-      // Create variable for the li
-      var $li = $(this);
-
-      // If the li has no-link, change the a to a span
-      if ($li.hasClass('no-link')) {
-
-        // Create a variable for the link
-        var $a = $('> a', $li);
-
-        // Add a span with the link text before the link
-        $a.before('<span>'+$a.text()+'</span>');
-
-        // Then deteach the link itself
-        $a.detach();
-
-      }
-
-      // Finally remove the classes and ids from the li elements
-      $li.attr('class','');
-      $li.attr('id','');
+      $('> a', this).detach();
+      $(this).removeClass('no-link').prepend('<span class="no-link">'+element_text+'</span>');
 
     });
 
-    // Prepend the main #page element with the cloned menu
-    $('#page').prepend('<nav id="mobile-menu"><ul>'+$mobile_menu.html()+'</ul></div>');
+  });
 
-    var mobile_menu = new Mmenu( '#mobile-menu', {
-      'offCanvas': {
-        'position': 'right'
-      }
-    });
-    var mobile_menu_api = mobile_menu.API;
-    $('#mm-trigger').on('click', function() {
-      mobile_menu_api.open();
-    });
+  /* MOBILE MENU ------------------------------------------------ */
 
+  // Configure the mobile menu
+  var mmenu = new Mmenu( '#navigation', {
+    'offCanvas': {
+      'position': 'right'
+    }
+  },{
+    'offCanvas': {
+      'clone': true
+    }
+  });
 
-    /* Use this if the menu trigger $('#mm-trigger') is in a fixed location and won't close the menu
-    var api = $('#mobile-menu').data('mmenu');
-    $('#mm-trigger').click(function() {
-      api.close();
-    });
-    */
-
-    // Reattach the skip-main link to the body
-    $('body').prepend($skip_content);
-
+  // Utilize mmenu API to use independent mobile menu trigger
+  var mmenu_api = mmenu.API;
+  $('#mm-trigger').on('click', function() {
+    if ($('body').hasClass('mm-wrapper--opened')) {
+      mmenu_api.close();
+    } else {
+      mmenu_api.open();
+    }
   });
 
 

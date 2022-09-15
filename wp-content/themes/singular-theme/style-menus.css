@@ -30,7 +30,7 @@ TABLE OF CONTENTS
 #navigation ul li {
   position: relative;
 }
-#navigation ul li.no-link > a {
+#navigation ul li > .no-link {
   cursor: default;
 }
 
@@ -39,17 +39,20 @@ TABLE OF CONTENTS
 #navigation ul.menu > li {
   float: left;
 }
-#navigation ul.menu > li > a {
+#navigation ul.menu > li > a,
+#navigation ul.menu > li > .no-link {
   display: block;
   position: relative;
   padding: 0.5em 1em;
   color: #000;
   font-size: 16px;
 }
-#navigation ul.menu > li:first-child > a {
+#navigation ul.menu > li:first-child > a,
+#navigation ul.menu > li:first-child > .no-link {
   padding-left: 0;
 }
-#navigation ul.menu > li:last-child > a {
+#navigation ul.menu > li:last-child > a,
+#navigation ul.menu > li:last-child > .no-link {
   padding-right: 0;
 }
 
@@ -63,13 +66,15 @@ TABLE OF CONTENTS
   display: block;
 }
 #navigation ul.menu > li > ul > li { }
-#navigation ul.menu > li > ul > li > a {
+#navigation ul.menu > li > ul > li > a,
+#navigation ul.menu > li > ul > li > .no-link {
   display: block;
   min-width: 15em;
   padding: 0.5em 1em;
   color: #000;
 }
-#navigation ul.menu > li > ul > li:hover > a {
+#navigation ul.menu > li > ul > li:hover > a,
+#navigation ul.menu > li > ul > li:hover > .no-link {
   background-color: #aaa;
 }
 
@@ -85,13 +90,15 @@ TABLE OF CONTENTS
   display: block;
 }
 #navigation ul.menu > li > ul > li > ul > li { }
-#navigation ul.menu > li > ul > li > ul > li > a {
+#navigation ul.menu > li > ul > li > ul > li > a,
+#navigation ul.menu > li > ul > li > ul > li > .no-link {
   display: block;
   min-width: 15em;
   padding: 0.5em 1em;
   color: #000;
 }
-#navigation ul.menu > li > ul > li > ul > li:hover > a {
+#navigation ul.menu > li > ul > li > ul > li:hover > a,
+#navigation ul.menu > li > ul > li > ul > li:hover > .no-link {
   background-color: #aaa;
 }
 
@@ -188,17 +195,17 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
 
 
 /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
-#mobile-menu {
+#mm-clone-navigation {
   display: none;
 }
 .mmenu { }
 
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1400px) {
 
   /* 1.0: DESKTOP NAVIGATION -------------------------------------- */
   #navigation {
-    display: none;
+    display: none !important;
   }
 
   /* 2.0: MOBILE MENU TRIGGER ------------------------------------- */
@@ -207,7 +214,7 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
   }
 
   /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
-  #mobile-menu {
+  #mm-clone-navigation {
     display: block;
   }
 
