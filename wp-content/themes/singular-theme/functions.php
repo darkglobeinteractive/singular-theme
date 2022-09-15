@@ -6,6 +6,7 @@
 // include( 'inc/singular-functions.php' );
 
 /* ENABLE THEME SUPPORT ----------------------------------------- */
+/* https://developer.wordpress.org/reference/functions/add_theme_support/ */
 function singular_setup_theme_supported_features() {
   add_theme_support( 'menus' );
   add_theme_support( 'post-thumbnails' );
