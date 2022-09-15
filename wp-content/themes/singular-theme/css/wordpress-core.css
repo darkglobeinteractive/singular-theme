@@ -1,3 +1,8 @@
+/* September 15, 2022 -- This is no longer used after discovering the following:
+https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
+add_theme_support( 'wp-block-styles' );
+*/
+
 /* AUDIO BLOCKS ------------------------------------------------- */
 .wp-block-audio {
 	margin-left: 0px;

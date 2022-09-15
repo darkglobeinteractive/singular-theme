@@ -10,6 +10,7 @@ function singular_setup_theme_supported_features() {
   add_theme_support( 'menus' );
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'responsive-embeds' );
+  add_theme_support( 'wp-block-styles' );
   add_image_size( 'banner-bg', 2560, 0, false );
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
@@ -25,7 +26,6 @@ function singular_styles() {
   // wp_enqueue_style( 'slickjs_theme_css', get_template_directory_uri().'/libs/slick/slick/slick-theme.css' );
   // wp_enqueue_style( 'slickjs_custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/jquery.mmenu.all.css' );
-  wp_enqueue_style( 'wordpress-core-css', get_template_directory_uri().'/css/wordpress-core.css' );
   wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css' );
   wp_enqueue_style( 'menus-css', get_template_directory_uri().'/style-menus.css' );
   wp_enqueue_style( 'homepage-css', get_template_directory_uri().'/style-homepage.css' );
