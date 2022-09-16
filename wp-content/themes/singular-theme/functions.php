@@ -16,6 +16,12 @@ function singular_setup_theme_supported_features() {
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 
+/* FIX HEADER BUMP ---------------------------------------------- */
+/* WordPress core adds top margin to html element by default -- incompatible with mmenu mobile menu library */
+function singular_remove_admin_login_header() {
+  remove_action( 'wp_head', '_admin_bar_bump_cb' );
+}
+add_action( 'get_header', 'singular_remove_admin_login_header' );
 
 /* STYLES ------------------------------------------------------- */
 function singular_styles() {

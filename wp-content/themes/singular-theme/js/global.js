@@ -1,9 +1,5 @@
 jQuery(document).ready(function($) {
 
-  /* ADD FIXED CLASS TO WORDPRESS ADMIN BAR FOR MMENU COMPATIBILITY */
-  $('#wpadminbar').addClass('Fixed');
-
-
   /* NAVIGATION ------------------------------------------------- */
   $('#navigation > ul.menu').each(function() {
 
@@ -28,7 +24,7 @@ jQuery(document).ready(function($) {
   // Configure the mobile menu
   var mmenu = new Mmenu( '#navigation', {
     'offCanvas': {
-      'position': 'right'
+      'position': 'right-front'
     }
   },{
     'offCanvas': {
@@ -85,8 +81,8 @@ jQuery(document).ready(function($) {
 
     // Determine the heights of possible elements on the page to take into consideration
     var header_height = 0; // Fixed headers need to be taken into consideration
-    var wpadminbar_height = ($('#wpadminbar').length > 0 ? $('#wpadminbar').innerHeight() : 0);
-    var scroll_top_padding = 20;
+    var wpadminbar_height = ($('#wpadminbar').length > 0 ? $('#wpadminbar').innerHeight() : 0); // Height of WordPress admin bar
+    var scroll_top_padding = 20; // Extra padding
 
     // Calculate the final offset for scrolling by removing the height of the items above (and some padding) from the total offset height
     var e_offset_top = e.offset().top - (header_height + wpadminbar_height + scroll_top_padding);

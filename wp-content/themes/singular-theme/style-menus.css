@@ -123,6 +123,13 @@ TABLE OF CONTENTS
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+body.mm-wrapper--opened #mm-trigger {
+  right: 440px;
+  -webkit-transition: right ease-in-out 400ms;
+  -moz-transition: right ease-in-out 400ms;
+  -o-transition: right ease-in-out 400ms;
+  transition: right ease-in-out 400ms;
+}
 #mm-trigger .trigger-title {
   display: none;
 }
@@ -195,8 +202,12 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
 
 
 /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+/* #wpadminbar is 32px tall */
 #mm-clone-navigation {
   display: none;
+}
+body.admin-bar #mm-clone-navigation {
+  top: 32px;
 }
 .mmenu { }
 
@@ -216,6 +227,25 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
   /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
   #mm-clone-navigation {
     display: block;
+  }
+
+}
+
+@media screen and (max-width: 782px) {
+
+  /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+  /* #wpadminbar is 46px tall */
+  body.admin-bar #mm-clone-navigation {
+    top: 46px;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+
+  /* 2.0: MOBILE MENU TRIGGER ------------------------------------- */
+  body.mm-wrapper--opened #mm-trigger {
+    right: 80%;
   }
 
 }

@@ -27,26 +27,28 @@
 		<a href="#banner" class="skip-main">Skip to Main Content</a>
     <div id="page">
       <header id="header">
-        <?php include( locate_template( 'templates/logo.php', false, false ) ); ?>
-        <?php
-				wp_nav_menu( array(
-					'menu' => 'main-menu',
-					'menu_class' => 'menu',
-					'container' => 'nav',
-          'container_id' => 'navigation'
-				) );
-				?>
-				<button id="mm-trigger">
-					<span class="trigger-title">Mobile Menu</span>
-					<span class="trigger-wrapper">
-						<span class="trigger-container">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
+				<div class="wrap">
+	        <?php include( locate_template( 'templates/logo.php', false, false ) ); ?>
+	        <?php
+					wp_nav_menu( array(
+						'menu' => 'main-menu',
+						'menu_class' => 'menu',
+						'container' => 'nav',
+	          'container_id' => 'navigation'
+					) );
+					?>
+					<button id="mm-trigger">
+						<span class="trigger-title">Mobile Menu</span>
+						<span class="trigger-wrapper">
+							<span class="trigger-container">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
 						</span>
-					</span>
-				</button>
+					</button>
+				</div>
       </header>
 			<?php include( locate_template( 'templates/banner.php', false, false ) ); ?>
       <div id="main" role="main">

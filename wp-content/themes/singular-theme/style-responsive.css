@@ -1,6 +1,15 @@
 @media screen and (max-width: 782px) {
 
+  /* 2.0: GLOBAL -------------------------------------------------- */
   /* #wpadminbar is 46px tall */
+  body.admin-bar #page {
+    padding-top: 46px;
+  }
+
+  /* 2.1: HEADER -------------------------------------------------- */
+  body.admin-bar #header.sticky {
+    top: 46px;
+  }
 
 }
 

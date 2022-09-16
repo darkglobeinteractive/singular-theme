@@ -93,6 +93,7 @@ input[type="submit"]:hover,
 
 
 /* 2.0: GLOBAL -------------------------------------------------- */
+/* #wpadminbar is 32px tall */
 body {
   background-color: #000;
 }
@@ -102,14 +103,33 @@ body {
   margin: 0 auto;
   background-color: #fff;
 }
+body.admin-bar #page {
+  padding-top: 32px;
+}
 
 
 /* 2.1: HEADER -------------------------------------------------- */
-/* #wpadminbar is 32px tall */
+#header,
+#header * {
+  box-sizing: border-box;
+}
 #header {
   position: relative;
   z-index: 2;
   height: 120px;
+  width: 100%;
+}
+#header.sticky {
+  position: sticky;
+  top: 0;
+}
+body.admin-bar #header.sticky {
+  top: 32px;
+}
+#header > .wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 #header .logo {
   display: block;
@@ -143,6 +163,12 @@ body {
 }
 .banner { }
 .banner .content { }
+.banner .content > *:first-child {
+  margin-top: 0;
+}
+.banner .content > *:last-child {
+  margin-bottom: 0;
+}
 .banner .banner-title { }
 .banner .banner-title .copy { }
 
@@ -198,10 +224,19 @@ body.sidebar #sidebar {
 
 
 /* 2.7: FOOTER -------------------------------------------------- */
+#footer,
+#footer * {
+  box-sizing: border-box;
+}
 #footer {
   clear: both;
   position: relative;
   z-index: 1;
+}
+#footer > .wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 #footer .copyright { }
 
