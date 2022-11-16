@@ -20,9 +20,6 @@
 	</head>
 	<body <?php
 	$additional_classes = [];
-	if ( is_active_sidebar( 'primary' ) ) {
-	  array_push ( $additional_classes, 'sidebar' );
-	}
 	body_class( $additional_classes ); ?>>
 		<a href="#main" class="skip-main">Skip to Main Content</a>
     <div id="page">
