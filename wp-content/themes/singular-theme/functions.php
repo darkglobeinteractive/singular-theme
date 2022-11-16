@@ -34,9 +34,17 @@ function singular_remove_admin_login_header() {
 }
 add_action( 'get_header', 'singular_remove_admin_login_header' );
 
+/* GOOGLE FONTS ------------------------------------------------- */
+function singular_add_google_fonts() {
+  echo '<link rel="preconnect" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+  <link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="preload" as="style">
+  <link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">';
+}
+add_action( 'wp_head', 'singular_add_google_fonts' );
+
 /* STYLES ------------------------------------------------------- */
 function singular_styles() {
-  wp_enqueue_style( 'custom-google-fonts', '//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap', false );
   // wp_enqueue_style( 'custom-fontastic-icons', 'https://file.myfontastic.com/U9FqFSWAktJNmqp9Dd93ZG/icons.css', false );
   // wp_enqueue_style( 'local-fontastic-icons', get_template_directory_uri().'/fonts/styles.css' );
   // wp_enqueue_style( 'colorbox_css', get_template_directory_uri().'/libs/colorbox/example2/colorbox.css' );
