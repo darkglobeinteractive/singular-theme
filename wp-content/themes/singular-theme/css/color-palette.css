@@ -1,0 +1,12 @@
+/* COLOR PALETTE VARIABLES -------------------------------------- */
+:root {
+  --brand-dark-orange: #c25600;
+}
+
+/* Defined in the 'after_setup_theme' hook within functions.php */
+.has-dark-orange-color {
+  color: var(--brand-dark-orange) !important;
+}
+.has-dark-orange-background-color {
+  background-color: var(--brand-dark-orange);
+}

@@ -41,7 +41,30 @@ Admin > Appearance > Menus
 
 1. The Settings > Reading blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
 2. [ ] Disable admin-based Theme Editor (Appearance > Theme Editor)
-  - [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
+       [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
+
+
+# Custom Color Palette
+
+To enable custom color palette:
+
+1. [ ] In the "ENABLE THEME SUPPORT" section, uncomment:
+       [ ] add_theme_support( 'editor-color-palette', array() );
+2. [ ] Uncomment the following enqueued styles:
+       [ ] wp_enqueue_style( 'color-palette-css', ... );
+       [ ] wp_enqueue_style( 'admin-color-palette-css', ... );
+
+
+# Custom Block Patterns
+
+To enable custom block patterns:
+
+1. [ ] Uncomment the following lines:
+       [ ] include( 'inc/block-patterns.php' );
+       [ ] remove_theme_support( 'core-block-patterns' );
+2. [ ] Uncomment the following enqueued styles:
+       [ ] wp_enqueue_style( 'block-patterns-css', ... );
+       [ ] wp_enqueue_style( 'admin-block-patterns-css', ... );
 
 
 # Required Plugin Installation Notes
@@ -50,7 +73,7 @@ Advanced Custom Fields PRO is required by this theme.
 
 1. [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
 2. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
-  - [ ] /singular-theme/_configuration/acf-theme-fields.json
+       [ ] /singular-theme/_configuration/acf-theme-fields.json
 2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
@@ -63,14 +86,14 @@ Advanced Custom Fields PRO is required by this theme.
 # CLIENT 1 REQUESTS
 
 1. [ ] Install "WPS Hide Login" (https://wordpress.org/plugins/wps-hide-login/)
-  - [ ] Rename login page to /user
+       [ ] Rename login page to /user
 2. [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
-  - [ ] Limit login attempts
+       [ ] Limit login attempts
 3. [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
-  - [ ] Add captcha to login and other forms
+       [ ] Add captcha to login and other forms
 4. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
-  - [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
-  - [ ] Add site name and image to the Yoast SEO admin
+       [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
+       [ ] Add site name and image to the Yoast SEO admin
 5. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
 6. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
 7. [ ] Remove 'root' user if necessary
@@ -88,7 +111,7 @@ The Singular Plugin is included in the repository. It provides content-based fun
 Advanced Custom Fields PRO (ACF PRO) is a requirement for this plugin's functionality to work. Install and activate the Singular Plugin, then install, activate and update ACF PRO.
 
 1. [ ] After installing and activating ACF PRO, import the following JSON files into ACF PRO:
-  - [ ] /singular-plugin/_configuration/acf-singular-plugin-fields.json
+       [ ] /singular-plugin/_configuration/acf-singular-plugin-fields.json
 2. [ ] Ensure that the "Singular Plugin: Accordion Block" field group has "Show this field group if: Block is equal to Accordion"
 
 

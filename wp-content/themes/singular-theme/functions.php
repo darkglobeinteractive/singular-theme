@@ -4,6 +4,7 @@
 // include( 'inc/wysiwyg-customizations.php' );
 // include( 'inc/shortcodes.php' );
 // include( 'inc/singular-functions.php' );
+// include( 'inc/block-patterns.php' );
 
 /* ENABLE THEME SUPPORT ----------------------------------------- */
 /* https://developer.wordpress.org/reference/functions/add_theme_support/ */
@@ -13,6 +14,16 @@ function singular_setup_theme_supported_features() {
   add_theme_support( 'responsive-embeds' );
   add_theme_support( 'wp-block-styles' );
   add_image_size( 'banner-bg', 2560, 0, false );
+  // remove_theme_support( 'core-block-patterns' );
+  /*
+  add_theme_support( 'editor-color-palette', array(
+    array(
+      'name'  => 'Dark Orange',
+      'slug'  => 'dark-orange',
+      'color' => '#c25600'
+    ),
+  ) );
+  */
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 
@@ -33,6 +44,8 @@ function singular_styles() {
   // wp_enqueue_style( 'slickjs_theme_css', get_template_directory_uri().'/libs/slick/slick/slick-theme.css' );
   // wp_enqueue_style( 'slickjs_custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/mmenu.css' );
+  // wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/block-patterns.css' );
+  // wp_enqueue_style( 'block-patterns-css', get_template_directory_uri().'/css/block-patterns.css' );
   wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css' );
   wp_enqueue_style( 'menus-css', get_template_directory_uri().'/style-menus.css' );
   wp_enqueue_style( 'homepage-css', get_template_directory_uri().'/style-homepage.css' );
@@ -43,6 +56,8 @@ add_action( 'wp_enqueue_scripts', 'singular_styles' );
 
 /* ADMIN STYLES ------------------------------------------------- */
 function singular_admin_styles() {
+  // wp_enqueue_style( 'admin-color-palette-css', get_template_directory_uri().'/css/block-patterns.css' );
+  // wp_enqueue_style( 'admin-block-patterns-css', get_template_directory_uri().'/css/block-patterns.css' );
   wp_enqueue_style( 'admin-primary-css', get_template_directory_uri().'/css/admin-styles.css' );
   wp_enqueue_style( 'admin-editor-css', get_template_directory_uri().'/css/editor-styles.css' );
 }
