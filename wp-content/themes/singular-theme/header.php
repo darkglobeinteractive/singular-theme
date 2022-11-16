@@ -6,11 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php
 		$gv = singular_global_vars();
-		if ( is_object( $gv['queried_object'] ) && get_field ( 'custom_page_title', $gv['queried_object']->ID ) ) {
+		if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
+			wp_title();
+		} elseif ( is_object( $gv['queried_object'] ) && get_field ( 'custom_page_title', $gv['queried_object']->ID ) ) {
 			echo get_field ( 'custom_page_title', $gv['queried_object']->ID ).' | ';
 			bloginfo();
-		} elseif ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
-			wp_title();
 		} else {
 			wp_title( '|', true, 'right' );
 			bloginfo();
