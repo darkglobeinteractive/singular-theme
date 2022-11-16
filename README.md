@@ -67,6 +67,21 @@ To enable custom block patterns:
        [ ] wp_enqueue_style( 'admin-block-patterns-css', ... );
 
 
+# GreenSock Animation Support
+
+GreenSock is the animation library we'd like to focus on using:
+https://greensock.com/docs/
+
+To enable basic GreenSock animation:
+
+1. [ ] Uncomment the following enqueued styles:
+       [ ] wp_enqueue_style( 'animation-css', ... );
+2. [ ] Uncomment the enqueued scripts in the if ( !is_admin() ) block:
+       [ ] wp_enqueue_script( 'gsap_js', ... );
+       [ ] wp_enqueue_script( 'gsap_scrolltrigger_js', ... );
+       [ ] wp_enqueue_script( 'animations_js', ... );
+
+
 # Required Plugin Installation Notes
 
 Advanced Custom Fields PRO is required by this theme.
