@@ -1,0 +1,84 @@
+/* The rules below are ones which will commonly be changed. By default, they mostly match the default Ninja Forms styles and are here simply to make it easier to change them reliably. */
+
+/* global wrapper and erros */
+#page .nf-form-cont { }
+#page .nf-form-title { }
+#page .nf-form-title h3 { }
+#page .nf-form-content {
+  max-width: 100%;
+  padding: 0;
+}
+#page .nf-error-msg,
+#page .ninja-forms-req-symbol {
+  color: #e80000;
+}
+#page .nf-error .ninja-forms-field {
+  border-color: #e80000 !important;
+}
+#page #ninja_forms_required_items,
+#page .nf-field-container {
+  margin: 0 0 25px;
+}
+
+/* labels */
+#page .nf-form-content .label-above .nf-field-label,
+#page .nf-form-content .label-below .nf-field-label,
+#page .nf-form-content .label-hidden .nf-field-label {
+  margin: 0 0 10px;
+  padding: 0;
+}
+#page .nf-form-content label {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* standard fields */
+#page .nf-form-content .listselect-wrap .nf-field-element div,
+#page .nf-form-content .ninja-forms-field:not([type="button"]) {
+  margin: 0;
+  padding: 12px;
+  font-size: 16px;
+}
+#page .nf-form-content .list-select-wrap .nf-field-element > div,
+#page .nf-form-content input:not([type="button"]),
+#page .nf-form-content textarea {
+  background: #f7f7f7;
+  border: 1px solid #c4c4c4;
+  border-radius: 0;
+  box-shadow: none;
+  color: #787878;
+}
+/* select fields */
+#page .nf-form-content select.ninja-forms-field {
+  color: #787878;
+}
+#page .nf-form-content .list-select-wrap > div select {
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 2;
+}
+.nf-form-content .list-select-wrap > div div:after {
+  content: "\f078";
+  font-family: FontAwesome;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* buttons */
+#page .nf-form-content button,
+#page .nf-form-content input[type="button"],
+#page .nf-form-content input[type="submit"] { }
+#page .nf-form-content button:hover,
+#page .nf-form-content input[type="button"]:hover,
+#page .nf-form-content input[type="submit"]:hover { }

@@ -55,6 +55,7 @@ function singular_styles() {
   // wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/block-patterns.css' );
   // wp_enqueue_style( 'block-patterns-css', get_template_directory_uri().'/css/block-patterns.css' );
   // wp_enqueue_style( 'animation-css', get_template_directory_uri().'/css/animation.css' );
+  wp_enqueue_style( 'ninja-forms-css', get_template_directory_uri().'/css/ninja-forms.css' );
   wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css' );
   wp_enqueue_style( 'menus-css', get_template_directory_uri().'/style-menus.css' );
   wp_enqueue_style( 'homepage-css', get_template_directory_uri().'/style-homepage.css' );
