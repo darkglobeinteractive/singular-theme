@@ -203,13 +203,18 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
 
 /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
 /* #wpadminbar is 32px tall */
+.mm-menu {
+  /* --mm-color-background: #fff; */
+  /* --mm-color-border: #000; */
+  /* --mm-color-text-dimmed: #000; */
+  /* --mm-color-text: #000; */
+}
 #mm-clone-navigation {
   display: none;
 }
 body.admin-bar #mm-clone-navigation {
   top: 32px;
 }
-.mmenu { }
 
 
 @media screen and (max-width: 1400px) {

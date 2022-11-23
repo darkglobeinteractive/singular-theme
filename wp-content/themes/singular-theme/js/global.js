@@ -25,7 +25,19 @@ jQuery(document).ready(function($) {
   var mmenu = new Mmenu( '#navigation', {
     'offCanvas': {
       'position': 'right-front'
-    }
+    },
+    'navbar': false,
+    'navbars': [
+      {
+        'use': true,
+        'position': 'top',
+        'content': [
+          'prev',
+          'title',
+          'close'
+        ]
+      }
+    ]
   },{
     'offCanvas': {
       'clone': true
