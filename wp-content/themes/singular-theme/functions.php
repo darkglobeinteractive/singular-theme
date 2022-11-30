@@ -15,15 +15,18 @@ function singular_setup_theme_supported_features() {
   add_theme_support( 'wp-block-styles' );
   add_image_size( 'banner-bg', 2560, 0, false );
   // remove_theme_support( 'core-block-patterns' );
-  /*
-  add_theme_support( 'editor-color-palette', array(
-    array(
-      'name'  => 'Dark Orange',
-      'slug'  => 'dark-orange',
-      'color' => '#c25600'
-    ),
-  ) );
-  */
+  // add_theme_support( 'editor-color-palette', array(
+  //   array(
+  //     'name'  => 'Primary',
+  //     'slug'  => 'primary',
+  //     'color' => '#0000ff'
+  //   ),
+  //   array(
+  //     'name'  => 'Secondary',
+  //     'slug'  => 'secondary',
+  //     'color' => '#ff0000'
+  //   ),
+  // ) );
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 

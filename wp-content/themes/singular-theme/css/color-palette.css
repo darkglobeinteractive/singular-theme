@@ -1,12 +1,19 @@
 /* COLOR PALETTE VARIABLES -------------------------------------- */
 :root {
-  --brand-dark-orange: #c25600;
+  --brand-primary: #0000ff;
+  --brand-secondary: #ff0000;
 }
 
 /* Defined in the 'after_setup_theme' hook within functions.php */
-.has-dark-orange-color {
-  color: var(--brand-dark-orange) !important;
+.has-primary-color {
+  color: var(--brand-primary) !important;
 }
-.has-dark-orange-background-color {
-  background-color: var(--brand-dark-orange);
+.has-primary-background-color {
+  background-color: var(--brand-primary);
+}
+.has-secondary-color {
+  color: var(--brand-secondary) !important;
+}
+.has-secondary-background-color {
+  background-color: var(--brand-secondary);
 }
