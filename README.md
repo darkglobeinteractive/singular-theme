@@ -42,6 +42,7 @@ Admin > Appearance > Menus
 1. The Settings > Reading blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
 2. [ ] Disable admin-based Theme Editor (Appearance > Theme Editor)
        [ ] In wp-config.php file == define('DISALLOW_FILE_EDIT', true);
+3. [ ] Double-check that commenting is completely turned-off
 
 
 # Custom Color Palette
