@@ -15,6 +15,8 @@ function singular_setup_theme_supported_features() {
   add_theme_support( 'wp-block-styles' );
   add_image_size( 'banner-bg', 2560, 0, false );
   // remove_theme_support( 'core-block-patterns' );
+  // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#block-color-palettes
+  // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#block-gradient-presets
   // add_theme_support( 'editor-color-palette', array(
   //   array(
   //     'name'  => 'Primary',
