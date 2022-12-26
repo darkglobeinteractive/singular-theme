@@ -100,6 +100,9 @@ ul.social-media li a {
   width: 100%;
   color: #000;
 }
+ul.social-media li a > .label {
+  display: none;
+}
 ul.social-media li.icon a svg .fill {
   fill: #0000ff;
 }
