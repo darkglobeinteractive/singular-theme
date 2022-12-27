@@ -45,6 +45,11 @@ Admin > Appearance > Menus
 3. [ ] Double-check that commenting is completely turned-off
 
 
+# Fixed Header Notes
+
+1. The "Smooth Scrolling" functionality in the /js/global.js file contains a header_height variable. If a fixed header is used on the site, you'll want to change this from "0" to "$('#header').innerHeight()" and possibly adjust the scroll_top_padding variable as well.
+
+
 # Custom Color Palette
 
 To enable custom color palette:
