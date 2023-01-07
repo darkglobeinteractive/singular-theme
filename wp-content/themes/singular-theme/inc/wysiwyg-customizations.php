@@ -9,6 +9,7 @@ function singular_mce_editor_buttons( $buttons ) {
 add_filter( 'mce_buttons_2', 'singular_mce_editor_buttons' );
 
 /* ADD STYLES TO DROPDOWN --------------------------------------- */
+/* See https://stackoverflow.com/q/50918418 for adding these to ACF WYSIWYG fields */
 function singular_mce_before_init( $settings ) {
 
   $style_formats = array(
