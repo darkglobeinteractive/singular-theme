@@ -104,6 +104,9 @@ ul.social-media li a {
 ul.social-media li a > .label {
   display: none;
 }
+ul.social-media li.icon a svg {
+  display: block;
+}
 ul.social-media li.icon a svg .fill {
   fill: #0000ff;
 }
@@ -118,6 +121,7 @@ body {
   background-color: #000;
 }
 #page {
+  position: relative;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;

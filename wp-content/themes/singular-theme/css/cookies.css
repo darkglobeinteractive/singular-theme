@@ -1,0 +1,54 @@
+/* COOKIE CONSENT BAR ------------------------------------------- */
+#cookie-consent,
+#cookie-consent * {
+  box-sizing: border-box;
+}
+#cookie-consent { 
+  display: none;
+  position: sticky;
+  z-index: 10000;
+  bottom: 0;
+}
+body.show-cookie-consent #cookie-consent {
+  display: block;
+}
+#cookie-consent > .wrap {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #aaa;
+  padding: 20px;
+ }
+#cookie-consent .info { }
+#cookie-consent .info > *:first-child {
+  margin-top: 0;
+} 
+#cookie-consent .info > *:last-child {
+  margin-bottom: 0;
+}
+#cookie-consent .btn-wrap { 
+  padding: 0 0 0 20px;
+}
+#cookie-consent .btn-wrap .btn { 
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+
+  /* COOKIE CONSENT BAR ------------------------------------------- */
+  #cookie-consent > .wrap {
+    -ms-flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap
+   }
+   #cookie-consent .btn-wrap { 
+    padding: 20px 0 0;
+   }
+
+}

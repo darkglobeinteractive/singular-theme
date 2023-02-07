@@ -1,6 +1,3 @@
-        <?php if ( is_active_sidebar( 'primary' ) ): ?>
-          <?php get_sidebar( 'primary' ); ?>
-        <?php endif; ?>
       </div>
     </div>
     <footer id="footer">
@@ -9,6 +6,7 @@
         <?php include( locate_template( 'templates/social-media.php', false, false ) ); ?>
       </div>
     </footer>
+    <?php // include( locate_template( 'templates/cookie-consent.php', false, false ) ); ?>
   </div>
 <?php wp_footer(); ?>
 </body>
