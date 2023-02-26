@@ -144,4 +144,11 @@ function singular_feed_reader( $feed_url, $article_limit = false ) {
   return $feed_return;
 
 }
+
+
+// THEME FILEMTIME: This returns the timestamp of a file's modification time within the theme
+// $file: Relative path to the theme file
+function singular_theme_filemtime( $file ) {
+  return filemtime( get_template_directory().$file );
+}
 ?>
