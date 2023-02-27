@@ -1,57 +1,63 @@
 jQuery(document).ready(function($) {
 
   /* NAVIGATION ------------------------------------------------- */
-  $('#navigation > ul.menu').each(function() {
+  $('#navigation').each(function() {
 
-    // Create variable for the main navigation menu
-    var $menu = $(this);
+    // Create variable for container element
+    var $navigation = $(this);
 
-    // Handle items with no-link
-    $('li.no-link', $menu).each(function() {
+    // Handle no-link menu items
+    $('> ul.menu', $navigation).each(function() {
 
-      // Create variable to contain the text of the item
-      var element_text = $('> a', this).text();
+      // Create variable for the main navigation menu
+      var $menu = $(this);
 
-      $('> a', this).detach();
-      $(this).removeClass('no-link').prepend('<span class="no-link">'+element_text+'</span>');
+      // Handle items with no-link
+      $('li.no-link', $menu).each(function() {
+
+        // Create variable to contain the text of the item
+        var element_text = $('> a', this).text();
+
+        $('> a', this).detach();
+        $(this).removeClass('no-link').prepend('<span class="no-link">'+element_text+'</span>');
+
+      });
 
     });
 
-  });
-
-  /* MOBILE MENU ------------------------------------------------ */
-
-  // Configure the mobile menu
-  var mmenu = new Mmenu( '#navigation', {
-    'offCanvas': {
-      'position': 'right-front'
-    },
-    'navbar': false,
-    'navbars': [
-      {
-        'use': true,
-        'position': 'top',
-        'content': [
-          'prev',
-          'title',
-          'close'
-        ]
+    // Configure the mobile menu
+    var mmenu = new Mmenu( '#navigation', {
+      'offCanvas': {
+        'position': 'right-front'
+      },
+      'navbar': false,
+      'navbars': [
+        {
+          'use': true,
+          'position': 'top',
+          'content': [
+            'prev',
+            'title',
+            'close'
+          ]
+        }
+      ]
+    },{
+      'offCanvas': {
+        'clone': true
       }
-    ]
-  },{
-    'offCanvas': {
-      'clone': true
-    }
-  });
+    });
 
-  // Utilize mmenu API to use independent mobile menu trigger
-  var mmenu_api = mmenu.API;
-  $('#mm-trigger').on('click', function() {
-    if ($('body').hasClass('mm-wrapper--opened')) {
-      mmenu_api.close();
-    } else {
-      mmenu_api.open();
-    }
+    // Utilize mmenu API to use independent mobile menu trigger
+    var mmenu_api = mmenu.API;
+    $('#mm-trigger').on('click', function() {
+      if ($('body').hasClass('mm-wrapper--opened')) {
+        mmenu_api.close();
+      } else {
+        mmenu_api.open();
+      }
+    });
+
   });
 
 
