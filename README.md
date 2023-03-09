@@ -105,7 +105,7 @@ Advanced Custom Fields PRO is required by this theme.
 1. [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
 2. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
        [ ] /singular-theme/_configuration/acf-theme-fields.json
-2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
+3. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
 # Optional Plugin Installation Notes
@@ -116,18 +116,16 @@ Advanced Custom Fields PRO is required by this theme.
 
 # CLIENT 1 REQUESTS
 
-1. [ ] Install "WPS Hide Login" (https://wordpress.org/plugins/wps-hide-login/)
-       [ ] Rename login page to /user
-2. [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
+1. [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
        [ ] Limit login attempts
-3. [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
+2. [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
        [ ] Add captcha to login and other forms
-4. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+3. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
        [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
        [ ] Add site name and image to the Yoast SEO admin
-5. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-6. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
-7. [ ] Remove 'root' user if necessary
+4. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
+5. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+6. [ ] Remove 'root' user if necessary
 
 
 ===================================

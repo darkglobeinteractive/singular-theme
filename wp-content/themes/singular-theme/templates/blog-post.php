@@ -13,6 +13,8 @@ $blurb = ( has_excerpt() ? get_the_excerpt() : substr( get_the_excerpt(), 0, 250
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+  <?php edit_post_link( 'Edit', '<div class="edit-link">', '</div>', get_the_ID(), 'btn' ); ?>
+
   <div class="thumbnail"><a href="<?php echo $permalink; ?>"><img src="<?php echo $post_thumbnail; ?>" alt="<?php echo $post_thumbnail_alt; ?>" /></a></div>
 
   <div class="content">
