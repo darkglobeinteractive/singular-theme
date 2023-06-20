@@ -1,6 +1,7 @@
 <?php
 /* INCLUDES ----------------------------------------------------- */
 /* Un-comment the ones you'd like to use, each contains examples */
+// include( 'admin-support/index.php' ); -- Still underdevelopment
 include( 'inc/singular-functions.php' );
 // include( 'inc/wysiwyg-customizations.php' );
 // include( 'inc/shortcodes.php' );

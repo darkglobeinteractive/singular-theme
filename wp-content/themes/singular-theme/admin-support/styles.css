@@ -1,0 +1,9 @@
+/* WP CORE OVERRIDES -------------------------------------------- */
+#wpcontent {
+  padding-left: 0 !important;
+}
+
+/* SINGULAR SUPPORT GLOBALS ------------------------------------- */
+.singular-support-wrap {
+  padding: 0;
+}
