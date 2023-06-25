@@ -45,12 +45,12 @@
 }
 
 /* standard fields */
-#page .nf-form-content .ninja-forms-field:not([type="button"]):not([type="checkbox"]):not([type="radio"]) {
+#page .nf-form-content .ninja-forms-field:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]) {
   margin: 0;
   padding: 8px;
   font-size: 15px;
 }
-#page .nf-form-content input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+#page .nf-form-content input:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 #page .nf-form-content textarea {
   height: 36px;
   background: #fff;
