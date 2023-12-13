@@ -14,7 +14,7 @@
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.75);
 }
-#page .slick-dots li button::before {
+#page .slick-dots li button .slick-dot-icon {
   display: none;
 }
 #page .slick-dots li.slick-active button {
