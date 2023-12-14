@@ -63,6 +63,8 @@ jQuery(document).ready(function($) {
 
   /* SLICK SLIDER ----------------------------------------------- */
   /* https://kenwheeler.github.io/slick/ */
+  /* https://accessible360.github.io/accessible-slick/ */
+  /* Note: If autoplay is set to true, a play/pause button is added by default for accessibility reasons. You can hide this by setting useAutoplayToggleButton to false, but this creates an accessibility issue in itself. */
   /* Un-comment the slick items in functions.php
   $('.slick-slider').slick({
     arrows: true,
