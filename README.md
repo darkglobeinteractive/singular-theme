@@ -9,7 +9,7 @@ https://github.com/darkglobeinteractive/singular-theme
 Singular Theme Installation Notes
 ===================================
 
-# mmenu (v.9.2)
+# mmenu (v.9.3)
 
 mmenu is used to handle the mobile menus in this theme. Documentation can be found here:
 https://mmenujs.com/
@@ -25,10 +25,9 @@ Admin > Appearance > Menus
 
 # Create Pages / Modify Templates
 
-1. [ ] Create sitemap page and update template file to reflect page ID
-2. [ ] Create search form page and update template file to reflect page ID
-3. [ ] Create home page and use customizer to set this page to the front page
-4. [ ] Delete existing widgets
+1. [ ] Create search form page and update template file to reflect page ID
+2. [ ] Create home page and use customizer to set this page to the front page
+3. [ ] Delete existing widgets
 
 
 # Login Page Customizations
@@ -102,10 +101,9 @@ To enable this functionality:
 
 Advanced Custom Fields PRO is required by this theme.
 
-1. [ ] Install "Custom Post Type UI" (https://github.com/WebDevStudios/custom-post-type-ui/)
-2. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
+1. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
        [ ] /singular-theme/_configuration/acf-theme-fields.json
-3. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
+2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
 # Optional Plugin Installation Notes
@@ -118,14 +116,14 @@ Advanced Custom Fields PRO is required by this theme.
 
 1. [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
        [ ] Limit login attempts
-2. [ ] Install "reCaptcha" (https://wordpress.org/plugins/google-captcha/)
-       [ ] Add captcha to login and other forms
-3. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+2. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
        [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
        [ ] Add site name and image to the Yoast SEO admin
-4. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-5. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
-6. [ ] Remove 'root' user if necessary
+       [ ] Remove sitemap page and template file if using Yoast SEO
+3. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
+4. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+5. [ ] Install "Wordfence"
+       [ ] Send license information to hello@[clientaddress]
 
 
 ===================================
