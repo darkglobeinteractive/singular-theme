@@ -34,7 +34,7 @@
 	          'container_id' => 'navigation'
 					) );
 					?>
-					<button id="mm-trigger">
+					<button id="mm-trigger" aria-label="Mobile Menu Toggle">
 						<span class="trigger-title">Mobile Menu</span>
 						<span class="trigger-wrapper">
 							<span class="trigger-container">
