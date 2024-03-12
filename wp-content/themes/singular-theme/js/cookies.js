@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
     }
 
     $cpc_btn.on('click', function() {
-      setCookie('cookie-consent-policy-accept', 'true', 24);
+      setCookie('cookie-consent-policy-accept', 'true', false);
       $('body').removeClass('show-cookie-consent');
     });
 
