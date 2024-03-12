@@ -64,12 +64,8 @@ To enable custom color palette:
 
 To enable custom block patterns:
 
-1. [ ] Uncomment the following lines:
-       [ ] include( 'inc/block-patterns.php' );
-       [ ] remove_theme_support( 'core-block-patterns' );
-2. [ ] Uncomment the following enqueued styles:
-       [ ] wp_enqueue_style( 'block-patterns-css', ... );
-       [ ] wp_enqueue_style( 'admin-block-patterns-css', ... );
+1. [ ] Uncomment the following line:
+       [ ] include( 'block-patterns/block-patterns.php' );
 
 
 # GreenSock Animation Support
@@ -122,6 +118,7 @@ Advanced Custom Fields PRO is required by this theme.
        [ ] Remove sitemap page and template file if using Yoast SEO
 3. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
 4. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+       [ ] Add redirect from /user to /wp-admin
 5. [ ] Install "Wordfence"
        [ ] Send license information to hello@[clientaddress]
 
