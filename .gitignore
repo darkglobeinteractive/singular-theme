@@ -28,10 +28,11 @@ Thumbs.db
 *.komodoproject
 *.code-workspace
 
-# ignore log files and databases
+# ignore log files and databases and text files
 *.log
 *.sql
 *.sqlite
+*.txt
 
 # ignore compiled files
 *.com
