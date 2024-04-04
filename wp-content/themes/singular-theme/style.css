@@ -70,8 +70,29 @@ input[type="submit"]:hover,
   background: #eee;
 }
 
+/* 1.3: SITE LOGO ----------------------------------------------- */
+.site-logo {
+  display: block;
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: transparent url('img/logo-login.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.site-logo .logo-link {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  text-align: left;
+  text-indent: -9999em;
+}
 
-/* 1.3: SOCIAL MEDIA NAVIGATION --------------------------------- */
+/* 1.4: SOCIAL MEDIA NAVIGATION --------------------------------- */
 /* https://icons8.com/icons/set/social-media */
 ul.social-media,
 ul.social-media * {
@@ -155,28 +176,11 @@ body.admin-bar #header.sticky {
   height: 100%;
   width: 100%;
 }
-#header .logo {
-  display: block;
+#header .site-logo {
   position: absolute;
   z-index: 1;
   left: 0;
   top: 0;
-  height: 80px;
-  width: 80px;
-  background: transparent url('img/logo-login.png') 0 0 no-repeat;
-  background-size: 100% 100%;
-}
-#header .logo .logo-link {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #000;
-  text-align: left;
-  text-indent: -9999em;
 }
 
 
