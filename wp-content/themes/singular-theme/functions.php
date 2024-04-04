@@ -56,6 +56,7 @@ wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css', array
 function singular_styles() {
   // wp_enqueue_style( 'custom-fontastic-icons', 'https://file.myfontastic.com/U9FqFSWAktJNmqp9Dd93ZG/icons.css', false );
   // wp_enqueue_style( 'local-fontastic-icons', get_template_directory_uri().'/fonts/styles.css' );
+  // wp_enqueue_style( 'custom-fonts-css', get_template_directory_uri().'/fonts/style.css', array(), singular_theme_filemtime('/fonts/style.css' ) );
   // wp_enqueue_style( 'colorbox_css', get_template_directory_uri().'/libs/colorbox/example2/colorbox.css' );
   // wp_enqueue_style( 'slickjs_css', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.css' );
   // wp_enqueue_style( 'slickjs_theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
