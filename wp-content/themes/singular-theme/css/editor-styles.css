@@ -1,4 +1,7 @@
 /* Main column width */
+body {
+  background-color: #fff;
+}
 .wp-block {
   max-width: 100%;
 }
