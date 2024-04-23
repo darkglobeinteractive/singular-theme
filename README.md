@@ -26,6 +26,8 @@ Admin > Appearance > Menus
 # Create Pages / Modify Templates
 
 1. [ ] Create search form page and update template file to reflect page ID
+2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file to reflect page ID
+       [ ] If you ARE using Yoast SEO, delete the sitemap page template 
 2. [ ] Create home page and use customizer to set this page to the front page
 3. [ ] Delete existing widgets
 
