@@ -10,7 +10,7 @@
 
 /* Throttle example
 $(window).on('resize', $.throttle(500, function() {
-    setCookieBarPosition();
+    position_menu_bar();
   })
 );
 */

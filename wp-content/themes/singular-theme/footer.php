@@ -6,7 +6,6 @@
         <?php include( locate_template( 'templates/social-media.php', false, false ) ); ?>
       </div>
     </footer>
-    <?php // include( locate_template( 'templates/cookie-consent.php', false, false ) ); ?>
   </div>
 <?php wp_footer(); ?>
 </body>
