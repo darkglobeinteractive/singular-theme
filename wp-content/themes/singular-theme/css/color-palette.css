@@ -2,9 +2,11 @@
 :root {
   --brand-primary: #0000ff;
   --brand-secondary: #ff0000;
+  --black: #000000;
+  --white: #ffffff;
 }
 
-/* Defined in the 'after_setup_theme' hook within functions.php */
+/* solid colors */
 .has-primary-color {
   color: var(--brand-primary) !important;
 }
@@ -16,4 +18,32 @@
 }
 .has-secondary-background-color {
   background-color: var(--brand-secondary);
+}
+.has-black-color {
+  color: var(--black) !important;
+}
+.has-black-background-color {
+  background-color: var(--black);
+}
+.has-white-color {
+  color: var(--white) !important;
+}
+.has-white-background-color {
+  background-color: var(--white);
+}
+
+/* gradients */
+.has-left-to-right-light-to-dark-green-gradient-background {
+  background: rgb(104,189,73);
+  background: -moz-linear-gradient(90deg, rgba(104,189,73,1) 0%, rgba(0,111,81,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(104,189,73,1) 0%, rgba(0,111,81,1) 100%);
+  background: linear-gradient(90deg, rgba(104,189,73,1) 0%, rgba(0,111,81,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#68bd49",endColorstr="#006f51",GradientType=1);
+}
+.has-angled-light-to-dark-green-gradient-background {
+  background: rgb(104,189,73);
+  background: -moz-linear-gradient(132deg, rgba(104,189,73,1) 0%, rgba(104,189,73,1) 20%, rgba(0,111,81,1) 60%, rgba(18,59,125,1) 100%);
+  background: -webkit-linear-gradient(132deg, rgba(104,189,73,1) 0%, rgba(104,189,73,1) 20%, rgba(0,111,81,1) 60%, rgba(18,59,125,1) 100%);
+  background: linear-gradient(132deg, rgba(104,189,73,1) 0%, rgba(104,189,73,1) 20%, rgba(0,111,81,1) 60%, rgba(18,59,125,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#68bd49",endColorstr="#123b7d",GradientType=1);
 }

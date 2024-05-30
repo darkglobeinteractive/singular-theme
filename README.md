@@ -51,17 +51,6 @@ Admin > Appearance > Menus
 1. The "Smooth Scrolling" functionality in the /js/global.js file contains a header_height variable. If a fixed header is used on the site, you'll want to change this from "0" to "$('#header').innerHeight()" and possibly adjust the scroll_top_padding variable as well.
 
 
-# Custom Color Palette
-
-To enable custom color palette:
-
-1. [ ] In the "ENABLE THEME SUPPORT" section, uncomment:
-       [ ] add_theme_support( 'editor-color-palette', array() );
-2. [ ] Uncomment the following enqueued styles:
-       [ ] wp_enqueue_style( 'color-palette-css', ... );
-       [ ] wp_enqueue_style( 'admin-color-palette-css', ... );
-
-
 # Custom Block Patterns
 
 To enable custom block patterns:

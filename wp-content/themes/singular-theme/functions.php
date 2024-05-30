@@ -15,20 +15,44 @@ function singular_setup_theme_supported_features() {
   add_theme_support( 'responsive-embeds' );
   add_theme_support( 'wp-block-styles' );
   add_image_size( 'banner-bg', 2560, 0, false );
+
   // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#block-color-palettes
+  add_theme_support( 'editor-color-palette', array(
+    array(
+      'name'  => 'Primary',
+      'slug'  => 'primary',
+      'color' => '#0000ff'
+    ),
+    array(
+      'name'  => 'Secondary',
+      'slug'  => 'secondary',
+      'color' => '#ff0000'
+    ),
+    array(
+      'name'  => 'Black',
+      'slug'  => 'black',
+      'color' => '#000000'
+    ),
+    array(
+      'name'  => 'White',
+      'slug'  => 'white',
+      'color' => '#ffffff'
+    )
+  ) );
+
   // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#block-gradient-presets
-  // add_theme_support( 'editor-color-palette', array(
-  //   array(
-  //     'name'  => 'Primary',
-  //     'slug'  => 'primary',
-  //     'color' => '#0000ff'
-  //   ),
-  //   array(
-  //     'name'  => 'Secondary',
-  //     'slug'  => 'secondary',
-  //     'color' => '#ff0000'
-  //   ),
-  // ) );
+  add_theme_support( 'editor-gradient-presets', array(
+    array(
+      'name'      => 'Left-to-Right: Light Green to Dark Green',
+      'gradient'  => 'linear-gradient(90deg, rgba(104,189,73,1) 0%, rgba(0,111,81,1) 100%)',
+      'slug'      => 'left-to-right-light-to-dark-green'
+    ),
+    array(
+      'name'      => 'Angled: Light Green to Dark Green',
+      'gradient'  => 'linear-gradient(132deg, rgba(104,189,73,1) 0%, rgba(0,111,81,1) 100%)',
+      'slug'      => 'angled-light-to-dark-green'
+    )
+  ) );
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 
@@ -62,7 +86,7 @@ function singular_styles() {
   // wp_enqueue_style( 'slickjs_theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
   // wp_enqueue_style( 'slickjs_custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/mmenu.css' );
-  // wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/color-palette.css' );
+  wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/color-palette.css' );
   // wp_enqueue_style( 'animation-css', get_template_directory_uri().'/css/animation.css' );
   wp_enqueue_style( 'ninja-forms-css', get_template_directory_uri().'/css/ninja-forms.css', array(), singular_theme_filemtime('/css/ninja-forms.css' ) );
   wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css', array(), singular_theme_filemtime('/style.css' ) );
@@ -76,7 +100,7 @@ add_action( 'wp_enqueue_scripts', 'singular_styles' );
 
 /* ADMIN STYLES ------------------------------------------------- */
 function singular_admin_styles() {
-  // wp_enqueue_style( 'admin-color-palette-css', get_template_directory_uri().'/css/color-palette.css' );
+  wp_enqueue_style( 'admin-color-palette-css', get_template_directory_uri().'/css/color-palette.css' );
   wp_enqueue_style( 'admin-primary-css', get_template_directory_uri().'/css/admin-styles.css', array(), singular_theme_filemtime('/css/admin-styles.css' ) );
   wp_enqueue_style( 'admin-editor-css', get_template_directory_uri().'/css/editor-styles.css', array(), singular_theme_filemtime('/css/editor-styles.css' ) );
 }
