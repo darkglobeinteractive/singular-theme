@@ -81,10 +81,11 @@ function singular_styles() {
   // wp_enqueue_style( 'custom-fontastic-icons', 'https://file.myfontastic.com/U9FqFSWAktJNmqp9Dd93ZG/icons.css', false );
   // wp_enqueue_style( 'local-fontastic-icons', get_template_directory_uri().'/fonts/styles.css' );
   // wp_enqueue_style( 'custom-fonts-css', get_template_directory_uri().'/fonts/style.css', array(), singular_theme_filemtime('/fonts/style.css' ) );
-  // wp_enqueue_style( 'colorbox_css', get_template_directory_uri().'/libs/colorbox/example2/colorbox.css' );
-  // wp_enqueue_style( 'slickjs_css', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.css' );
-  // wp_enqueue_style( 'slickjs_theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
-  // wp_enqueue_style( 'slickjs_custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
+  // wp_enqueue_style( 'colorbox-css', get_template_directory_uri().'/libs/colorbox/example2/colorbox.css' );
+  // wp_enqueue_style( 'modaal-css', get_template_directory_uri().'/libs/modaal/dist/css/modaal.min.css' );
+  // wp_enqueue_style( 'slickjs-css', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.css' );
+  // wp_enqueue_style( 'slickjs-theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
+  // wp_enqueue_style( 'slickjs-custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/mmenu.css' );
   wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/color-palette.css' );
   // wp_enqueue_style( 'animation-css', get_template_directory_uri().'/css/animation.css' );
@@ -122,6 +123,7 @@ add_filter( 'login_headerurl', 'singular_login_url' );
 /* SCRIPTS ------------------------------------------------------ */
 function singular_scripts() {
   // wp_enqueue_script( 'colorbox-js', get_template_directory_uri().'/libs/colorbox/jquery.colorbox-min.js', array( 'jquery' ) );
+  //wp_enqueue_script( 'modaal-js', get_template_directory_uri().'/libs/modaal/dist/js/modaal.js', array( 'jquery' ) );
   // wp_enqueue_script( 'slickjs-js', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.js', array( 'jquery' ) );
   wp_enqueue_script( 'mmenu-js', get_template_directory_uri().'/libs/mmenu/dist/mmenu.js', array( 'jquery' ) );
 	wp_enqueue_script( 'global-js', get_template_directory_uri().'/js/global.js', array( 'jquery', 'mmenu-js' ), singular_theme_filemtime('/js/global.js' ) );

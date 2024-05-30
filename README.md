@@ -135,3 +135,25 @@ Advanced Custom Fields PRO (ACF PRO) is a requirement for this plugin's function
 The plugin adds a new Gutenberg block category titled "Singular Blocks" which contains the following custom blocks.
 
 1. Accordion: Produces an animated accordion block composed of titles and WYSIWYG content blocks.
+
+
+===================================
+Available Libraries
+===================================
+
+There are a handful of libraries included in the theme directory in the /libs/ directory.
+
+# Accessible Slick v.1.0.1
+Git Location: https://github.com/Accessible360/accessible-slick.git
+Website: https://accessible360.github.io/accessible-slick/
+Notes: This is the accessible version of the slider we've been using for years.
+
+# Colorbox v.1.6.4
+Git Location: https://github.com/jackmoore/colorbox
+Website: https://www.jacklmoore.com/colorbox/
+Notes: We should begin phasing-out the use of this plugin because it's not maintained anymore and isn't 100% accessible.
+
+# Modaal v.0.4.4
+Git Location: https://github.com/humaan/Modaal
+Notes: We're beginning to try-out this modal library because it's proven to be simpler to use and passes accessibility scans. The /libs/modaal/index.html demos are better than the github information.
+
