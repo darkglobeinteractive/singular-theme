@@ -74,16 +74,6 @@ To enable basic GreenSock animation:
        [ ] wp_enqueue_script( 'animations_js', ... );
 
 
-# Simple Cookie Consent
-
-There is a simple cookie consent banner built-in to the theme for accepting the use of cookies.
-
-To enable this functionality:
-
-1. [ ] Uncomment the enqueued /js/cookies.js and /css/cookies.css files in functions.php
-2. [ ] Uncomment the local template include to /templates/cookie-consent.php in footer.php
-
-
 # Required Plugin Installation Notes
 
 Advanced Custom Fields PRO is required by this theme.
