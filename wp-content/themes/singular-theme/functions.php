@@ -1,7 +1,8 @@
 <?php
 /* INCLUDES ----------------------------------------------------- */
 /* Un-comment the ones you'd like to use, each contains examples */
-// include( 'admin-support/index.php' ); -- Still underdevelopment
+// include( 'admin-support/index.php' );
+// include( 'inc/remove-comments.php' );
 include( 'inc/singular-functions.php' );
 include( 'block-patterns/block-patterns.php' );
 // include( 'inc/wysiwyg-customizations.php' );
