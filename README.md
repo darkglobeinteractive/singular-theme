@@ -46,14 +46,27 @@ Admin > Appearance > Menus
 3. [ ] Double-check that commenting is completely turned-off
 
 
+# Disabling Comments
+
+If this site will not allow discussions, follow these instructions for effectively removing the functionality from the site:
+
+1. [ ] Goto Admin > Settings > Discussion and uncheck the checkbox for "Allow people to submit comments on new posts"
+2. [ ] Uncomments the following line in functions.php:
+        [ ] include( 'inc/remove-comments.php' );
+3. [ ] Enable the site support section which contains information on the fact that comments have been disabled and how to enable them in necessary. To do this, uncomment the following line in functions.php:
+        [ ] include( 'admin-support/index.php' );
+
+
 # Fixed Header Notes
 
-1. The "Smooth Scrolling" functionality in the /js/global.js file contains a header_height variable. If a fixed header is used on the site, you'll want to change this from "0" to "$('#header').innerHeight()" and possibly adjust the scroll_top_padding variable as well.
+The "Smooth Scrolling" functionality in the /js/global.js file contains a header_height variable. 
+
+If a fixed header is used on the site, you'll want to change this from "0" to "$('#header').innerHeight()" and possibly adjust the scroll_top_padding variable as well.
 
 
 # Custom Block Patterns
 
-Custom block patterns should be created and managed via core WordPress functionality in the block editor. There are two blocks which should manually migrated into the block editor. Follow these instructions
+Custom block patterns should be created and managed via core WordPress functionality in the block editor. There are two blocks which should manually migrated into the block editor. Follow these instructions:
 
 1. [ ] Migrate the following block code into the block editor:
         [ ] /block-patterns/blocks/accordion.php

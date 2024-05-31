@@ -1,4 +1,21 @@
-<div class="singular-support-wrap">
-  <h2>Site Support</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget neque eget tortor maximus feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras commodo turpis erat, quis vulputate purus euismod at. Quisque aliquam posuere turpis, in ultrices ante bibendum accumsan. Donec accumsan nibh nisl, et aliquam elit ultricies non. Aenean dictum vel nisl sit amet egestas. Nulla malesuada euismod augue vel convallis. Nullam commodo placerat nulla, eu tristique est placerat a. Duis eget nisi semper tortor scelerisque pellentesque sed eget neque. Praesent finibus tempus orci, non interdum dui consequat eget. Curabitur egestas gravida enim. Curabitur sit amet purus lorem. Praesent sollicitudin eros nunc. Vivamus eget massa ullamcorper, semper ex ut, volutpat est. Nunc neque nulla, egestas ac faucibus ac, porta eget sapien.</p>
-</div>
+<?php include( locate_template( 'admin-support/inc/admin-support-header.php', false, false ) ); ?>
+
+  <h1>Introduction</h1>
+  
+  <p>This section of this site contains information on the configuration of the site as well as any custom functionality that users and developers of the site may need to know.</p>
+
+  <hr />
+
+  <h2>Comments Are Disabled</h2>
+
+  <p>Due to the fact that commenting on posts was not planned to be included on the site, all comment- and discussion-related functionality was removed from the site. To restore this functionality, follow these instructions:</p>
+  
+  <p>Remove the following line from the <strong>functions.php</strong> file:</p>
+
+  <code>
+    include( 'inc/remove-comments.php' );
+  </code>
+
+  <p>Once this line is removed, comment-related navigation will be returned to the admin and posts will have the ability to allow comments on a post-by-post basis.</p>
+
+<?php include( locate_template( 'admin-support/inc/admin-support-footer.php', false, false ) ); ?>
