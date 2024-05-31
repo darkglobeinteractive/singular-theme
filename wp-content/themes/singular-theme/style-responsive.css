@@ -1,12 +1,12 @@
 @media screen and (max-width: 782px) {
 
-  /* 2.0: GLOBAL -------------------------------------------------- */
+  /* GLOBAL ------------------------------------------------------- */
   /* #wpadminbar is 46px tall */
   body.admin-bar #page {
     padding-top: 46px;
   }
 
-  /* 2.1: HEADER -------------------------------------------------- */
+  /* HEADER ------------------------------------------------------- */
   body.admin-bar #header.sticky {
     top: 46px;
   }
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 600px) {
 
-  /* 12.1: WORDPRESS CORE OVERRIDES -------------------------------- */
+  /* WORDPRESS CORE OVERRIDES ------------------------------------- */
   #wpadminbar {
     position: fixed;
   }

@@ -1,12 +1,4 @@
-/* -----------------------------------------------------------------
-TABLE OF CONTENTS
-1.0: DESKTOP NAVIGATION
-2.0: MOBILE MENU TRIGGER
-2.1: MOBILE MENU OVERRIDES
------------------------------------------------------------------ */
-
-
-/* 1.0: DESKTOP NAVIGATION -------------------------------------- */
+/* DESKTOP NAVIGATION ------------------------------------------- */
 #navigation,
 #navigation * {
   box-sizing: border-box;
@@ -103,7 +95,7 @@ TABLE OF CONTENTS
 }
 
 
-/* 2.0: MOBILE MENU TRIGGER ------------------------------------- */
+/* MOBILE MENU TRIGGER ------------------------------------------ */
 #mm-trigger,
 #mm-trigger * {
   box-sizing: border-box;
@@ -201,7 +193,7 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
 }
 
 
-/* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+/* MOBILE MENU OVERRIDES ---------------------------------------- */
 /* #wpadminbar is 32px tall */
 .mm-menu {
   /* --mm-color-background: #fff; */
@@ -219,17 +211,17 @@ body.admin-bar #mm-clone-navigation {
 
 @media screen and (max-width: 1400px) {
 
-  /* 1.0: DESKTOP NAVIGATION -------------------------------------- */
+  /* DESKTOP NAVIGATION ------------------------------------------- */
   #navigation {
     display: none !important;
   }
 
-  /* 2.0: MOBILE MENU TRIGGER ------------------------------------- */
+  /* MOBILE MENU TRIGGER ------------------------------------------ */
   #mm-trigger {
     display: block;
   }
 
-  /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+  /* MOBILE MENU OVERRIDES ---------------------------------------- */
   #mm-clone-navigation {
     display: block;
   }
@@ -238,7 +230,7 @@ body.admin-bar #mm-clone-navigation {
 
 @media screen and (max-width: 782px) {
 
-  /* 2.1: MOBILE MENU OVERRIDES ----------------------------------- */
+  /* MOBILE MENU OVERRIDES ---------------------------------------- */
   /* #wpadminbar is 46px tall */
   body.admin-bar #mm-clone-navigation {
     top: 46px;
@@ -248,7 +240,7 @@ body.admin-bar #mm-clone-navigation {
 
 @media screen and (max-width: 550px) {
 
-  /* 2.0: MOBILE MENU TRIGGER ------------------------------------- */
+  /* MOBILE MENU TRIGGER ------------------------------------------ */
   body.mm-wrapper--opened #mm-trigger {
     right: 80%;
   }

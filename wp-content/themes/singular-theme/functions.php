@@ -94,7 +94,6 @@ function singular_styles() {
   wp_enqueue_style( 'ninja-forms-css', get_template_directory_uri().'/css/ninja-forms.css', array(), singular_theme_filemtime('/css/ninja-forms.css' ) );
   wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css', array(), singular_theme_filemtime('/style.css' ) );
   wp_enqueue_style( 'menus-css', get_template_directory_uri().'/style-menus.css', array(), singular_theme_filemtime('/style-menus.css' ) );
-  wp_enqueue_style( 'homepage-css', get_template_directory_uri().'/style-homepage.css', array(), singular_theme_filemtime('/style-homepage.css' ) );
   wp_enqueue_style( 'responsive-css', get_template_directory_uri().'/style-responsive.css', array(), singular_theme_filemtime('/style-responsive.css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'singular_styles' );
