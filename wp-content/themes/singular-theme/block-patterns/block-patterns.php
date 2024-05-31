@@ -29,8 +29,8 @@ add_action( 'wp_enqueue_scripts', 'singular_bps_enqueue_styles' );
 
 function singular_bps_enqueue_admin_styles() {
   wp_enqueue_style( 'bps-base-admin-css', get_template_directory_uri().'/block-patterns/block-patterns.css', array(), singular_theme_filemtime('/block-patterns/block-patterns.css' ) );
-  wp_enqueue_style( 'bps-accordion-admin-css', get_template_directory_uri().'/block-patterns/blocks/accordion-admin.css', array(), singular_theme_filemtime('/block-patterns/blocks/accordion-admin.css' ) );
   wp_enqueue_style( 'bps-basic-content-wrapper-admin-css', get_template_directory_uri().'/block-patterns/blocks/basic-content-wrapper.css', array(), singular_theme_filemtime('/block-patterns/blocks/basic-content-wrapper.css' ) );
+  wp_enqueue_style( 'bps-admin-overrides-css', get_template_directory_uri().'/block-patterns/block-patterns-admin.css', array(), singular_theme_filemtime('/block-patterns/block-patterns-admin.css' ) );
 }
 add_action( 'admin_enqueue_scripts', 'singular_bps_enqueue_admin_styles' );
 ?>
