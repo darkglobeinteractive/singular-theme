@@ -9,35 +9,12 @@ function singular_bps_register_categories() {
   register_block_pattern_category(
     'singular-all',
     array(
-      'label' => 'All Patterns'
-    )
-  );
-
-  register_block_pattern_category(
-    'singular-blocks',
-    array(
-      'label' => 'Blocks'
-    )
-  );
-
-  register_block_pattern_category(
-    'singular-elements',
-    array(
-      'label' => 'Elements'
+      'label' => '[CLIENT] Patterns'
     )
   );
 
 }
 add_action( 'init', 'singular_bps_register_categories' );
-
-
-/* INCLUDE BLOCK PATTERNS --------------------------------------- */
-include( 'blocks/accordion.php' );
-include( 'blocks/basic-content-wrapper.php' );
-
-
-/* INCLUDE INDIVIDUAL ELEMENT TAGS ------------------------------ */
-include( 'elements/custom-list.php' );
 
 
 /* ENQUEUE SCRIPTS ---------------------------------------------- */

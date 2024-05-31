@@ -53,10 +53,14 @@ Admin > Appearance > Menus
 
 # Custom Block Patterns
 
-To enable custom block patterns:
+Custom block patterns should be created and managed via core WordPress functionality in the block editor. There are two blocks which should manually migrated into the block editor. Follow these instructions
 
-1. [ ] Uncomment the following line:
-       [ ] include( 'block-patterns/block-patterns.php' );
+1. [ ] Migrate the following block code into the block editor:
+        [ ] /block-patterns/blocks/accordion.php
+        [ ] /block-patterns/blocks/basic-content-wrapper.php
+2. [ ] Delete the files used in the previous task from the remote server
+
+At this point, you simply have to add new CSS files for each additional custom block created.
 
 
 # GreenSock Animation Support
