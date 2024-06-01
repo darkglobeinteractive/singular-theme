@@ -17,10 +17,12 @@
 		};
 		?></title>
 		<?php wp_head(); ?>
+		<?php include( locate_template( 'inc/analytics-head.php', false, false ) ); ?>
 	</head>
 	<body <?php
 	$additional_classes = [];
 	body_class( $additional_classes ); ?>>
+		<?php include( locate_template( 'inc/analytics-body.php', false, false ) ); ?>
 		<a href="#main" class="skip-main">Skip to Main Content</a>
     <div id="page">
       <header id="header">
