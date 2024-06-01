@@ -32,6 +32,15 @@ Admin > Appearance > Menus
 3. [ ] Delete existing widgets
 
 
+# Required Plugin Installation Notes
+
+Advanced Custom Fields PRO is required by this theme.
+
+1. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
+       [ ] /singular-theme/_configuration/acf-json/acf-theme-fields.json
+2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
+
+
 # Login Page Customizations
 
 1. [ ] Update the image located at /singular-theme/img/login-logo.png
@@ -89,15 +98,6 @@ To enable basic GreenSock animation:
        [ ] wp_enqueue_script( 'gsap_js', ... );
        [ ] wp_enqueue_script( 'gsap_scrolltrigger_js', ... );
        [ ] wp_enqueue_script( 'animations_js', ... );
-
-
-# Required Plugin Installation Notes
-
-Advanced Custom Fields PRO is required by this theme.
-
-1. [ ] Install "Advanced Custom Fields PRO" and import the following JSON field into ACF PRO:
-       [ ] /singular-theme/_configuration/acf-theme-fields.json
-2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 
 
 # Optional Plugin Installation Notes

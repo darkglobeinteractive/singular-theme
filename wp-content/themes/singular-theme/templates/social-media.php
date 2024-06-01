@@ -1,38 +1,77 @@
-<ul class="social-media">
-  <li class="icon facebook">
-    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Link">
-      <span class="label">Facebook</span>
-      <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="facebook-icon-title">
-        <title id="facebook-icon-title">Facebook Icon</title>
-        <path class="fill" d="M227.954,24h0Zm.085,0h0Zm-.121,0h0Zm.16,0h0Zm-.2,0h0Zm.234,0h0Zm.039,0h0Zm-.318,0h0Zm.356,0h0Zm-.394,0h0Zm.433,0h0Zm-.468,0h0Zm-.044,0h0Zm.551,0h0Zm-.589,0h0Zm.628,0h0Zm.039,0h0Zm-.7,0h0Zm-.034,0h0Zm.774,0h0Zm.038,0h0Zm-.861,0h0Zm-.035,0h0Zm.935,0h0Zm-.969,0h0Zm1.008,0h0Zm-1.056,0h0Zm1.094,0h0Zm-1.129,0h0Zm1.167,0h0Zm-1.2,0h0Zm1.24,0h0Zm.038,0h0Zm-1.309,0h0Zm1.347,0h0Zm-1.4,0h0Zm-.034,0h0Zm1.471,0h0Zm-1.5,0h0Zm1.542,0h0Zm.038,0h0Zm-1.629,0h0Zm-.034,0h0Zm1.7,0h0Zm-1.735,0h0Zm1.773,0h0Zm-1.818,0h0Zm1.856,0h0Zm.038,0h0Zm-1.929,0h0Zm-.034,0h0Zm2,0h0Zm-2.039,0h0Zm2.077,0h0Zm.038,0h0Zm-2.155,0h0Zm-.035,0h0Zm2.228,0h0Zm-2.988-.095a12,12,0,1,1,3.75,0V15.469h2.8L233.2,12h-3.328V9.749a1.734,1.734,0,0,1,1.956-1.874h1.513V4.922a18.452,18.452,0,0,0-2.686-.234c-2.741,0-4.533,1.661-4.533,4.669V12h-3.047v3.469h3.047Z" transform="translate(-216)" fill-rule="evenodd"/>
-      </svg>
-    </a>
-  </li>
-  <li class="icon linkedin">
-    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn Link">
-      <span class="label">LinkedIn</span>
-      <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="linkedin-icon-title">
-        <title id="linkedin-icon-title">LinkedIn Icon</title>
-        <path class="fill" d="M237.068,0A2.934,2.934,0,0,1,240,2.932V21.068A2.934,2.934,0,0,1,237.068,24H218.932A2.934,2.934,0,0,1,216,21.068V2.932A2.934,2.934,0,0,1,218.932,0ZM223.522,19.841V9.261H220v10.58Zm12.682,0V13.774c0-3.25-1.735-4.762-4.049-4.762a3.493,3.493,0,0,0-3.17,1.747v-1.5h-3.517c.047.993,0,10.58,0,10.58h3.517V13.932a2.4,2.4,0,0,1,.116-.859,1.925,1.925,0,0,1,1.8-1.286c1.272,0,1.782.971,1.782,2.392v5.661ZM221.787,4.159a1.833,1.833,0,1,0-.047,3.656h.023a1.834,1.834,0,1,0,.024-3.656Z" transform="translate(-216)" fill-rule="evenodd"/>
-      </svg>
-    </a>
-  </li>
-  <li class="icon twitter">
-    <a href="#" target="_blank" rel="noopener" aria-label="Twitter Link">
-      <span class="label">Twitter</span>
-      <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="twitter-icon-title">
-        <title id="twitter-icon-title">Twitter Icon</title>
-        <path class="fill" data-name="Path 4" d="M228,0a12,12,0,1,1-12,12A12.006,12.006,0,0,1,228,0Zm-2.114,18.382a8.158,8.158,0,0,0,8.214-8.214c0-.126,0-.251-.006-.371a5.913,5.913,0,0,0,1.443-1.5,5.859,5.859,0,0,1-1.658.455,2.885,2.885,0,0,0,1.269-1.6,5.846,5.846,0,0,1-1.832.7,2.888,2.888,0,0,0-4.993,1.976,2.647,2.647,0,0,0,.078.659,8.189,8.189,0,0,1-5.951-3.017,2.885,2.885,0,0,0,.9,3.849,2.836,2.836,0,0,1-1.305-.359V11a2.89,2.89,0,0,0,2.317,2.832,2.88,2.88,0,0,1-.76.1,2.754,2.754,0,0,1-.545-.054,2.882,2.882,0,0,0,2.694,2.005,5.8,5.8,0,0,1-3.586,1.233,5.253,5.253,0,0,1-.688-.042,8.043,8.043,0,0,0,4.412,1.305Z" transform="translate(-216)" fill-rule="evenodd"/>
-      </svg>
-    </a>
-  </li>
-  <li class="icon youtube">
-    <a href="#" target="_blank" rel="noopener" aria-label="YouTube Link">
-      <span class="label">YouTube</span>
-      <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="youtube-icon-title">
-        <title id="youtube-icon-title">YouTube Icon</title>
-        <path class="fill" d="M237.068,0A2.934,2.934,0,0,1,240,2.932V21.068A2.934,2.934,0,0,1,237.068,24H218.932A2.934,2.934,0,0,1,216,21.068V2.932A2.934,2.934,0,0,1,218.932,0Zm-.983,8.233a2.113,2.113,0,0,0-1.492-1.492,61.8,61.8,0,0,0-13.186,0,2.113,2.113,0,0,0-1.492,1.492,21.963,21.963,0,0,0-.353,4.062,21.961,21.961,0,0,0,.353,4.062,2.114,2.114,0,0,0,1.492,1.492A50.445,50.445,0,0,0,228,18.2a50.445,50.445,0,0,0,6.593-.353,2.113,2.113,0,0,0,1.492-1.492,21.964,21.964,0,0,0,.353-4.062A21.966,21.966,0,0,0,236.085,8.233Zm-9.773,6.593V9.763l4.384,2.531-4.384,2.531Z" transform="translate(-216)" fill-rule="evenodd"/>
-      </svg>
-    </a>
-  </li>
-</ul>
+<?php 
+$gi_social_media = [
+  ...( get_field( 'social_media_facebook', 'option' ) ? ['facebook' => get_field( 'social_media_facebook', 'option' )] : [] ),
+  ...( get_field( 'social_media_instagram', 'option' ) ? ['instagram' => get_field( 'social_media_instagram', 'option' )] : [] ),
+  ...( get_field( 'social_media_linkedin', 'option' ) ? ['linkedin' => get_field( 'social_media_linkedin', 'option' )] : [] ),
+  ...( get_field( 'social_media_twitter', 'option' ) ? ['twitter' => get_field( 'social_media_twitter', 'option' )] : [] ),
+  ...( get_field( 'social_media_youtube', 'option' ) ? ['youtube' => get_field( 'social_media_youtube', 'option' )] : [] ),
+];
+?>
+<?php if ( count( $gi_social_media ) > 0 ): ?>
+  <ul class="social-media">
+    <?php if ( array_key_exists( 'facebook', $gi_social_media ) ): ?>
+      <li class="icon facebook">
+        <a href="<?php echo $gi_social_media['facebook']; ?>" target="_blank" rel="noopener" aria-label="Facebook Link">
+          <span class="label">Facebook</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+            <title>Facebook Icon</title>
+            <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+            <path class="foreground" d="M259.26,184.48l-3.33,26.75c-.56,4.47-4.35,7.83-8.84,7.83h-43.34v111.87c-4.57.41-9.2.62-13.88.62-10.46,0-20.69-1.05-30.57-3.04v-109.45h-33.33c-3.06,0-5.56-2.51-5.56-5.58v-33.48c0-3.07,2.5-5.58,5.56-5.58h33.33v-50.21c0-30.81,24.88-55.79,55.56-55.79h38.89c3.06,0,5.56,2.51,5.56,5.58v33.48c0,3.07-2.5,5.58-5.56,5.58h-27.78c-12.27,0-22.22,9.99-22.22,22.32v39.05h46.67c5.36,0,9.5,4.71,8.84,10.04Z"/>
+          </svg>
+        </a>
+      </li>
+    <?php endif; ?>
+    <?php if ( array_key_exists( 'instagram', $gi_social_media ) ): ?>
+      <li class="icon instagram">
+        <a href="<?php echo $gi_social_media['instagram']; ?>" target="_blank" rel="noopener" aria-label="Instagram Link">
+          <span class="label">Instagram</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+            <title>Instagram Icon</title>
+            <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+            <path class="foreground" d="M254.26,95.09h-108.52c-27.96,0-50.64,22.68-50.64,50.64v108.52c0,27.96,22.68,50.64,50.64,50.64h108.52c27.96,0,50.64-22.68,50.64-50.64v-108.52c0-27.96-22.68-50.64-50.64-50.64ZM286.82,250.64c0,19.97-16.21,36.17-36.17,36.17h-101.29c-19.97,0-36.17-16.21-36.17-36.17v-101.29c0-19.97,16.21-36.17,36.17-36.17h101.29c19.97,0,36.17,16.21,36.17,36.17v101.29Z"/>
+            <path class="foreground" d="M200.1,145.74c-29.95,0-54.26,24.31-54.26,54.26s24.31,54.26,54.26,54.26,54.26-24.31,54.26-54.26-24.31-54.26-54.26-54.26ZM200.1,236.17c-19.93,0-36.17-16.24-36.17-36.17s16.24-36.17,36.17-36.17,36.17,16.24,36.17,36.17-16.24,36.17-36.17,36.17Z"/>
+            <path class="foreground" d="M257.98,152.97c-5.98,0-10.85-4.87-10.85-10.85s4.87-10.85,10.85-10.85,10.85,4.87,10.85,10.85-4.87,10.85-10.85,10.85Z"/>
+          </svg>
+        </a>
+      </li>
+    <?php endif; ?>
+    <?php if ( array_key_exists( 'linkedin', $gi_social_media ) ): ?>
+      <li class="icon linkedin">
+        <a href="<?php echo $gi_social_media['linkedin']; ?>" target="_blank" rel="noopener" aria-label="LinkedIn Link">
+          <span class="label">LinkedIn</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+            <title>LinkedIn Icon</title>
+            <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+            <circle class="foreground" cx="129.16" cy="120.77" r="25.76"/>
+            <rect  class="foreground" x="107.7" y="163.7" width="42.93" height="128.8" rx="1.91" ry="1.91"/>
+            <path class="foreground" d="M296.6,210.93v72.98c0,4.72-3.86,8.59-8.59,8.59h-25.76c-4.72,0-8.59-3.86-8.59-8.59v-60.11c0-11.85-9.62-21.47-21.47-21.47s-21.47,9.62-21.47,21.47v60.11c0,4.72-3.86,8.59-8.59,8.59h-25.76c-4.72,0-8.59-3.86-8.59-8.59v-111.62c0-4.72,3.86-8.59,8.59-8.59h25.76c4.72,0,8.59,3.86,8.59,8.59v5.5c8.59-11.12,22.8-18.37,38.64-18.37,23.7,0,47.23,17.17,47.23,51.52Z"/>
+          </svg>
+        </a>
+      </li>
+    <?php endif; ?>
+    <?php if ( array_key_exists( 'twitter', $gi_social_media ) ): ?>
+      <li class="icon twitter">
+        <a href="<?php echo $gi_social_media['twitter']; ?>" target="_blank" rel="noopener" aria-label="Twitter Link">
+          <span class="label">Twitter</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+            <title>Twitter X Icon</title>
+            <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+            <path class="foreground" d="M228.86,181.63l80.91-86.54h-30.73l-63.5,67.92-48.63-67.92h-84.03l85.07,118.83-85.07,90.99h30.73l67.67-72.38,51.82,72.38h84.03l-88.26-123.28ZM126.18,117.34h29.3l118.35,165.31h-29.3L126.18,117.34Z"/>
+          </svg>
+        </a>
+      </li>
+    <?php endif; ?>
+    <?php if ( array_key_exists( 'youtube', $gi_social_media ) ): ?>
+      <li class="icon youtube">
+        <a href="<?php echo $gi_social_media['youtube']; ?>" target="_blank" rel="noopener" aria-label="YouTube Link">
+          <span class="label">YouTube</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+            <title>YouTube Icon</title>
+            <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+            <path class="foreground" d="M286.19,115.26H113.81c-17.03,0-30.84,13.81-30.84,30.83v107.82c0,17.03,13.81,30.83,30.84,30.83h172.38c17.02,0,30.83-13.8,30.83-30.83v-107.82c0-17.02-13.81-30.83-30.83-30.83ZM227.69,207.44l-47.93,23.95c-5.53,2.77-12.04-1.25-12.04-7.43v-47.92c0-6.18,6.51-10.2,12.04-7.44l47.93,23.96c6.12,3.06,6.12,11.8,0,14.87Z"/>
+          </svg>
+        </a>
+      </li>
+    <?php endif; ?>
+  </ul>
+<?php endif; ?>

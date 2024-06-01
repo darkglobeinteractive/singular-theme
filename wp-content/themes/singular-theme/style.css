@@ -128,11 +128,14 @@ ul.social-media li a > .label {
 ul.social-media li.icon a svg {
   display: block;
 }
-ul.social-media li.icon a svg .fill {
-  fill: #0000ff;
+ul.social-media li.icon a svg .foreground {
+  fill: #fff;
 }
-ul.social-media li.icon a:hover svg .fill {
-  fill: #ff0000;
+ul.social-media li.icon a svg .background {
+  fill: #000;
+}
+ul.social-media li.icon a:hover svg .background {
+  fill: #f00;
 }
 
 
@@ -231,6 +234,22 @@ body.admin-bar #header.sticky {
   height: 100%;
   width: 100%;
 }
+
+/* vcard */
+#footer .vcard { }
+#footer .vcard .org { }
+#footer .vcard .adr { }
+#footer .vcard .adr .street-address { }
+#footer .vcard .adr .street-address-2 { }
+#footer .vcard .adr .locality { }
+#footer .vcard .adr .region { }
+#footer .vcard .adr .postal-code { }
+#footer .vcard .tel { }
+#footer .vcard .tel a { }
+#footer .vcard .email { }
+#footer .vcard .email a { }
+
+/* copyright */
 #footer .copyright { }
 
 
