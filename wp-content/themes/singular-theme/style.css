@@ -192,6 +192,104 @@ body.admin-bar #header.sticky {
 .banner .banner-title .copy { }
 
 
+/* RICH BANNER -------------------------------------------------- */
+.banner-rich,
+.banner-rich * {
+  box-sizing: border-box;
+}
+.banner-rich { 
+  position: relative;
+  z-index: 1;
+  background: #000 url('img/spacer.gif') center center no-repeat;
+  background-size: cover;
+}
+.banner-rich > .wrap { 
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  position: relative;
+  min-height: 887px;
+}
+.banner-rich .content { 
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 210px;
+}
+.banner-rich .content .content-wrap {
+  max-width: 600px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+.banner-rich .content .content-wrap > *:first-child {
+  margin-top: 0;
+}
+.banner-rich .content .content-wrap > *:last-child {
+  margin-bottom: 0;
+}
+.banner-rich .content .content-wrap h1 {
+  margin-bottom: 0.25em;
+  color: #fff;
+  font-size: 86px;
+  font-weight: 800;
+  line-height: 1.16279em;
+}
+.banner-rich .content .content-wrap .big {
+  font-size: 30px;
+  line-height: 1.25em;
+}
+.banner-rich .content .content-wrap p a {
+  color: #fff;
+  text-decoration: none;
+}
+.banner-rich .content .content-wrap p a:hover {
+  text-decoration: underline;
+}
+.banner-rich .content .content-wrap .button-wrap { 
+  margin-top: 60px;
+}
+.banner-rich .content .content-wrap .button-wrap .btn {
+  margin: 0;
+}
+
+/* full width image banners */
+.banner-rich.full .content { 
+  background-color: transparent;
+}
+
+/* image-aligned banners */
+.banner-rich.image-aligned > .wrap {
+  padding: 0;
+}
+.banner-rich.image-left > .wrap {
+  -ms-flex-flow: row-reverse nowrap;
+  -webkit-flex-flow: row-reverse nowrap;
+  flex-flow: row-reverse nowrap;
+}
+.banner-rich.image-aligned .content {
+  position: relative;
+  z-index: 2;
+  width: 47%;
+  padding: 150px;
+}
+.banner-rich.image-aligned .content .content-wrap {
+  max-width: 100%;
+}
+.banner-rich.image-aligned .image {
+  position: relative;
+  z-index: 1;
+  width: 53%;
+  background: transparent url('img/spacer.gif') center center no-repeat;
+  background-size: cover;
+}
+
+
 /* CONTENT ------------------------------------------------------ */
 #main {
   box-sizing: border-box;

@@ -1,3 +1,9 @@
+<?php
+// Grab global variables from custom function.php function
+$gv = singular_global_vars();
+$qo = $gv['queried_object'];
+$qid = $qo->ID;
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -5,11 +11,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php
-		$gv = singular_global_vars();
 		if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
 			wp_title();
-		} elseif ( is_object( $gv['queried_object'] ) && get_field ( 'custom_page_title', $gv['queried_object']->ID ) ) {
-			echo get_field ( 'custom_page_title', $gv['queried_object']->ID ).' | ';
+		} elseif ( is_object( $qo ) && get_field ( 'custom_page_title', $qid) ) {
+			echo get_field ( 'custom_page_title', $qid ).' | ';
 			bloginfo();
 		} else {
 			wp_title( '|', true, 'right' );
@@ -49,6 +54,10 @@
 					</button>
 				</div>
       </header>
-			<?php include( locate_template( 'templates/banner.php', false, false ) ); ?>
+			<?php if ( get_field( 'rich_banner_add', $qid ) == 'Yes' ): ?>
+				<?php include( locate_template( 'templates/banner-rich.php', false, false ) ); ?>
+			<?php else: ?>
+				<?php include( locate_template( 'templates/banner-simple.php', false, false ) ); ?>
+			<?php endif; ?>
       <div id="main" role="main">
 				<div id="main-wrap">

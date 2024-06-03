@@ -348,28 +348,199 @@
         "show_in_rest": 0
     },
     {
-        "key": "ui_options_page_665a160179680",
-        "title": "Global Options",
-        "active": true,
+        "key": "group_664b87d305e12",
+        "title": "Rich Banner",
+        "fields": [
+            {
+                "key": "field_664b87d3bab6d",
+                "label": "Add rich banner to page?",
+                "name": "rich_banner_add",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Yes": "Yes",
+                    "No": "No"
+                },
+                "default_value": "No",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "horizontal",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_664b8812bab6e",
+                "label": "Rich Banner Type",
+                "name": "rich_banner_type",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_664b87d3bab6d",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "full": "Full Width Image",
+                    "image-left": "Image Left",
+                    "image-right": "Image Right"
+                },
+                "default_value": "full",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "horizontal",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_664b8891bab6f",
+                "label": "Text",
+                "name": "rich_banner_text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_664b87d3bab6d",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_664b88b2bab70",
+                "label": "Button",
+                "name": "rich_banner_button",
+                "aria-label": "",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_664b87d3bab6d",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_664b88c9bab71",
+                "label": "Image",
+                "name": "rich_banner_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_664b87d3bab6d",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_6657456a350a7",
+                "label": "Image Background Position",
+                "name": "rich_banner_image_position",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_664b87d3bab6d",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "center center",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
         "menu_order": 0,
-        "page_title": "Global Options",
-        "menu_slug": "global-options",
-        "parent_slug": "none",
-        "advanced_configuration": 1,
-        "icon_url": "",
-        "menu_title": "",
-        "position": "",
-        "redirect": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
         "description": "",
-        "menu_icon": {
-            "type": "dashicons",
-            "value": "dashicons-admin-generic"
-        },
-        "update_button": "Update",
-        "updated_message": "Options Updated",
-        "capability": "edit_posts",
-        "data_storage": "options",
-        "post_id": "",
-        "autoload": 0
+        "show_in_rest": 0
     }
 ]
