@@ -19,6 +19,44 @@ function singular_assemble_link( $link_object, $add_class = false, $add_id = fal
 }
 
 
+// COLOR PALETTE CLASS: Returns the appropriate color palette class from a hex
+// $hex: The hex color
+// $type: Should be either 'background' or 'text'
+function singular_color_palette_class( $hex, $type ) {
+
+  // Set palette name variable
+  $palette_name = '';
+
+  switch ( $hex ) {
+    case '#0000ff':
+      $palette_name = 'brand-primary';
+      break;
+    case '#ff0000':
+      $palette_name = 'brand-secondary';
+      break;
+    case '#000000':
+      $palette_name = 'black';
+      break;
+    case '#ffffff';
+      $palette_name = 'white';
+      break;
+    default:
+      $palette_name = '';
+  }
+
+  if ( $palette_name ) {
+    if ( $type == 'text' ) {
+      return 'has-'.$palette_name.'-color';
+    } else {
+      return 'has-'.$palette_name.'-background-color';
+    }  
+  } else {
+    return '';
+  }
+
+}
+
+
 // CUSTOM DEBUGGING: Generates an element describing a field for debugging purposes
 // $field: The raw field data
 // $field_type: The type of field (e.g. text, array, etc.)

@@ -1,3 +1,8 @@
+/* CHANGE THE FOLLOWING LOCATIONS TO MATCH:
+- /functions.php
+- /inc/singular-functions::singular_color_palette_class
+- /js/acf-api.js
+*/
 /* COLOR PALETTE VARIABLES -------------------------------------- */
 :root {
   --brand-primary: #0000ff;
