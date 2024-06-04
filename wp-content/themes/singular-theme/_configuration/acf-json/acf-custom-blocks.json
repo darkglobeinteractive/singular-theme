@@ -141,7 +141,7 @@
                 "return_format": "value",
                 "allow_null": 0,
                 "other_choice": 0,
-                "layout": "vertical",
+                "layout": "horizontal",
                 "save_other_choice": 0
             },
             {
@@ -166,7 +166,7 @@
                 "return_format": "value",
                 "allow_null": 0,
                 "other_choice": 0,
-                "layout": "vertical",
+                "layout": "horizontal",
                 "save_other_choice": 0
             },
             {
@@ -191,7 +191,7 @@
                 "return_format": "value",
                 "allow_null": 0,
                 "other_choice": 0,
-                "layout": "vertical",
+                "layout": "horizontal",
                 "save_other_choice": 0
             },
             {
