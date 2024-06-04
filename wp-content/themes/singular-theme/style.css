@@ -198,10 +198,21 @@ body.admin-bar #header.sticky {
   box-sizing: border-box;
 }
 .banner-rich { 
+  overflow: hidden;
   position: relative;
   z-index: 1;
   background: #000 url('img/spacer.gif') center center no-repeat;
   background-size: cover;
+}
+.banner-rich .mask {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .banner-rich > .wrap { 
   display: -ms-flexbox;
@@ -211,6 +222,7 @@ body.admin-bar #header.sticky {
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
   position: relative;
+  z-index: 3;
   min-height: 887px;
 }
 .banner-rich .content { 
@@ -289,6 +301,72 @@ body.admin-bar #header.sticky {
   background-size: cover;
 }
 
+/* video loop backgrounds */
+.banner-rich.video .video-bg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('img/spacer.gif') no-repeat;
+  background-size: cover;
+  -webkit-transition: 1s opacity;
+  -moz-transition: 1s opacity;
+  -o-transition: 1s opacity;
+  transition: 1s opacity;
+}
+.banner-rich.video .video-bg.horizontal-left.vertical-top {
+  left: 0;
+  top: 0;
+  transform: translateX(0) translateY(0);
+}
+.banner-rich.video .video-bg.horizontal-center.vertical-top {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(0);
+}
+.banner-rich.video .video-bg.horizontal-right.vertical-top {
+  left: auto;
+  right: 0;
+  top: 0;
+  transform: translateX(0) translateY(0);
+}
+.banner-rich.video .video-bg.horizontal-left.vertical-center {
+  left: 0;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+.banner-rich.video .video-bg.horizontal-right.vertical-center {
+  left: auto;
+  right: 0;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+.banner-rich.video .video-bg.horizontal-left.vertical-bottom {
+  left: 0;
+  top: auto;
+  bottom: 0;
+  transform: translateX(0) translateY(0);
+}
+.banner-rich.video .video-bg.horizontal-center.vertical-bottom {
+  left: 50%;
+  top: auto;
+  bottom: 0;
+  transform: translateX(-50%) translateY(0);
+}
+.banner-rich.video .video-bg.horizontal-right.vertical-bottom {
+  left: auto;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  transform: translateX(0) translateY(0);
+}
+
 
 /* CONTENT ------------------------------------------------------ */
 #main {
@@ -302,6 +380,12 @@ body.admin-bar #header.sticky {
 }
 #content {
   box-sizing: border-box;
+}
+#content > *:first-child {
+  margin-top: 0;
+}
+#content > *:last-child {
+  margin-bottom: 0;
 }
 
 
