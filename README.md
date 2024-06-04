@@ -41,8 +41,8 @@ Admin > Appearance > Menus
 1. [ ] Create search form page and update template file to reflect page ID
 2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file to reflect page ID
        [ ] If you ARE using Yoast SEO, delete the sitemap page template 
-2. [ ] Create home page and use customizer to set this page to the front page
-3. [ ] Delete existing widgets
+3. [ ] Create home page and use customizer to set this page to the front page
+4. [ ] Delete existing widgets
 
 
 # Required Plugin Installation Notes
@@ -92,12 +92,23 @@ If a fixed header is used on the site, you'll want to change this from "0" to "$
 
 Custom block patterns should be created and managed via core WordPress functionality in the block editor. There are two blocks which should manually migrated into the block editor. Follow these instructions:
 
-1. [ ] Migrate the following block code into the block editor:
+1. [ ] Update the block pattern category name in the following file:
+        [ ] /block-patterns/block-patterns.php
+2. [ ] Migrate the following block code into the block editor:
         [ ] /block-patterns/blocks/accordion.php
         [ ] /block-patterns/blocks/basic-content-wrapper.php
-2. [ ] Delete the files used in the previous task from the remote server
+3. [ ] Delete the files used in the previous task from the remote server
 
 At this point, you simply have to add new CSS files for each additional custom block created.
+
+
+# Custom Blocks
+
+The theme contains a handful of custom blocks.
+
+1. [ ] Update the slug and name of the block category in the following file:
+        [ ] /blocks/blocks.php
+2. [ ] Update the 'category' attribute to match the slug name in the previous file.
 
 
 # GreenSock Animation Support
@@ -123,40 +134,24 @@ To enable basic GreenSock animation:
 
 # CLIENT 1 REQUESTS
 
-1. [ ] Install "WPS Limit Login" (https://wordpress.org/plugins/wps-limit-login/)
-       [ ] Limit login attempts
-2. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+1. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
        [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
        [ ] Add site name and image to the Yoast SEO admin
        [ ] Remove sitemap page and template file if using Yoast SEO
-3. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-4. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+2. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
+3. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
        [ ] Add redirect from /user to /wp-admin
-5. [ ] Install "Wordfence"
+4. [ ] Install "Wordfence"
        [ ] Send license information to hello@[clientaddress]
+       [ ] Request Google reCaptcha keys and install them
+       [ ] Set brute force login limit to 5 attempts
 
 
 ===================================
 Singular Plugin Installation Notes
 ===================================
 
-The Singular Plugin is included in the repository. It provides content-based functionality to the site.
-
-
-# Installation
-
-Advanced Custom Fields PRO (ACF PRO) is a requirement for this plugin's functionality to work. Install and activate the Singular Plugin, then install, activate and update ACF PRO.
-
-1. [ ] After installing and activating ACF PRO, import the following JSON files into ACF PRO:
-       [ ] /singular-plugin/_configuration/acf-singular-plugin-fields.json
-2. [ ] Ensure that the "Singular Plugin: Accordion Block" field group has "Show this field group if: Block is equal to Accordion"
-
-
-# Custom Gutenberg Blocks
-
-The plugin adds a new Gutenberg block category titled "Singular Blocks" which contains the following custom blocks.
-
-1. Accordion: Produces an animated accordion block composed of titles and WYSIWYG content blocks.
+The Singular Plugin is included in the repository. Since we've moved the custom accordion block to the block patterns sections, you should not install this plugin.
 
 
 ===================================
@@ -169,11 +164,6 @@ There are a handful of libraries included in the theme directory in the /libs/ d
 Git Location: https://github.com/Accessible360/accessible-slick.git
 Website: https://accessible360.github.io/accessible-slick/
 Notes: This is the accessible version of the slider we've been using for years.
-
-# Colorbox v.1.6.4
-Git Location: https://github.com/jackmoore/colorbox
-Website: https://www.jacklmoore.com/colorbox/
-Notes: We should begin phasing-out the use of this plugin because it's not maintained anymore and isn't 100% accessible.
 
 # Modaal v.0.4.4
 Git Location: https://github.com/humaan/Modaal
