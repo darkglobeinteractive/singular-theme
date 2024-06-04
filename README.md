@@ -50,6 +50,7 @@ Admin > Appearance > Menus
 Advanced Custom Fields PRO is required by this theme.
 
 1. [ ] Install "Advanced Custom Fields PRO" and import the following JSON files into ACF PRO:
+       [ ] /singular-theme/_configurations/acf-json/acf-options-pages.json
        [ ] /singular-theme/_configuration/acf-json/acf-base-import.json
        [ ] /singular-theme/_configutation/acf-json/acf-custom-blocks.json
 2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
