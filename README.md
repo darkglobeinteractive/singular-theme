@@ -143,8 +143,10 @@ To enable basic GreenSock animation:
        [ ] Add redirect from /user to /wp-admin
 4. [ ] Install "Wordfence"
        [ ] Send license information to hello@[clientaddress]
-       [ ] Request Google reCaptcha keys and install them
-       [ ] Set brute force login limit to 5 attempts
+       [ ] Request Google reCAPTCHA keys and install them
+               [ ] Admin > Wordfence > Login Security > Settings > reCAPTCHA section
+       [ ] Set brute force login limit to 5 attempts:
+               [ ] Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection
 
 
 ===================================
