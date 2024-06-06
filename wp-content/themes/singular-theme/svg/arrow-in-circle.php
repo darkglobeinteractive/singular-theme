@@ -1,5 +1,5 @@
 <span class="svg-icon arrow-in-circle">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 103" role="img">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 103" role="img" aria-label="Arrow In Circle Icon">
     <title>Arrow In Circle Icon</title>
     <g class="wrap" data-name="Arrow in circle" transform="translate(-506 -1213)">
       <g class="circle" transform="translate(506 1213)">

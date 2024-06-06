@@ -1,5 +1,5 @@
 <span class="svg-icon social-media-icon linkedin">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="LinkedIn Icon">
     <title>LinkedIn Icon</title>
     <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
     <circle class="foreground" cx="129.16" cy="120.77" r="25.76"/>
