@@ -65,7 +65,7 @@ $rich_banner_button = ( get_field( 'rich_banner_button', $qid ) ? singular_assem
 ?>
 <div id="banner-rich"<?php echo $block_classes; ?><?php echo ( $rich_banner_type == 'full' ? $block_styles : '' ); ?>>
   <div class="wrap">
-    <div class="content<?php if ( $rich_banner_type != 'full' ): ?> has-primary-background-color<?php endif; ?>">
+    <div class="content<?php if ( $rich_banner_type != 'full' ): ?> has-black-background-color<?php endif; ?>">
       <div class="content-wrap">
         <?php echo $rich_banner_text; ?>
         <?php if ( $rich_banner_button ): ?>
