@@ -45,7 +45,7 @@ if ( $rich_banner_type == 'full' ) {
 // Handle banner image
 $rich_banner_image = ( get_field( 'rich_banner_image', $qid ) ?: false );
 if ( $rich_banner_image ) {
-  $styles_array[] = 'background-image: url('.$rich_banner_image['sizes']['large'].')';
+  $styles_array[] = 'background-image: url('.$rich_banner_image['sizes']['banner-bg'].')';
 }
 
 // Handle background position, defaulting to 'center center'
