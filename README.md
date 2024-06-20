@@ -39,7 +39,7 @@ Admin > Appearance > Menus
 # Create Pages / Modify Templates
 
 1. [ ] Create search form page and update template file to reflect page ID
-2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file to reflect page ID
+2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file (page-search.php) to use page ID (page-[id].php)
        [ ] If you ARE using Yoast SEO, delete the sitemap page template 
 3. [ ] Create home page and use customizer to set this page to the front page
 4. [ ] Delete existing widgets
@@ -92,12 +92,12 @@ If a fixed header is used on the site, you'll want to change this from "0" to "$
 
 Custom block patterns should be created and managed via core WordPress functionality in the block editor. There are two blocks which should manually migrated into the block editor. Follow these instructions:
 
-1. [ ] Update the block pattern category name in the following file:
-        [ ] /block-patterns/block-patterns.php
-2. [ ] Migrate the following block code into the block editor:
+1. [ ] Update the block pattern category name ("[CLIENT] Patterns") in the following file to use the client name:
+        [ ] Line 12: /block-patterns/block-patterns.php
+2. [ ] Migrate the following block pattern code into the block editor and save as WP Core patterns:
         [ ] /block-patterns/blocks/accordion.php
         [ ] /block-patterns/blocks/basic-content-wrapper.php
-3. [ ] Delete the files used in the previous task from the remote server
+3. [ ] Delete the files used in Step #2 from the remote server
 
 At this point, you simply have to add new CSS files for each additional custom block created.
 
@@ -106,9 +106,13 @@ At this point, you simply have to add new CSS files for each additional custom b
 
 The theme contains a handful of custom blocks.
 
-1. [ ] Update the slug and name of the block category in the following file:
-        [ ] /blocks/blocks.php
-2. [ ] Update the 'category' attribute to match the slug name in the previous file.
+1. [ ] Update the slug ("client-blocks") and name ("[CLIENT] Blocks") of the block category to use the client name in the following file:
+        [ ] Lines 5-6: /blocks/blocks.php
+2. [ ] Update the 'category' attribute in each block json files to match the slug set in Step 1:
+        [ ] Line 5: /blocks/color-block-cta/block.json
+        [ ] Line 5: /blocks/image-cta/block.json
+        [ ] Line 5: /blocks/multi-slider/block.json
+        [ ] Line 5: /blocks/testimonial/block.json
 
 
 # GreenSock Animation Support
@@ -124,12 +128,6 @@ To enable basic GreenSock animation:
        [ ] wp_enqueue_script( 'gsap_js', ... );
        [ ] wp_enqueue_script( 'gsap_scrolltrigger_js', ... );
        [ ] wp_enqueue_script( 'animations_js', ... );
-
-
-# Optional Plugin Installation Notes
-
-1. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/): Useful for SEO and setting 301 redirects
-2. [ ] Install "Widget Context" (https://wordpress.org/plugins/widget-context/): Allows you to decided where widgets are visible/hidden
 
 
 # CLIENT 1 REQUESTS

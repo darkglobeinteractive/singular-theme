@@ -3,7 +3,7 @@
 function singular_register_block_category( $cats ) {
   array_unshift( $cats, array(
     'slug' => 'client-blocks',
-    'title' => 'Client Blocks'
+    'title' => '[CLIENT] Blocks'
   ) );
   return $cats;
 }
