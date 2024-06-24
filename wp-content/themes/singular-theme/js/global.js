@@ -112,7 +112,7 @@ jQuery(document).ready(function($) {
 
 
   /* SMOOTH SCROLLING ------------------------------------------- */
-  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){
+  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href*="#modal"]').click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){
 
     var e = $(this.hash);
 
