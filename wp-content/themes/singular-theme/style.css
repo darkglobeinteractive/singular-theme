@@ -544,8 +544,13 @@ body.admin-bar #header.sticky {
 #search-results,
 #search-results * { box-sizing: border-box; }
 #search-results { }
-#search-results .search-result { }
-#search-results .search-result .title { }
+#search-results .search-result { 
+  margin: 0 0 2em;
+}
+#search-results .search-result .title { 
+  margin: 0 0 0.5em;
+  font-weight: 700;
+}
 #search-results .search-result .title a { }
 #search-results .search-result .blurb { }
 #search-results .search-result .more { }
