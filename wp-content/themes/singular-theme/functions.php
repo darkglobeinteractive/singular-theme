@@ -5,6 +5,7 @@
 // include( 'inc/remove-comments.php' );
 // include( 'inc/wysiwyg-customizations.php' );
 // include( 'inc/shortcodes.php' );
+// include( 'inc/custom-post-columns' );
 include( 'inc/singular-functions.php' );
 include( 'block-patterns/block-patterns.php' );
 include( 'blocks/blocks.php' );

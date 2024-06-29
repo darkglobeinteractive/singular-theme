@@ -150,6 +150,13 @@ To enable basic GreenSock animation:
                [ ] Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection
 
 
+# QUALITY ASSURANCE / WRAP-UP / MISC NOTES
+
+1. [ ] Check basic Search and Search Results templating
+2. [ ] Check 404 page templating
+3. [ ] /inc/custom-post-columns.php shows you an example of how to customize the admin post listing columns and headers
+
+
 ===================================
 Singular Plugin Installation Notes
 ===================================
