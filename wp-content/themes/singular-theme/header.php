@@ -54,7 +54,7 @@ $qid = $qo->ID;
 					</button>
 				</div>
       </header>
-			<?php if ( get_field( 'rich_banner_add', $qid ) == 'Yes' ): ?>
+			<?php if ( !is_search() && get_field( 'rich_banner_add', $qid ) == 'Yes' ): ?>
 				<?php include( locate_template( 'templates/banner-rich.php', false, false ) ); ?>
 			<?php else: ?>
 				<?php include( locate_template( 'templates/banner-simple.php', false, false ) ); ?>
