@@ -35,7 +35,7 @@ $qid = $qo->ID;
 	        <?php include( locate_template( 'templates/logo.php', false, false ) ); ?>
 	        <?php
 					wp_nav_menu( array(
-						'menu' => 'main-menu',
+						'theme_location' => 'main-menu-nav',
 						'menu_class' => 'menu',
 						'container' => 'nav',
 	          'container_id' => 'navigation'
