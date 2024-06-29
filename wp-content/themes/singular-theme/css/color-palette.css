@@ -55,3 +55,19 @@ https://chir.ag/projects/name-that-color/
   background: linear-gradient(132deg, rgba(104,189,73,1) 0%, rgba(104,189,73,1) 20%, rgba(0,111,81,1) 60%, rgba(18,59,125,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#68bd49",endColorstr="#123b7d",GradientType=1);
 }
+
+/* OVERRIDES ---------------------------------------------------- */
+
+/* black overrides */
+.has-black-background-color,
+.has-black-background-color h1,
+.has-black-background-color h2,
+.has-black-background-color h3,
+.has-black-background-color h4,
+.has-black-background-color h5,
+.has-black-background-color p,
+.has-black-background-color p a,
+.has-black-background-color ul,
+.has-black-background-color ol {
+  color: var(--white) !important;
+}
