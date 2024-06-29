@@ -9,19 +9,6 @@ https://github.com/darkglobeinteractive/singular-theme
 Singular Theme Installation Notes
 ===================================
 
-# General Notes (v.1.2) (June 3, 2024)
-
-Major changes were added to the theme over the past few days:
-- Admin Support (/admin-support/): The basics are now in-place and ready to use
-- Block Patterns (/block-patterns/)
-- Custom Blocks (/blocks/): This required enabling the Modaal and Slick Slider libraries out of the box
-- Color Patterns (/css/color-palette.css): This requires setting the color palette in multiple places (notes are at the top of the CSS file)
-- Global Options: Company info and social media link are now handled via an ACF block and presented in the following template files:
-       - /templates/social-media.php
-       - /templates/vcard.php
-- SVG Support (/svg/): First attempt at this. Placing includeable files here for SVG-based icons
-
-
 # mmenu (v.9.3)
 
 mmenu is used to handle the mobile menus in this theme. Documentation can be found here:
@@ -32,8 +19,9 @@ https://mmenujs.com/
 
 Admin > Appearance > Menus
 
-1. [ ] Menu Name: "Main Menu"
+1. [ ] Create "Main Menu"
 2. [ ] Add something to the menu tree so it appears correctly on the front-end
+3. [ ] Assign the new menu to the Manage Locations > Main Menu Navigation theme location
 
 
 # Create Pages / Modify Templates
@@ -179,3 +167,28 @@ Notes: This is the accessible version of the slider we've been using for years.
 Git Location: https://github.com/humaan/Modaal
 Notes: We're beginning to try-out this modal library because it's proven to be simpler to use and passes accessibility scans. The /libs/modaal/index.html demos are better than the github information.
 
+
+===================================
+Version Notes (A little late to this party...)
+===================================
+
+# General Notes (v.1.3) (June 29, 2024)
+
+Miscellaneous tweaks:
+- Adding basic styling to search and 404 pages
+- Adding autoplay option to multi-slider custom block
+- Added starter code for custom admin post columns
+- Revised how menus are declared and assigned
+- Miscellaneous other tweaks
+
+# General Notes (v.1.2) (June 3, 2024)
+
+Major changes were added to the theme over the past few days:
+- Admin Support (/admin-support/): The basics are now in-place and ready to use
+- Block Patterns (/block-patterns/)
+- Custom Blocks (/blocks/): This required enabling the Modaal and Slick Slider libraries out of the box
+- Color Patterns (/css/color-palette.css): This requires setting the color palette in multiple places (notes are at the top of the CSS file)
+- Global Options: Company info and social media link are now handled via an ACF block and presented in the following template files:
+       - /templates/social-media.php
+       - /templates/vcard.php
+- SVG Support (/svg/): First attempt at this. Placing includeable files here for SVG-based icons
