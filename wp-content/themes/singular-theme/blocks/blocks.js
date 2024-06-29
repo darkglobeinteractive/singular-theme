@@ -2,8 +2,9 @@ jQuery(document).ready(function($) {
 
   $('.multi-slider-block').each(function() {
 
-    // The following gobdf_slider_modal function allows you to set heights of the modal window upon modal window opening
-    function gobdf_slider_modal() {
+    // The following set_modal_window_height function allows you to set heights of different sections of the modal window upon modal window opening
+    function set_modal_window_height() {
+      
       var container_height = $('.modaal-wrapper .modaal-container').height();
       var content_height = container_height;
   
@@ -21,7 +22,7 @@ jQuery(document).ready(function($) {
         background: '#fff',
         overlay_opacity: 0.5,
         width: 650
-        // after_open: gobdf_slider_modal
+        // after_open: set_modal_window_height
       });
     }
 
@@ -32,6 +33,9 @@ jQuery(document).ready(function($) {
     var $slider_nav = $('.slider-nav', $container);
     var $nav_prev = $('.slider--prev', $slider_nav);
     var $nav_next = $('.slider--next', $slider_nav);
+    var autoplay = ( $container.hasClass('autoplay-slider') ? true : false );
+    var autoplay_speed = ( autoplay ? $container.data('autoplay-speed') : 4000 );
+    var transition_speed = ( autoplay ? $container.data('transition-speed') : 1000 );
     
     $nav_prev.each(function() {
       $(this).on('click', function() {
@@ -47,24 +51,26 @@ jQuery(document).ready(function($) {
     
     $slider.on('init reInit breakpoint', function(slick) {
       
+      // Make sure slider is visible
       $slider_container.addClass('show');
-      var active_slides = $('.slick-active', $slider).length;
-      // console.log('Slide Count: '+slide_count);
-      // console.log('Active Slides: '+active_slides);
 
+      // Determine if custom navigation should show/hide
+      var active_slides = $('.slick-active', $slider).length;
       if (active_slides < slide_count) {
         $slider_nav.addClass('show');
       } else {
         $slider_nav.removeClass('show');
       }
 
-      if($container.hasClass('modal')) {
+      // Re-initialize modal windows if this is a modal slider
+      if ($container.hasClass('modal')) {
         initialize_modal_windows($slider);
       }
      
     });
 
-    $slider.slick({
+    // Set slider variables
+    var slider_args = {
       dots: false,
       arrows: false,
       infinite: true,
@@ -96,7 +102,16 @@ jQuery(document).ready(function($) {
           }
         }
       ]
-    });
+    };
+
+    // Set autoplay variables if necessary
+    if (autoplay) {
+      slider_args['autoplay'] = true;
+      slider_args['autoplaySpeed'] = autoplay_speed;
+      slider_args['speed'] = transition_speed;
+    }
+
+    $slider.slick(slider_args);
 
   });
 

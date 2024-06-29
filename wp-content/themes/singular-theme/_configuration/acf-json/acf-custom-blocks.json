@@ -98,8 +98,113 @@
         "show_in_rest": 0
     },
     {
+        "key": "group_664f8c55879c2",
+        "title": "Custom Block: Image CTA",
+        "fields": [
+            {
+                "key": "field_664f8c559b918",
+                "label": "Heading",
+                "name": "image_cta_heading",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "CTA Title",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_664f8c559b96a",
+                "label": "Text",
+                "name": "image_cta_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Occae et la sim et earuptint imi,\r\nsoluptaspero iminimus molores cidus",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_664f8c559b9b6",
+                "label": "Link",
+                "name": "image_cta_link",
+                "aria-label": "",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_664f8c6cdc177",
+                "label": "Image",
+                "name": "image_cta_img",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "preview_size": "medium"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/image-cta"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
         "key": "group_665092799192e",
-        "title": "Custom Block: Custom Slider",
+        "title": "Custom Block: Multi-Slider",
         "fields": [
             {
                 "key": "field_6651dd5d7d3fb",
@@ -143,6 +248,91 @@
                 "other_choice": 0,
                 "layout": "horizontal",
                 "save_other_choice": 0
+            },
+            {
+                "key": "field_6680260ea217c",
+                "label": "Autoplay Slider?",
+                "name": "image_slider_autoplay",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Yes": "Yes",
+                    "No": "No"
+                },
+                "default_value": "No",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "horizontal",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_6680263ca217d",
+                "label": "Autoplay Speed (ms)",
+                "name": "image_slider_autoplay_speed",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6680260ea217c",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 4000,
+                "min": "",
+                "max": "",
+                "placeholder": "",
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6680274ad1c41",
+                "label": "Transition Speed (ms)",
+                "name": "image_slider_transition_speed",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6680260ea217c",
+                            "operator": "==",
+                            "value": "Yes"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 1000,
+                "min": "",
+                "max": "",
+                "placeholder": "",
+                "step": "",
+                "prepend": "",
+                "append": ""
             },
             {
                 "key": "field_6651dd7c7d3fc",
@@ -377,111 +567,6 @@
                     "param": "block",
                     "operator": "==",
                     "value": "acf\/multi-slider"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "show_in_rest": 0
-    },
-    {
-        "key": "group_664f8c55879c2",
-        "title": "Custom Block: Image CTA",
-        "fields": [
-            {
-                "key": "field_664f8c559b918",
-                "label": "Heading",
-                "name": "image_cta_heading",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "CTA Title",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_664f8c559b96a",
-                "label": "Text",
-                "name": "image_cta_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Occae et la sim et earuptint imi,\r\nsoluptaspero iminimus molores cidus",
-                "maxlength": "",
-                "rows": "",
-                "placeholder": "",
-                "new_lines": ""
-            },
-            {
-                "key": "field_664f8c559b9b6",
-                "label": "Link",
-                "name": "image_cta_link",
-                "aria-label": "",
-                "type": "link",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            },
-            {
-                "key": "field_664f8c6cdc177",
-                "label": "Image",
-                "name": "image_cta_img",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "",
-                "preview_size": "medium"
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "block",
-                    "operator": "==",
-                    "value": "acf\/image-cta"
                 }
             ]
         ],

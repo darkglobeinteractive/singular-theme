@@ -20,6 +20,14 @@ $classes_array[] = ( get_field( 'image_slider_width' ) ?: 'full-width' );
 $image_slider_image_type = ( get_field( 'image_slider_image_type' ) ?: 'block' );
 $classes_array[] = $image_slider_image_type;
 
+// Handle autoplay variables
+$autoplay_check = ( get_field( 'image_slider_autoplay' ) == 'Yes' ? true : false );
+if ( $autoplay_check ) {
+  $autoplay_speed = ( get_field( 'image_slider_autoplay_speed' ) ?: '4000' );
+  $transition_speed = ( get_field( 'image_slider_transition_speed' ) ?: '1000' );
+  $classes_array[] = 'autoplay-slider';
+}
+
 // Handle styles and classes
 $block_classes = ' class="'.implode( ' ', $classes_array ).'"';
 $block_classes_inner = ' class="'.implode( ' ', $classes_inner_array ).'"';
@@ -44,7 +52,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
       <?php endwhile; ?>
     </div>
   <?php else: ?>
-    <div<?php echo $block_classes; ?>>
+    <div<?php echo $block_classes; ?><?php echo ( $autoplay_check ? ' data-autoplay-speed="'.$autoplay_speed.'" data-transition-speed="'.$transition_speed.'"' : '' ); ?>>
       <div<?php echo $block_classes_inner; ?>>
         <div class="multi-slider">
           <div class="wrap">
