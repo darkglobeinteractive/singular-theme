@@ -1,3 +1,8 @@
+/* BASIC CONTENT WRAPPER ---------------------------------------- */
+.editor-styles-wrapper .wp-block-singular > .wp-block-group__inner-container {
+  padding: 0 !important;
+  max-width: 100%;
+}
 /* ACCORDION OVERRIDES ------------------------------------------ */
 .editor-styles-wrapper .wp-block.wp-block-singular.accordion-container { 
   border: 1px solid #000;
