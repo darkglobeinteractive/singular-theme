@@ -32,7 +32,9 @@ if ( get_post_type() == 'post' ) {
 }
 ?>
 <div id="banner" class="banner" tabindex="-1">
-  <div class="content">
-    <?php echo $banner_element; ?>
+  <div class="wrap">
+    <div class="content">
+      <?php echo $banner_element; ?>
+    </div>
   </div>
 </div>

@@ -181,6 +181,7 @@ body.admin-bar #header.sticky {
   box-sizing: border-box;
 }
 .banner { }
+.banner > .wrap { }
 .banner .content { }
 .banner .content > *:first-child {
   margin-top: 0;
