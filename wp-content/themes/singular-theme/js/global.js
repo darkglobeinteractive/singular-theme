@@ -117,14 +117,8 @@ jQuery(document).ready(function($) {
     var e = $(this.hash);
 
     // Determine the heights of possible elements on the page to take into consideration
-    var header_height = 0; // Fixed headers need to be taken into consideration
-
-    // Set header height based-on the size of the fixed header at different break points
-    if ($(window).width() > 1200) {
-      header_height = 0;
-    } else if ($(window).width() > 600) {
-      header_height = 0;
-    }
+    var header_height = 0; 
+    // header_height = $('#header').innerHeight(); // Fixed headers need to be taken into consideration
 
     var wpadminbar_height = ($('#wpadminbar').length > 0 ? $('#wpadminbar').innerHeight() : 0); // Height of WordPress admin bar
     var scroll_top_padding = 20; // Extra padding
