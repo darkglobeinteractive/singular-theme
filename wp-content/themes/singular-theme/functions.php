@@ -66,6 +66,12 @@ function singular_setup_theme_supported_features() {
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 
+/* ADD BANNER BG TO SRCSET -------------------------------------- */
+function singular_banner_bg_max( $max_width, $size_array ) {
+  return 2560;
+}
+add_filter( 'max_srcset_image_width', 'singular_banner_bg_max', 10, 2 );
+
 /* FIX HEADER BUMP ---------------------------------------------- */
 /* WordPress core adds top margin to html element by default -- incompatible with mmenu mobile menu library */
 function singular_remove_admin_login_header() {
