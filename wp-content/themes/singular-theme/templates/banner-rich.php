@@ -1,8 +1,6 @@
 <?php
 // Grab global variables from custom function.php function
 $gv = singular_global_vars();
-$qo = $gv['queried_object'];
-$qid = $qo->ID;
 
 // Create arrays for banner classes and styles
 $classes_array = array( 'banner-rich' );
@@ -10,7 +8,7 @@ $styles_array = array();
 $btn_array = array( 'btn' );
 
 // Handle banner and button classes based-on type of banner, defaulting to 'full'
-$rich_banner_type = ( get_field( 'rich_banner_type', $qid ) ?: 'full' );
+$rich_banner_type = ( get_field( 'rich_banner_type', $gv['qid'] ) ?: 'full' );
 
 // Set banner mask to 'false' by default
 $rich_banner_mask = false;
@@ -22,18 +20,18 @@ if ( $rich_banner_type == 'full' ) {
   $classes_array[] = 'full';
 
   // Determine the full background type, defaulting to a static image
-  $rich_banner_background_type = ( get_field( 'rich_banner_background_type', $qid ) ?: 'static-image' );
+  $rich_banner_background_type = ( get_field( 'rich_banner_background_type', $gv['qid'] ) ?: 'static-image' );
 
   // Add full background type to classes array
   $classes_array[] = $rich_banner_background_type;
 
   // Check for a video background
   if ( $rich_banner_background_type == 'video' ) {
-    $rich_banner_video = ( get_field( 'rich_banner_video', $qid ) ?: false );
+    $rich_banner_video = ( get_field( 'rich_banner_video', $gv['qid'] ) ?: false );
   }
 
   // Set banner mask
-  $rich_banner_mask = ( get_field( 'rich_banner_mask', $qid ) == 'Yes' ? true : false );
+  $rich_banner_mask = ( get_field( 'rich_banner_mask', $gv['qid'] ) == 'Yes' ? true : false );
 
 } else {
 
@@ -43,13 +41,13 @@ if ( $rich_banner_type == 'full' ) {
 }
 
 // Handle banner image
-$rich_banner_image = ( get_field( 'rich_banner_image', $qid ) ?: false );
+$rich_banner_image = ( get_field( 'rich_banner_image', $gv['qid'] ) ?: false );
 if ( $rich_banner_image ) {
   $styles_array[] = 'background-image: url('.$rich_banner_image['sizes']['banner-bg'].')';
 }
 
 // Handle background position, defaulting to 'center center'
-$rich_banner_background_position = ( get_field( 'rich_banner_background_position', $qid ) ?: 'center center' );
+$rich_banner_background_position = ( get_field( 'rich_banner_background_position', $gv['qid'] ) ?: 'center center' );
 
 // Add background position to the styles array
 $styles_array[] = 'background-position: '.$rich_banner_background_position;
@@ -60,8 +58,8 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
 $btn_classes = implode( ' ', $btn_array );
 
 // Handle banner text and button
-$rich_banner_text = ( get_field( 'rich_banner_text', $qid ) ?: false );
-$rich_banner_button = ( get_field( 'rich_banner_button', $qid ) ? singular_assemble_link( get_field( 'rich_banner_button' ), $btn_classes ) : false );
+$rich_banner_text = ( get_field( 'rich_banner_text', $gv['qid'] ) ?: false );
+$rich_banner_button = ( get_field( 'rich_banner_button', $gv['qid'] ) ? singular_assemble_link( get_field( 'rich_banner_button' ), $btn_classes ) : false );
 ?>
 <div id="banner-rich"<?php echo $block_classes; ?><?php echo ( $rich_banner_type == 'full' ? $block_styles : '' ); ?>>
   <div class="wrap">
