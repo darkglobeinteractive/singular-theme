@@ -152,19 +152,27 @@ body.admin-bar #page {
 #header {
   position: relative;
   z-index: 2;
-  height: 120px;
   width: 100%;
 }
+#header.fixed,
 #header.sticky {
-  position: sticky;
+  left: 0;
   top: 0;
+  width: 100%;
 }
+body.admin-bar #header.fixed,
 body.admin-bar #header.sticky {
   top: 32px;
 }
+#header.fixed {
+  position: fixed;
+}
+#header.sticky {
+  position: sticky;
+}
 #header > .wrap {
   position: relative;
-  height: 100%;
+  height: 120px;
   width: 100%;
 }
 #header .site-logo {
