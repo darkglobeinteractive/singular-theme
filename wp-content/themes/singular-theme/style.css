@@ -538,15 +538,15 @@ body.admin-bar #header.sticky {
 
 /* SEARCH FORM -------------------------------------------------- */
 /* generated via get_search_form() */
-#searchform,
-#searchform * {
+.search-form,
+.search-form * {
   box-sizing: border-box;
 }
-#searchform { }
-#searchform .searchform-wrap { }
-#searchform .searchform-wrap label.search-reader-text { }
-#searchform .searchform-wrap input#s { }
-#searchform .searchform-wrap input#searchsubmit { }
+.search-form { }
+.search-form .search-form-wrap { }
+.search-form .search-form-wrap label.search-reader-text { }
+.search-form .search-form-wrap input[name="s"] { }
+.search-form .search-form-wrap button.search-submit { }
 
 
 /* SEARCH RESULTS ----------------------------------------------- */

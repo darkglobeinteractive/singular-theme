@@ -1,7 +1,7 @@
-<form role="search" method="get" id="searchform" class="searchform" action="/">
-	<div class="searchform-wrap">
+<form role="search" method="get" class="search-form" action="/">
+	<div class="search-form-wrap">
 		<label class="screen-reader-text" for="s">Search for:</label>
-		<input type="text" value="<?php echo ( get_search_query() ? get_search_query() : '' ); ?>" name="s" id="s">
-		<input type="submit" id="searchsubmit" value="Search">
+		<input id="s" name="s" type="text" value="<?php echo ( get_search_query() ? get_search_query() : '' ); ?>" />
+		<button type="submit" class="search-submit">Submit</button>
 	</div>
 </form>
