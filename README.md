@@ -88,6 +88,7 @@ Custom block patterns should be created and managed via core WordPress functiona
 2. [ ] Migrate the following block pattern code into the block editor and save as WP Core patterns:
         [ ] /block-patterns/blocks/accordion.php
         [ ] /block-patterns/blocks/basic-content-wrapper.php
+       NOTE: Remember to name the block pattern block elements in the block editor before saving.
 3. [ ] Delete the files used in Step #2 from the remote server
 
 At this point, you simply have to add new CSS files for each additional custom block created.
