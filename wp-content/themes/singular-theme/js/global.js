@@ -98,39 +98,6 @@ jQuery(document).ready(function($) {
   });
 
 
-  /* SLICK SLIDER ----------------------------------------------- */
-  /* https://kenwheeler.github.io/slick/ */
-  /* https://accessible360.github.io/accessible-slick/ */
-  /* Note: If autoplay is set to true, a play/pause button is added by default for accessibility reasons. You can hide this by setting useAutoplayToggleButton to false, but this creates an accessibility issue in itself. */
-  /* Un-comment the slick items in functions.php
-  $('.slick-slider').slick({
-    arrows: true,
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    speed: 5000,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-    ]
-  });
-  */
-
-
   /* SMOOTH SCROLLING ------------------------------------------- */
   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href*="#modal"]').click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){
 
