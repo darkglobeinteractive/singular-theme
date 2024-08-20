@@ -17,6 +17,26 @@ $(window).on('resize', $.throttle(500, function() {
 
 jQuery(document).ready(function($) {
 
+  /* HEADER ON SCROLL ------------------------------------------- */
+  /* NOTE: If header dimensions change, use a fixed header, not a sticky header
+  $(window).on('scroll', $.throttle(500, function() {
+
+    var window_scroll_top = $(window).scrollTop();
+
+    if ($(window).innerWidth() > 1000) {
+
+      if (window_scroll_top > 150) {
+        $('body').addClass('scrolled-header');
+      } else {
+        $('body').removeClass('scrolled-header');
+      }
+
+    } 
+
+  }));  
+  */
+
+
   /* NAVIGATION ------------------------------------------------- */
   $('#navigation').each(function() {
 
