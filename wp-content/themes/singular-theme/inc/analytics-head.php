@@ -1,1 +1,1 @@
-<!-- HEAD Analytics Go Here -->
+<?php echo ( get_field( 'analytics_code_head', 'option' ) ?: '' ); ?>
