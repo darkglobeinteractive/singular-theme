@@ -25,8 +25,8 @@ $gv = singular_global_vars();
 	<body <?php
 	$additional_classes = [];
 	body_class( $additional_classes ); ?>>
-		<?php include( locate_template( 'inc/analytics-body.php', false, false ) ); ?>
 		<a href="#main" class="skip-main">Skip to Main Content</a>
+		<?php include( locate_template( 'inc/analytics-body.php', false, false ) ); ?>
     <div id="page">
       <header id="header">
 				<div class="wrap">
