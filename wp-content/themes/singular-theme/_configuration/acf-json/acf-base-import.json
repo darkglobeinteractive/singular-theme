@@ -326,6 +326,64 @@
                 },
                 "default_value": "",
                 "placeholder": ""
+            },
+            {
+                "key": "field_66d084abd8f1e",
+                "label": "Analytics Code",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_66d084bdd8f1f",
+                "label": "Head Element Code",
+                "name": "analytics_code_head",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "This code will be placed in the &lt;head&gt; element of the theme.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_66d084dfd8f20",
+                "label": "Body Element Code",
+                "name": "analytics_code_body",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "This code will be placed in the &lt;body&gt; element of the theme.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
             }
         ],
         "location": [
