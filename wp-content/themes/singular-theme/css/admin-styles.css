@@ -1,3 +1,17 @@
+/* WORDPRESS CORE STYLE PRESERVATIONS --------------------------- */
+.wp-block-post-title,
+.rich-text [data-rich-text-placeholder],
+.wp-core-ui .button,
+.wp-core-ui .button-primary,
+.wp-core-ui .button-secondary {
+  font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+.editor-styles-wrapper a.link-url,
+.editor-styles-wrapper a.acf-icon {
+  color: unset !important;
+}
+
+
 /* ADMIN SORTABLE META BOXES ------------------------------------ */
 #normal-sortables.meta-box-sortables { }
 #normal-sortables.meta-box-sortables .postbox { }
