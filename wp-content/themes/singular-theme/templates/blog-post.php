@@ -13,13 +13,31 @@ $blurb = ( has_excerpt() ? get_the_excerpt() : substr( get_the_excerpt(), 0, 250
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <?php edit_post_link( 'Edit', '<div class="edit-link">', '</div>', get_the_ID(), 'btn' ); ?>
+  <?php if ( !is_admin() ): ?>
+    <?php edit_post_link( 'Edit', '<div class="edit-link">', '</div>', get_the_ID(), 'btn' ); ?>
+  <?php endif; ?>
 
-  <div class="thumbnail"><a href="<?php echo $permalink; ?>"><img src="<?php echo $post_thumbnail; ?>" alt="<?php echo $post_thumbnail_alt; ?>" /></a></div>
+  <div class="thumbnail">
+    <?php if ( !is_admin() ): ?>
+      <a href="<?php echo $permalink; ?>">
+    <?php endif; ?>
+    <img src="<?php echo $post_thumbnail; ?>" alt="<?php echo $post_thumbnail_alt; ?>" />
+    <?php if ( !is_admin() ): ?>
+      </a>
+    <?php endif; ?>
+  </div>
 
   <div class="content">
 
-    <h2><a href="<?php echo $permalink; ?>"><?php echo get_the_title(); ?></a></h2>
+    <h2>
+      <?php if ( !is_admin() ): ?>
+        <a href="<?php echo $permalink; ?>">
+      <?php endif; ?>
+      <?php echo get_the_title(); ?>
+      <?php if ( !is_admin() ): ?>
+        </a>
+      <?php endif; ?>
+    </h2>
 
     <?php
     $categories = get_the_category();
@@ -47,7 +65,19 @@ $blurb = ( has_excerpt() ? get_the_excerpt() : substr( get_the_excerpt(), 0, 250
       <?php echo get_the_excerpt(); ?>
     </div>
 
-    <div class="btn-wrap"><a href="<?php echo $permalink; ?>" class="btn">Read More</a></div>
+    <div class="btn-wrap">
+      <?php if ( !is_admin() ): ?>
+        <a href="<?php echo $permalink; ?>" class="btn">
+      <?php else: ?>
+        <span class="btn">
+      <?php endif; ?>
+      Read More
+      <?php if ( !is_admin() ): ?>
+        </a>
+      <?php else: ?>
+        </span>
+      <?php endif; ?>
+    </div>
 
   </div>
 
