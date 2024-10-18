@@ -508,6 +508,121 @@ body.admin-bar #header.sticky {
 .blog-list article.post .content .btn-wrap .btn { }
 
 
+/* BLOG FILTERING ----------------------------------------------- */
+.post-grid-filtering,
+.post-grid-filtering * {
+  box-sizing: border-box;
+}
+.post-grid-filtering {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  gap: 30px 50px;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 80px;
+}
+.post-grid-filtering .filter-category {
+  position: relative;
+  width: 300px;
+}
+.post-grid-filtering .select-css {
+display: block;
+width: 100%;
+font-size: 14px;
+font-family: sans-serif;
+font-weight: 700;
+color: var(--black);
+line-height: 1.25em;
+padding: 1em 5em 1em 1em;
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
+margin: 0;
+border: 2px solid var(--black);
+box-shadow: none;
+border-radius: 0;
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+background: var(--white) url('img/static-icons/select-trigger.png') right center no-repeat;
+background-size: auto 100%;
+}
+.post-grid-filtering .select-css::-ms-expand {
+display: none;
+}
+.post-grid-filtering .select-css:hover {
+/* border-color: #888; */
+}
+.post-grid-filtering .select-css:focus {
+/* border-color: #aaa;
+box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+box-shadow: 0 0 0 3px -moz-mac-focusring;
+color: #222;
+outline: none; */
+}
+.post-grid-filtering .select-css option {
+font-weight:normal;
+}
+.post-grid-filtering .filter-text {
+position: relative;
+flex-grow: 1;
+}
+.post-grid-filtering .filter-text input[name='filter-text'] {
+position: relative;
+z-index: 1;
+width: 100%;
+padding: 1em 50px 1em 0;
+background-color: transparent;
+outline: none;
+border: 2px solid var(--black);
+border-top-color: transparent;
+border-right-color: transparent;
+border-left-color: transparent;
+color: var(--black);
+font-size: 14px;
+font-weight: 700;
+line-height: 1.25em;
+}
+.post-grid-filtering .filter-text button[type='submit'] {
+display: block;
+margin: 0;
+overflow: hidden;
+padding: 0;
+border: none;
+outline: none;
+background: transparent;
+color: var(--black);
+font-size: 16px;
+line-height: 1em;
+text-align: left;
+text-decoration: none;
+text-indent: -9999em;
+cursor: pointer;
+-webkit-appearance: none;
+-moz-appearance: none;
+position: absolute;
+top: 0;
+right: 0;
+z-index: 2;
+height: 50px;
+width: 50px;
+}
+.post-grid-filtering .filter-text button[type='submit'] .svg-icon,
+.post-grid-filtering .filter-text button[type='submit'] .svg-icon svg {
+height: 30px;
+width: 30px
+}
+.post-grid-filtering .filter-text button[type='submit'] .svg-icon {
+margin: 10px;
+}
+.post-grid-filtering .filter-text button[type='submit'] .svg-icon svg .path {
+fill: var(--black);
+}
+
 /* BLOG PAGINATION ---------------------------------------------- */
 .blog-list-pagination { }
 .blog-list-pagination .navigation { }

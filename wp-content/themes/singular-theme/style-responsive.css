@@ -12,6 +12,16 @@
     top: 46px;
   }
 
+  /* BLOG FILTERING ----------------------------------------------- */
+  .post-grid-filtering {
+    -ms-flex-flow: column-reverse wrap;
+    -webkit-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap;
+  }
+  .post-grid-filtering .filter-category {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
