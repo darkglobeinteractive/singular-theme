@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
 
+  /* MULTI-SLIDER ----------------------------------------------- */
   $('.multi-slider-block').each(function() {
 
     // The following set_modal_window_height function allows you to set heights of different sections of the modal window upon modal window opening
@@ -112,6 +113,39 @@ jQuery(document).ready(function($) {
     }
 
     $slider.slick(slider_args);
+
+  });
+
+  /* POSTS GRID ------------------------------------------------- */
+  $('.posts-block').each(function() {
+
+    // Declare variables
+    $container = $(this);
+    $filter = $('.post-grid-filtering', $container);
+    $category_filter = $('select[name="filter-category"]', $filter);
+    $text_search = $('input[name="filter-text"]', $filter);
+
+    $text_search.on('focus', function() {
+      if ($(this).val() == 'Search by keyword...') {
+        $(this).val('');
+      }
+    });
+
+    $text_search.on('blur', function() {
+      if ($(this).val() == '') {
+        $(this).val('Search by keyword...');
+      }
+    });
+
+    $filter.on('submit', function() {
+      if ($text_search.val() == 'Search by keyword...') {
+        $text_search.val('');
+      }
+    });
+
+    $category_filter.on('change', function() {
+      $filter.submit();
+    });
 
   });
 
