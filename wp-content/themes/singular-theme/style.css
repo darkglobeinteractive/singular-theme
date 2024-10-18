@@ -184,15 +184,21 @@ body.admin-bar #header.sticky {
   position: sticky;
 }
 #header > .wrap {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   height: 120px;
   width: 100%;
 }
 #header .site-logo {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  left: 0;
-  top: 0;
 }
 
 
