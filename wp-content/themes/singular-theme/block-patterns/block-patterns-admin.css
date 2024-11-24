@@ -1,7 +1,9 @@
 /* BASIC CONTENT WRAPPER ---------------------------------------- */
-.editor-styles-wrapper .wp-block-singular > .wp-block-group__inner-container {
-  padding: 0 !important;
-  max-width: 100%;
+/* The following might help with block creation due to space constraints in admin view */
+.editor-styles-wrapper .wp-block-singular > .wp-block-group__inner-container,
+.editor-styles-wrapper .wp-block-singular > .wp-block-cover__inner-container {
+  /* padding: 0 !important; */
+  max-width: 100% !important;
 }
 /* ACCORDION OVERRIDES ------------------------------------------ */
 .editor-styles-wrapper .wp-block.wp-block-singular.accordion-container { 
