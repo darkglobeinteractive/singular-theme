@@ -49,3 +49,9 @@ function singchild_admin_styles() {
   wp_enqueue_style( 'admin-style-css', get_stylesheet_directory_uri().'/style.css', array(), singular_child_theme_filemtime('/style.css' ) );
 }
 add_action( 'admin_enqueue_scripts', 'singchild_admin_styles', 99 );
+
+/* LOGIN LOGO STYLES -------------------------------------------- */
+function singchild_login_css() {
+  wp_enqueue_style( 'login-css', get_stylesheet_directory_uri().'/css/login.css', array(), singular_child_theme_filemtime('/css/login.css' ) );
+}
+add_action( 'login_enqueue_scripts', 'singchild_login_css' );
