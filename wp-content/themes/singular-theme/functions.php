@@ -102,6 +102,7 @@ function singular_styles() {
   wp_enqueue_style( 'slickjs-theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
   wp_enqueue_style( 'slickjs-custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/mmenu.css' );
+  wp_enqueue_style( 'buttons-css', get_template_directory_uri().'/css/buttons.css', array(), singular_theme_filemtime('/css/buttons.css' ) );
   wp_enqueue_style( 'svg-css', get_template_directory_uri().'/svg/style.css', array(), singular_theme_filemtime('/svg/style.css' ) );
   wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/color-palette.css', array(), singular_theme_filemtime('/css/color-palette.css' ) );
   // wp_enqueue_style( 'animation-css', get_template_directory_uri().'/css/animations.css', array(), singular_theme_filemtime('/css/animations.css' ) );
@@ -116,6 +117,7 @@ add_action( 'wp_enqueue_scripts', 'singular_styles' );
 /* ADMIN STYLES ------------------------------------------------- */
 function singular_admin_styles() {
   wp_enqueue_style( 'admin-color-palette-css', get_template_directory_uri().'/css/color-palette.css', array(), singular_theme_filemtime('/css/color-palette.css' ) );
+  wp_enqueue_style( 'admin-buttons-css', get_template_directory_uri().'/css/buttons.css', array(), singular_theme_filemtime('/css/buttons.css' ) );
   wp_enqueue_style( 'admin-primary-css', get_template_directory_uri().'/css/admin-styles.css', array(), singular_theme_filemtime('/css/admin-styles.css' ) );
   wp_enqueue_style( 'admin-editor-css', get_template_directory_uri().'/css/editor-styles.css', array(), singular_theme_filemtime('/css/editor-styles.css' ) );
   wp_enqueue_script( 'acf-api-js', get_template_directory_uri().'/js/acf-api.js', array( 'acf-input' ), singular_theme_filemtime('/js/acf-api.js' ) );
