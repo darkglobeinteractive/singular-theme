@@ -14,7 +14,7 @@ $blurb = ( has_excerpt() ? get_the_excerpt() : substr( get_the_excerpt(), 0, 250
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <?php if ( !is_admin() ): ?>
-    <?php edit_post_link( 'Edit', '<div class="edit-link">', '</div>', get_the_ID(), 'btn' ); ?>
+    <?php edit_post_link( 'Edit', '<div class="edit-link">', '</div>', get_the_ID() ); ?>
   <?php endif; ?>
 
   <div class="thumbnail">
