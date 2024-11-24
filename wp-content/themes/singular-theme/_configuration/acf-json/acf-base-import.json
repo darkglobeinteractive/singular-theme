@@ -525,12 +525,12 @@
                 "save_other_choice": 0
             },
             {
-                "key": "field_665f03ba69d25",
-                "label": "Video Loop File",
-                "name": "rich_banner_video",
+                "key": "field_674345e924a95",
+                "label": "Video Loop Files",
+                "name": "rich_banner_videos",
                 "aria-label": "",
-                "type": "file",
-                "instructions": "",
+                "type": "repeater",
+                "instructions": "It is recommended to upload an MP4 and a WEBM video file for maximum compatibility.",
                 "required": 1,
                 "conditional_logic": [
                     [
@@ -551,11 +551,37 @@
                     "class": "",
                     "id": ""
                 },
-                "return_format": "array",
-                "library": "all",
-                "min_size": "",
-                "max_size": "",
-                "mime_types": ""
+                "layout": "table",
+                "pagination": 0,
+                "min": 1,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Video",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_674348e168862",
+                        "label": "Video File",
+                        "name": "video_file",
+                        "aria-label": "",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "allow_in_bindings": 0,
+                        "parent_repeater": "field_674345e924a95"
+                    }
+                ]
             },
             {
                 "key": "field_664b88c9bab71",

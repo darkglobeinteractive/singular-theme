@@ -25,9 +25,9 @@ if ( $rich_banner_type == 'full' ) {
   // Add full background type to classes array
   $classes_array[] = $rich_banner_background_type;
 
-  // Check for a video background
+  // Check for background video files
   if ( $rich_banner_background_type == 'video' ) {
-    $rich_banner_video = ( get_field( 'rich_banner_video', $gv['qid'] ) ?: false );
+    $rich_banner_videos = ( have_rows( 'rich_banner_videos', $gv['qid'] ) ? true : false );
   }
 
   // Set banner mask
@@ -77,9 +77,17 @@ $rich_banner_button = ( get_field( 'rich_banner_button', $gv['qid'] ) ? singular
       <div class="image"<?php echo $block_styles; ?>></div>
     <?php endif; ?>
   </div>
-  <?php if ( $rich_banner_type == 'full' && $rich_banner_background_type == 'video' && $rich_banner_video ): ?>
+  <?php if ( $rich_banner_type == 'full' && $rich_banner_background_type == 'video' && $rich_banner_videos ): ?>
     <video class="video-bg <?php echo $rich_banner_background_position; ?>" autoplay loop muted width="100%">
-      <source src="<?php echo $rich_banner_video['url']; ?>" type="video/mp4" />
+      <?php while ( have_rows( 'rich_banner_videos', $gv['qid'] ) ): the_row(); ?>
+        <?php 
+        // Get url to video file
+        $rich_banner_video_url = get_sub_field( 'video_file' )['url'];
+        // Determine the extension of the video file
+        $rich_banner_video_ext = ( pathinfo( $rich_banner_video_url )['extension'] ?: 'mp4' ); 
+        ?>
+        <source src="<?php echo $rich_banner_video_url; ?>" type="video/<?php echo $rich_banner_video_ext; ?>" />
+      <?php endwhile; ?>
     </video> 
   <?php endif; ?>
   <?php if ( $rich_banner_mask ): ?>
